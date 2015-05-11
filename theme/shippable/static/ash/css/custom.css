@@ -99,12 +99,14 @@ code {
 
 #article {
     margin-top: 1em;
+    max-width: 1000px;
 }
 
 /* Sidebar */
 
 #sidebar {
     padding-top: 31px;
+    padding-left: 0px;
 }
 
 #sidebar a {
