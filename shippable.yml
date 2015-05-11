@@ -12,7 +12,7 @@ env:
   global:
     - AWS_S3_LOCAL_PATH='site'
     - AWS_S3_BUCKET='s3://ship-docsv2'
-    - AWS_S3_REGION='Oregon'
+    - AWS_S3_REGION='us-west-2'
     # AWS_ACCESS_KEY_ID
     # AWS_SECRET_ACCESS_KEY
     - secure: hhOsPQ4Uokl/xnHf5Gjs/kab3XX3+KGkj6NTLUsqcrFrT8inGP1KlPeKmeCFtxsJhBaqteBexXBx9op0SP4255IRcLrtBlqSJ1yUnQcy5lMQ846rOu/k80i9PZ9cndULssPHNNXWZOJ+seB7v3F9za2DBMrY+3sHqhgp/TcyZnp2EeYJw3LZgasz5DHMeBVCdUPflRv2mu7tzb0kY1pOivc8KWRDrD7GCS/9N4P9DttZWjncoLqt9bby+TUUOpRJypnqNirl3qHSCHb/FomWL5pZ+m56W5RL6xPWYktH0MNurOlT759JJGCg0P9+ycUK+5RhTvSqmhWZz4RmLMPepg==
