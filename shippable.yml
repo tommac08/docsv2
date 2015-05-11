@@ -11,12 +11,12 @@ branches:
 env:
   global:
     - AWS_S3_LOCAL_PATH='site'
-    - AWS_S3_BUCKET='s3://shippable-docs'
-    - AWS_S3_REGION='us-west-1'
+    - AWS_S3_BUCKET='s3://ship-docsv2'
+    - AWS_S3_REGION='Oregon'
     # AWS_ACCESS_KEY_ID
     # AWS_SECRET_ACCESS_KEY
-    - secure: mBBxqhpbvFpVx5DvKMfxPxAFoZGklk5+UhJ5wpwTrO6hpxinMXrY9rgWdWkurAWPgZNBNzQxT/3nJIq51Lvc00hvaY138C2QNRsLY2eDulv8lGG5cp7PoUAOo8ATpPE5LmCNBQgu0o+nZrivl3fRvY54mMeajlunbpt6qQDweJ/frdHeIW7CP86XlUF+hyds2PEvah76wQ4+L9CzTRpW3jdI7cdfns2imCAaZNuZuomTCjoY7wOXfb791r2eghaHnz47BCa2Yo5RZ3D+oWre56sLWuYW763Fa57XwLYcvQuZ1Sw0GBMEpjtS3eLyo3ZAI0YkK4dwTM0rXwXzA2ulFw==
-
+    - secure: wNWyty8ECIpidNT2du03aG1vuhYFpS16/kKe7yTMBaCgfO2P+9h9Rr+POM4+m5Wtkpq+eg84wv4tXRR16M5+CLhBa4srgTdHKj5L+9YacWSS/SltjLS2mMY8l3/2Z7nRbV6LSQ28U15SH8OMUASM/ZtKNcTSnR6QuZEYYXw4gcjRW7mBClLMh6hlv05qCKDFA92K09fnO1espSs9Ln9DAk4DfOxfgfxX+si8fPzC4F6RgNIiigRCwREsdhvO+uRiKDaYY0rjnckGWR8ENyNckCoOeviIlTxoB7Uxy9ui1cfhnTJg2UFZROqLOOYJ0+h6qsAPZRhMCfpKrMIwLImlwA==
+    
 install:
   - pip install -r requirements.txt
 
