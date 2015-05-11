@@ -1,0 +1,59 @@
+<article id="article" class="container">
+
+  <nav id="sidebar" class="col-md-3 hidden-print">
+
+    <nav id="search-bar" class="searchbar">
+      <gcse:searchbox></gcse:searchbox>
+    </nav>
+
+    {% if toc|first and toc|first|attr('children') %}
+    <ul class="tocbar nav">
+      {% for toc_item in toc %}
+      {% for toc_h2_item in toc_item.children %}
+      <li>
+        <a href="{{ toc_h2_item.url }}">{{ toc_h2_item.title }}</a>
+        <ul class="tocbar-sub nav">
+          {% for toc_h3_item in toc_h2_item.children %}
+          <li><a href="{{ toc_h3_item.url }}">{{ toc_h3_item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+      {% endfor %}
+    </ul>
+    {% endif %}
+
+  </nav>
+
+  <section id="mainbar" class="col-md-9">
+
+    <nav id="search-results">
+      <gcse:searchresults></gcse:searchresults>
+    </nav>
+
+    <section id="content">
+      {% block content %}
+      {{ content }}
+      {% endblock %}
+    </section>
+
+    <nav class="pull-left hidden-print">
+      {% if previous_page %}
+      <a rel="next" {% if previous_page %}href="{{ previous_page.url }}"{% endif %}>
+        <span class="fa fa-arrow-left"></span> Previous
+      </a>
+      {% endif %}
+      {% if next_page %}
+      <a rel="prev" {% if next_page %}href="{{ next_page.url }}"{% endif %}>
+        Next <span class="fa fa-arrow-right"></span>
+      </a>
+      {% endif %}
+    </nav>
+
+    <nav class="pull-right hidden-print">
+      <a href="{{ repo_url }}/docs/blob/master/sources/{% if current_page %}{{ current_page.path }}{% endif %}" title="edit this article">Edit this article on GitHub</a>
+    </nav>
+
+  </section>
+
+</article>

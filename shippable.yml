@@ -1,0 +1,34 @@
+language:
+  python
+
+python:
+  - '3.4'
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - AWS_S3_LOCAL_PATH='site'
+    - AWS_S3_BUCKET='s3://shippable-docs'
+    - AWS_S3_REGION='us-west-1'
+    # AWS_ACCESS_KEY_ID
+    # AWS_SECRET_ACCESS_KEY
+    - secure: mBBxqhpbvFpVx5DvKMfxPxAFoZGklk5+UhJ5wpwTrO6hpxinMXrY9rgWdWkurAWPgZNBNzQxT/3nJIq51Lvc00hvaY138C2QNRsLY2eDulv8lGG5cp7PoUAOo8ATpPE5LmCNBQgu0o+nZrivl3fRvY54mMeajlunbpt6qQDweJ/frdHeIW7CP86XlUF+hyds2PEvah76wQ4+L9CzTRpW3jdI7cdfns2imCAaZNuZuomTCjoY7wOXfb791r2eghaHnz47BCa2Yo5RZ3D+oWre56sLWuYW763Fa57XwLYcvQuZ1Sw0GBMEpjtS3eLyo3ZAI0YkK4dwTM0rXwXzA2ulFw==
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - mkdocs build
+
+after_success:
+  - aws s3 sync $AWS_S3_LOCAL_PATH $AWS_S3_BUCKET --delete --acl public-read --region $AWS_S3_REGION
+
+notifications:
+  email:
+    recipients:
+      - roll@respect31.com
+    on_success: change
+    on_failure: always
