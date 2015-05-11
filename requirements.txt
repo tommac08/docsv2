@@ -1,0 +1,20 @@
+# pip install awscli mkdocs
+awscli==1.7.26
+bcdoc==0.14.0
+botocore==0.107.0
+certifi==2015.4.28
+colorama==0.3.3
+docutils==0.12
+ghp-import==0.4.1
+Jinja2==2.7.3
+jmespath==0.7.1
+livereload==2.3.2
+Markdown==2.6.2
+MarkupSafe==0.23
+mkdocs==0.12.2
+pyasn1==0.1.7
+python-dateutil==2.4.2
+PyYAML==3.11
+rsa==3.1.4
+six==1.9.0
+tornado==4.1

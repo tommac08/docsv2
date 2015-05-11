@@ -1,0 +1,43 @@
+# General
+site_name: Shippable Documentation
+repo_url: https://github.com/Shippable
+
+# Paths
+docs_dir: sources
+theme_dir: theme/shippable
+
+# Pages
+pages:
+  - [index.md, Getting Started, Overview]
+  - [start.md, Getting Started, Getting Started]
+
+  - [yml.md, Configuration, Configuring Your YML]
+  - [config.md, Configuration, A Bit Deeper]
+
+  - [deployment/index.md, Deployment, Continuous Deployment]
+  - [deployment/heroku.md, Deployment, Heroku]
+  - [deployment/beanstalk.md, Deployment, Amazon Elastic Beanstalk]
+  - [deployment/opswork.md, Deployment, AWS OpsWorks]
+  - [deployment/appengine.md, Deployment, Google App Engine]
+  - [deployment/openshift.md, Deployment, Red Hat OpenShift]
+  - [deployment/digitalocean.md, Deployment, DigitalOcean]
+  - [deployment/codedeploy.md, Deployment, AWS CodeDeploy]
+
+  - [docker.md, Docker]
+
+  - [api.md, API]
+
+  - [languages/index.md, Languages, Languages Specific Help]
+  - [languages/images.md, Languages, Language Specific Images]
+  - [languages/clojure.md, Languages, Clojure]
+  - [languages/go.md, Languages, Go]
+  - [languages/java.md, Languages, Java]
+  - [languages/nodejs.md, Languages, Nodejs]
+  - [languages/php.md, Languages, PHP]
+  - [languages/python.md, Languages, Python]
+  - [languages/ruby.md, Languages, Ruby]
+  - [languages/scala.md, Languages, Scala]
+
+  - [glossary.md, Glossary]
+
+  - [faq.md, FAQ]

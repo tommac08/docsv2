@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head lang="en">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="{% if meta %}{{ meta.page_description|join('') }}{% endif %}">
+  <meta name="keywords" content="{% if meta %}{{ meta.page_keywords|join('') }}{% endif %}">
+
+  <title>{% if meta %}{{ meta.page_title|join('') }} - {% elif page_title %}{{ page_title }} - {% endif %}{{ site_name }}</title>
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,800">
+  <link rel="stylesheet" href="/static/ash/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/ash/font-icons/custom-icons/css/custom-icons.css">
+  <link rel="stylesheet" href="/static/ash/font-icons/custom-icons/css/custom-icons-ie7.css">
+  <link rel="stylesheet" href="/static/ash/css/layout.css">
+  <link rel="stylesheet" href="/static/ash/css/blue.css">
+  <link rel="stylesheet" href="/static/ash/css/custom.css">
+  <link rel="stylesheet" href="/static/ash/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/ash/font-icons/custom-icons/css/custom-icons.css">
+  <link rel="stylesheet" href="/static/ash/font-icons/custom-icons/css/custom-icons-ie7.css">
+
+  <link rel="shortcut icon" href="/static/ash/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/static/ash/images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/ash/images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/ash/images/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/ash/images/apple-touch-icon-144x144.png">
+
+  {% include 'scripts_top.html' %}
+
+</head>
+<body data-spy="scroll" data-target="#scrollTarget" data-offset="150">
+
+  <div id="globalWrapper" class="localscroll">
+
+    {% include 'header.html' %}
+
+    {% include 'navbar.html' %}
+
+    {% include 'article.html' %}
+
+    {% include 'footer.html' %}
+
+  </div>
+
+  {% include 'modals.html' %}
+
+  {% include 'scripts_bottom.html' %}
+
+</body>
+</html>
