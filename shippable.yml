@@ -15,8 +15,8 @@ env:
     - AWS_S3_REGION='Oregon'
     # AWS_ACCESS_KEY_ID
     # AWS_SECRET_ACCESS_KEY
-    - secure: wNWyty8ECIpidNT2du03aG1vuhYFpS16/kKe7yTMBaCgfO2P+9h9Rr+POM4+m5Wtkpq+eg84wv4tXRR16M5+CLhBa4srgTdHKj5L+9YacWSS/SltjLS2mMY8l3/2Z7nRbV6LSQ28U15SH8OMUASM/ZtKNcTSnR6QuZEYYXw4gcjRW7mBClLMh6hlv05qCKDFA92K09fnO1espSs9Ln9DAk4DfOxfgfxX+si8fPzC4F6RgNIiigRCwREsdhvO+uRiKDaYY0rjnckGWR8ENyNckCoOeviIlTxoB7Uxy9ui1cfhnTJg2UFZROqLOOYJ0+h6qsAPZRhMCfpKrMIwLImlwA==
-    
+    - secure: hhOsPQ4Uokl/xnHf5Gjs/kab3XX3+KGkj6NTLUsqcrFrT8inGP1KlPeKmeCFtxsJhBaqteBexXBx9op0SP4255IRcLrtBlqSJ1yUnQcy5lMQ846rOu/k80i9PZ9cndULssPHNNXWZOJ+seB7v3F9za2DBMrY+3sHqhgp/TcyZnp2EeYJw3LZgasz5DHMeBVCdUPflRv2mu7tzb0kY1pOivc8KWRDrD7GCS/9N4P9DttZWjncoLqt9bby+TUUOpRJypnqNirl3qHSCHb/FomWL5pZ+m56W5RL6xPWYktH0MNurOlT759JJGCg0P9+ycUK+5RhTvSqmhWZz4RmLMPepg==
+
 install:
   - pip install -r requirements.txt
 
