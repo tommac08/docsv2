@@ -6,14 +6,15 @@ page_keywords: languages, questions, documentation, shippable, ruby, node, java,
 
 We support the following languages:
 
--  [clojure](clojure.md)
--  [go](go.md)
--  [java](java.md)
--  [nodejs](nodejs.md)
--  [python](python.md)
--  [ruby](ruby.md)
--  [scala](scala.md)
--  [php](php.md)
+-  [clojure](#clojure)
+-  [go](#go)
+-  [java](#java)
+-  [nodejs](#nodejs)
+-  [php](#php)
+-  [python](#python)
+-  [ruby](#ruby)
+-  [scala](#scala)
+
 
 This list keeps growing and if you need something that you dont see
 here, drop us a line at support @ shippable.com
