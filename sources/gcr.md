@@ -40,7 +40,7 @@ To create a project -
 #### Set up GCR Integration 
 
 - Login to Shippable
-- Click on your GitHub/Bitbucket username at the top right of your Dashboard and click on 'Account Settings'
+- Click on 'Settings' in the top navbar
 - On the Account Settings page, click on 'Integrations', just below the Account Settings text.
 - From the options presented, click on GCR
 - Enter an Integration name, which will be used to refer to this integration on Shippable
