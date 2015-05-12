@@ -52,9 +52,12 @@ $(document).ready(function() {
     $("body").append(s);
 
     //Sticky tocbar
-    function set_tocbar_width() { $('#sidebar .tocbar').width($('#sidebar').width()); }
-    $(window).resize(set_tocbar_width);
-    set_tocbar_width();
+    if ($('#sidebar .tocbar').height() + 50 < $(window).height()) {
+        $('#sidebar .tocbar').affix({ offset: { top: 200 } });
+        function set_tocbar_width() { $('#sidebar .tocbar').width($('#sidebar').width()); }
+        $(window).resize(set_tocbar_width);
+        set_tocbar_width();
+    }
 
     if($.cookie("css")) {
         $("#colors").attr("href",$.cookie("css"));

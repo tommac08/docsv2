@@ -7,7 +7,7 @@
     </nav>
 
     {% if toc|first and toc|first|attr('children') %}
-    <ul class="tocbar nav" data-spy="affix" data-offset-top="200">
+    <ul class="tocbar nav">
       {% for toc_item in toc %}
       {% for toc_h2_item in toc_item.children %}
       <li>
