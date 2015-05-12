@@ -51,7 +51,10 @@ $(document).ready(function() {
     s.src = jquery_cookie_plugin_path;
     $("body").append(s);
 
-
+    //Sticky tocbar
+    function set_tocbar_width() { $('#sidebar .tocbar').width($('#sidebar').width()); }
+    $(window).resize(set_tocbar_width);
+    set_tocbar_width();
 
     if($.cookie("css")) {
         $("#colors").attr("href",$.cookie("css"));
