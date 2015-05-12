@@ -115,3 +115,10 @@ To update theme change files in `theme/shippable` directory.
 - Header menu doesn't work on mobile (as before migration)
 - Bootstrap theme "Little Necko" patches bootstrap and does it in really odd way. Some hacks are used to fight "Little Necko". All css looks legacy and fragile. Hopefully css will be rewritten from strach soon.
 - Minor style bugs (especially for mobile)
+
+> As default in boostrap, shippable and docs.shippable use following font stack:
+> "Helvetica Neue", Helvetica, Arial, sans-serif. Helvetica Neue is proprietary
+> font is not available on most Linux ans Windows machines (that's true right?).
+> Also it can't be shipped with website as webfont because of its license. That
+> means Helvetica font for the most of the users which someone believe a little bit
+> ugly font for the web.
