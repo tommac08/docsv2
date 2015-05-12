@@ -29,9 +29,11 @@ Common use cases for Shippable include:
 > Shippable is 100% free to use, even for private
 > repositories.
 
-## Supported languages, platforms, tools
+## What is supported?
 
-We currently support the following languages:
+### Languages
+
+We currently support the following programming languages:
 
 -  Ruby
 -  Python
@@ -42,10 +44,15 @@ We currently support the following languages:
 -  GO
 -  Clojure
 
+### Platforms
+
 Your Minions can test your repos on:
 
 -  Ubuntu 12.04 LTS
 -  Ubuntu 13.10
+-  Ubuntu 14.04
+
+### Services and tools
 
 We support the following services natively:
 
