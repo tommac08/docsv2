@@ -11,11 +11,11 @@ branches:
 env:
   global:
     - AWS_S3_LOCAL_PATH='site'
-    - AWS_S3_BUCKET='s3://shippable-docs'
-    - AWS_S3_REGION='us-west-1'
+    - AWS_S3_BUCKET='s3://ship-docsv2'
+    - AWS_S3_REGION='us-west-2'
     # AWS_ACCESS_KEY_ID
     # AWS_SECRET_ACCESS_KEY
-    - secure: mBBxqhpbvFpVx5DvKMfxPxAFoZGklk5+UhJ5wpwTrO6hpxinMXrY9rgWdWkurAWPgZNBNzQxT/3nJIq51Lvc00hvaY138C2QNRsLY2eDulv8lGG5cp7PoUAOo8ATpPE5LmCNBQgu0o+nZrivl3fRvY54mMeajlunbpt6qQDweJ/frdHeIW7CP86XlUF+hyds2PEvah76wQ4+L9CzTRpW3jdI7cdfns2imCAaZNuZuomTCjoY7wOXfb791r2eghaHnz47BCa2Yo5RZ3D+oWre56sLWuYW763Fa57XwLYcvQuZ1Sw0GBMEpjtS3eLyo3ZAI0YkK4dwTM0rXwXzA2ulFw==
+    - secure: hhOsPQ4Uokl/xnHf5Gjs/kab3XX3+KGkj6NTLUsqcrFrT8inGP1KlPeKmeCFtxsJhBaqteBexXBx9op0SP4255IRcLrtBlqSJ1yUnQcy5lMQ846rOu/k80i9PZ9cndULssPHNNXWZOJ+seB7v3F9za2DBMrY+3sHqhgp/TcyZnp2EeYJw3LZgasz5DHMeBVCdUPflRv2mu7tzb0kY1pOivc8KWRDrD7GCS/9N4P9DttZWjncoLqt9bby+TUUOpRJypnqNirl3qHSCHb/FomWL5pZ+m56W5RL6xPWYktH0MNurOlT759JJGCg0P9+ycUK+5RhTvSqmhWZz4RmLMPepg==
 
 install:
   - pip install -r requirements.txt
@@ -25,10 +25,3 @@ script:
 
 after_success:
   - aws s3 sync $AWS_S3_LOCAL_PATH $AWS_S3_BUCKET --delete --acl public-read --region $AWS_S3_REGION
-
-notifications:
-  email:
-    recipients:
-      - roll@respect31.com
-    on_success: change
-    on_failure: always

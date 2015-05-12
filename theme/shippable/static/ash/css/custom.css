@@ -99,12 +99,15 @@ code {
 
 #article {
     margin-top: 1em;
+    max-width: 1000px;
+    margin-left: 245px;
 }
 
 /* Sidebar */
 
 #sidebar {
     padding-top: 31px;
+    padding-left: 0px;
 }
 
 #sidebar a {
@@ -151,7 +154,7 @@ code {
 
 #sidebar .tocbar a {
     padding: 7px 14px;
-    color: #58595a;
+    color: #b7410e;
     font-weight: 600;
 }
 
