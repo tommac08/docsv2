@@ -83,7 +83,7 @@ To enable GCR integration for the repository for which you want to push to GCR -
 
 > **Note**
 >
->  Docker Build Support is only available with dedicated hosts. To set up a dedicated host, please follow instructions [here](http://docs.shippable.com/en/latest/config.html#dedicated-hosts)
+>  Docker Build Support is only available with dedicated hosts. To set up a dedicated host, please follow instructions [here](config.md#dedicated-hosts)
 
 
 You can run your build in a custom docker container by building a Docker image from a Dockerfile. Aside from providing a custom environment for your build, this image created can be pushed to your GDC account, for later use in your deployment step.
