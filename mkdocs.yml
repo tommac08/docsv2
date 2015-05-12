@@ -11,8 +11,8 @@ pages:
   - [index.md, Getting Started, Overview]
   - [start.md, Getting Started, Running your first build]
 
-  - [yml.md, Configuration, Configuring Your YML]
-  - [config.md, Configuration, A Bit Deeper]
+  - [yml_overview.md, Configuration, Config overview]
+  - [yml_reference.md, Configuration, YML reference]
 
   - [deployment/index.md, Deployment, Continuous Deployment]
   - [deployment/heroku.md, Deployment, Heroku]
