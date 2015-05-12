@@ -58,7 +58,7 @@ To enable GCR integration for the repository for which you want to pull a custom
 - Go to your repository page on Shippable and click on 'Integrations' on the right sidebar
 - Click on the dropdown for 'Hub' and select the Integration name you want to use.
 - On the repo page, go to 'Settings'. Choose the following to pull an image from GCR -
-  - Pull image from : gcr.io/gcr_project_id/image_name
+    - Pull image from : gcr.io/gcr_project_id/image_name
 
 
 -------
@@ -72,8 +72,8 @@ To enable GCR integration for the repository for which you want to push to GCR -
 - Go to your repository page on Shippable and click on 'Integrations' on the right sidebar
 - Click on the dropdown for 'Hub' and select the Integration name you want to use.
 - On the repo page, go to 'Settings'. Choose the following to push to GCR -
-  - Push Build : Yes
-  - Push image to : gcr.io/gcr_project_id/image_name
+    - Push Build : Yes
+    - Push image to : gcr.io/gcr_project_id/image_name
 
 -------
 
