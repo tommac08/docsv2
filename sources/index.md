@@ -4,6 +4,8 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 
 # Overview
 
+## What is Shippable?
+
 Shippable is a SaaS platform that lets you easily add Continuous
 Integration/Deployment to your Github and Bitbucket(Git) repositories.
 It is lightweight, super simple to setup, and runs your builds and tests
@@ -26,6 +28,8 @@ Common use cases for Shippable include:
 >
 > Shippable is 100% free to use, even for private
 > repositories.
+
+## Supported languages, platforms, tools
 
 We currently support the following languages:
 

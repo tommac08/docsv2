@@ -40,10 +40,11 @@ You are now ready to build and test with Shippable!
 
 ## **Step 2** : Enable CI for repos
 
-After logging in, you will see 'Repositories' on the right sidebar of
-your dashboard. Find or search for your repository in the list, and
-click the **Enable** button. Now, whenever you push a commit to your
-GitHub repo, Shippable will build that project as long as you have a
+To enable a repository for CI -
+- Click on 'Repositories' on the right sidebar of your dashboard. 
+- Find or search for your repository in the list, and click the **Enable** button.
+
+Now, whenever you push a commit to your GitHub/Bitbucket repository, Shippable will build that project as long as you have a
 shippable.yml (or .travis.yml) at the root of your repository.
 
 ---
