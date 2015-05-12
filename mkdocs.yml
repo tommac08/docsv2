@@ -24,6 +24,7 @@ pages:
   - [deployment/codedeploy.md, Deployment, AWS CodeDeploy]
 
   - [docker.md, Docker]
+  - [gcr.md, Docker]
 
   - [api.md, API]
 
