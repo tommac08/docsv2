@@ -146,6 +146,7 @@ code {
 #sidebar .tocbar {
     border: solid 1px #dbdde0;
     border-radius: 4px;
+    background-color: #fff;
 }
 
 #sidebar .tocbar a:hover {
@@ -175,6 +176,15 @@ code {
 
 #sidebar .tocbar-sub a:hover {
     background-color: #eee;
+}
+
+/* Sticky tocbar */
+@media (min-width: 992px) {
+    #sidebar .tocbar.affix {
+        position: fixed;
+        z-index: 10;
+        top: 1em;
+    }
 }
 
 /* Mainbar */

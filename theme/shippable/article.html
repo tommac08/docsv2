@@ -1,13 +1,13 @@
 <article id="article" class="container">
 
-  <nav id="sidebar" class="col-md-3 hidden-print">
+  <nav id="sidebar" class="col-md-3 hidden-xs hidden-sm hidden-print">
 
     <nav id="search-bar" class="searchbar">
       <gcse:searchbox></gcse:searchbox>
     </nav>
 
     {% if toc|first and toc|first|attr('children') %}
-    <ul class="tocbar nav">
+    <ul class="tocbar nav" data-spy="affix" data-offset-top="200">
       {% for toc_item in toc %}
       {% for toc_h2_item in toc_item.children %}
       <li>
