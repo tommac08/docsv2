@@ -52,7 +52,7 @@ Your Minions can test your repos on:
 -  Ubuntu 13.10
 -  Ubuntu 14.04
 
-### Services and tools
+### Services
 
 We support the following services natively:
 
@@ -67,5 +67,44 @@ We support the following services natively:
 -  RethinkDB
 -  CouchDB
 -  Selenium
+
+### Tools
+
+A set of common tools are available on all minions. The following is a
+list of available tools -
+
+-   Latest release of Git repository
+-   apt installer
+-   Networking tools
+    -   curl
+    -   wget
+    -   OpenSSL
+-   Headless browser testing tools
+    -   xfvb
+    -   PhantomJS
+-   Libraries
+    -   ImageMagik
+    -   OpenSSL
+-   JDK Versions
+    -   Oracle JDK 7u6 (oraclejdk7)
+    -   OpenJDK 7 (alias: openjdk7)
+    -   OpenJDK 6 (openjdk6)
+    -   Oracle JDK 8 EA (oraclejdk8)
+-   Build Tools
+    -   Maven 3
+    -   Gradle 1.9
+    -   Make
+    -   SBT 0.12.1
+-   Preinstalled PIP Packages
+    -   mock
+    -   nosetests
+    -   py.test
+-   Gems
+    -   Bundler
+    -   Rake
+-   Addons
+    -   Firefox
+    -   Custom hostname
+    -   PostgreSQL
 
 Enough reading! [Get Started!](start.md)
