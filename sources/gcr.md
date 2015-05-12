@@ -4,7 +4,7 @@ page_keywords: shippable, Docker, Container, Google, Google container registry, 
 
 # Google Container Registry
 
-The Google Container Registry (GCR) provides secure, private Docker image storage on Google Cloud Platform. Using GCR has many advantages such as fine grained access control, server-side encryption of images, and super fast deployment to Google Container Engine and Google Compute Engine.
+The Google Container Registry (GCR) provides secure, private Docker image storage on the Google Cloud Platform. GCR has additional benefits such as fine grained access control, server-side encryption of images, and super fast deployment to Google Container Engine and Google Compute Engine.
 
 To read more about GCR, you can read [Google's documentation](https://cloud.google.com/tools/container-registry) or [announcement blog](http://googlecloudplatform.blogspot.com/2015/01/secure-hosting-of-private-Docker-repositories-in-Google-Cloud-Platform.html). 
 
@@ -16,9 +16,9 @@ Follow the following steps to set up GCR integration.
 
 #### Create a Project in Google Dev Console
 
-To use Shippable with GCR, you will need a project created using the Google Developers Console (GDC). According to their documentation - A project is a collection of settings, credentials, and metadata about the application or applications you're working on that make use of Google Developer APIs and Google Cloud resources.
+To use Shippable with GCR, you will need a project created using the Google Developers Console (GDC). According to [Google's documentation](https://developers.google.com/console/help/new/#managingprojects) - A project is a collection of settings, credentials, and metadata about the application or applications you're working on that make use of Google Developer APIs and Google Cloud resources.
 
-If you already have a project you want to use, skip to step 2.
+If you already have a project you want to use, skip to the next step - *Setting up OAuth for your GDC project*.
 
 To create a project -
 
