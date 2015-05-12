@@ -25,10 +25,3 @@ script:
 
 after_success:
   - aws s3 sync $AWS_S3_LOCAL_PATH $AWS_S3_BUCKET --delete --acl public-read --region $AWS_S3_REGION
-
-notifications:
-  email:
-    recipients:
-      - roll@respect31.com
-    on_success: change
-    on_failure: always
