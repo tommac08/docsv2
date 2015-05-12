@@ -14,7 +14,7 @@ If you want to interact with GCR in any part of your build workflow for your Shi
 
 Follow the following steps to set up GCR integration.
 
-1. Create a Project in Google Dev Console
+#### Create a Project in Google Dev Console
 
 To use Shippable with GCR, you will need a project created using the Google Developers Console (GDC). According to their documentation - A project is a collection of settings, credentials, and metadata about the application or applications you're working on that make use of Google Developer APIs and Google Cloud resources.
 
@@ -27,7 +27,8 @@ To create a project -
 - Enter a name and project ID or accept the defaults.
 - Click 'Create'
 
-2. Setting up OAuth for your GDC project
+
+#### Setting up OAuth for your GDC project
 
 - On the [Google Developers Console](https://console.developers.google.com/), select the project you just created
 - In the sidebar on the left, expand 'APIs & auth' and select 'Credentials'
@@ -35,7 +36,8 @@ To create a project -
 - Click on 'Create Client ID'. A dialog box appears. To proceed, click 'Okay, got it'
 - Your new Public/Private key pair is generated and downloaded to your machine. Please store this carefully since you will not be able to retrieve this from your GDC account. You will need this key pair to set up GCR integration on Shippable. 
 
-3. Set up GCR Integration 
+
+#### Set up GCR Integration 
 
 - Login to Shippable
 - Click on your GitHub/Bitbucket username at the top right of your Dashboard and click on 'Account Settings'
@@ -108,12 +110,12 @@ To use these workflows, your app must be "dockerized". Details on this can be fo
 - Enable the repository on Shippable
 - Make sure that GCR integration is set up on Shippable and that GCR is enabled for your repo
 - On the repo page, go to 'Settings'. Choose the following -
-  - Docker Build : ON
-  - CI order : Pre-CI
-  - Push Build : Yes if you want to push to GCR, No if you don't want to push to GCR 
-  - Image name : gcr.io/(project id on GDC)/(image name)  
-  We need an image name for the image we build from your Dockerfile, even if you choose not to push to GCR
-  - Source Location : (source code location where tests will be run)
+    - Docker Build : ON
+    - CI order : Pre-CI
+    - Push Build : Yes if you want to push to GCR, No if you don't want to push to GCR 
+    - Image name : gcr.io/(project id on GDC)/(image name)  
+      We need an image name for the image we build from your Dockerfile, even if you choose not to push to GCR
+    - Source Location : (source code location where tests will be run)
 - Make sure the Dockerfile for the image you want to build is at the root of your repo
 - Trigger a manual or webhook build
 - After the build is complete, make sure your GDC account shows the image you just pushed. The image should be tagged with the build number on Shippable.
@@ -123,11 +125,11 @@ To use these workflows, your app must be "dockerized". Details on this can be fo
 - Enable the repository on Shippable
 - Make sure that GCR integration is set up on Shippable and that GCR is enabled for your repo
 - On the repo page, go to 'Settings'. Choose the following -
-  - Docker Build : ON
-  - Dockerbuild order : Post-CI
-  - Push Build : Yes if you want to push to GCR, No if you don't want to push to GCR 
-  - Push image to : gcr.io/(project id on GDC)/(image name)  
-  - Pull image from : Since your Dockerbuild is happening post CI, enter the image you want to use for CI
+    - Docker Build : ON
+    - Dockerbuild order : Post-CI
+    - Push Build : Yes if you want to push to GCR, No if you don't want to push to GCR 
+    - Push image to : gcr.io/(project id on GDC)/(image name)  
+    - Pull image from : Since your Dockerbuild is happening post CI, enter the image you want to use for CI
 - Make sure the Dockerfile for the image you want to build is at the root of your repo
 - Trigger a manual or webhook build
 - After the build is complete, make sure your GDC account shows the image you just pushed. The image should be tagged with the build number on Shippable.
