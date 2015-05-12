@@ -10,7 +10,7 @@ page_keywords: shippable, Docker, Container
 
 Shippable is the world's only CI/CD platform built natively on Docker.
 All builds are run on Docker containers and this gives us a unique
-ability to support advanced docker workflows. We're constantly adding to
+ability to support advanced Docker workflows. We're constantly adding to
 our custom Docker support, so check back often!
 
 ## Connect your Docker Hub account to Shippable
@@ -40,7 +40,7 @@ during the build, you should check your creds again.
 
 ## Push to Docker Hub
 
-Shippable allows you to push an image to the docker registry after a
+Shippable allows you to push an image to the Docker registry after a
 successful build. To do this, make sure your Docker Hub icon is set to
 ON on your Organization's page on Shippable.
 
@@ -56,7 +56,7 @@ entered in the previous step.
 
 ---
 
-## Dockerbuild
+## Docker Build
 
 > **Note**
 >
@@ -64,33 +64,32 @@ entered in the previous step.
 > a dedicated host, please follow instructions
 > [here](config.md#dedicated-hosts)
 
-You can run your build in a custom docker container by building a Docker
+You can run your build in a custom Docker container by building a Docker
 image from a Dockerfile. Aside from providing a custom environment for
 your build, this image created can be pushed to your Docker Hub account,
 for later use in your deployment step.
 
-There are 2 ways to set up Docker build with Shippable - pre CI or post
-CI.
+There are 2 ways to set up Docker Build with Shippable - pre-CI or post-CI.
 
-Pre CI workflow is:
+Pre-CI workflow is:
 
 - Build the image using Dockerfile at the root of your repo
 - Pull code from GitHub/Bitbucket and test code in the container
-- Push container to docker hub
+- Push container to Docker Hub
 
-Post CI workflow is:
+Post-CI workflow is:
 
 - Pull image specified from Docker Hub (default is minv2)
 - Pull code from GitHub/Bitbucket and test in container
-- If CI passs, build container from Dockerfile at the root of the repo
+- If CI passes, build container from Dockerfile at the root of the repo
 - Push container to docker hub
 
-To use these workflows, your app must be "dockerized". Details on this
+To use these workflows, your app must be "Dockerized". Details on this
 can be found in Docker's official documentation [Docker's official
 documentation](https://docs.dockerhub.com). You can also look at our
 [Docker build sample app](https://github.com/cadbot/dockerized-nodejs).
 
-### Pre CI Dockerbuild
+### Pre-CI Dockerbuild
 
 - Make sure your Shippable org is connected to your Docker Hub account
 - Enable the repository on Shippable
@@ -106,7 +105,7 @@ documentation](https://docs.dockerhub.com). You can also look at our
   the image you just pushed. The image should be tagged with the build
   number on Shippable.
 
-### Post CI Dockerbuild
+### Post-CI Dockerbuild
 
 - Make sure your Shippable org is connected to your Docker Hub account
 - Enable the repository on Shippable
@@ -129,7 +128,7 @@ documentation](https://docs.dockerhub.com). You can also look at our
 
 ### Copying artifacts to prod image
 
-If you are following the post-CI Dockerbuild workflow and want to copy
+If you are following the post-CI Docker Build workflow and want to copy
 some build artifacts to your prod image, you should:
 
 - Create a shippable/buildoutput directory in your shippable.yml
