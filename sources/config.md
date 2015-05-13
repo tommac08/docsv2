@@ -2,7 +2,7 @@ page_title: Shippable Configuration
 page_description: Complete guide to how Shippable is setup
 page_keywords: shippable, signup, login, registration
 
-# A Bit Deeper
+# Advanced concepts
 
 Build Minions and Build Configuration are two things that you should
 care the most about when using Shippable. The sections below talk about
@@ -36,66 +36,6 @@ root of your code repository.
 
 (Coming soon) Our Windows minions are based on AWS AMI for Windows 2012.
 
-### Common tools
-
-A set of common tools are available on all minions. The following is a
-list of available tools -
-
--   Latest release of Git repository
--   apt installer
--   Networking tools
-    -   curl
-    -   wget
-    -   OpenSSL
--   At least 1 version of (check out the language documentation for
-    specific versions)
-    -   Ruby
-    -   Node
-    -   Python
-    -   OpenJDK
-    -   PHP
-    -   Go
-    -   Clojure
--   Services
-    -   MySQL
-    -   Postgre
-    -   SQLite
-    -   MongoDB
-    -   Redis
-    -   ElasticSearch
-    -   Selenium Server
-    -   Neo4j
-    -   Cassandra
-    -   CouchDB
-    -   RethinkDB
--   Headless browser testing tools
-    -   xfvb
-    -   PhantomJS
--   Libraries
-    -   ImageMagik
-    -   OpenSSL
--   JDK Versions
-    -   Oracle JDK 7u6 (oraclejdk7)
-    -   OpenJDK 7 (alias: openjdk7)
-    -   OpenJDK 6 (openjdk6)
-    -   Oracle JDK 8 EA (oraclejdk8)
--   Build Tools
-    -   Maven 3
-    -   Gradle 1.9
-    -   Make
-    -   SBT 0.12.1
--   Preinstalled PIP Packages
-    -   mock
-    -   nosetests
-    -   py.test
--   Gems
-    -   Bundler
-    -   Rake
--   Addons
-    -   Firefox
-    -   Custom hostname
-    -   PostgreSQL
-
 * * * * *
 
 ## Pull requests
@@ -111,7 +51,7 @@ Request tab and then click on the **Build this Pull Request** button.
 
 * * * * *
 
-### Connecting your GitHub and Bitbucket accounts
+## Connecting your GitHub and Bitbucket accounts
 
 If you want to use Shippable to build both GitHub and Bitbucket
 repositories, you can connect the two accounts in order to get a
@@ -156,6 +96,15 @@ plans.
 
 * * * * *
 
+## Build badge
+
+Badges will display the status of your default branch. You can find the
+build badges on the project's page. Click on the **Badge** button and
+copy the markdown to your README file to display the status of most
+recent build on your Github or Bitbucket repo page.
+
+* * * * *
+
 ## Build termination
 
 Build will be forcefully terminated in the following scenarios:
@@ -185,7 +134,7 @@ webhook build will not be executed.
 
 * * * * *
 
-### Using Shippable with Gitlab or other types of source control
+## Using Shippable with Gitlab or other types of source control
 
 At the moment, Shippable supports repositories hosted either on GitHub
 or Bitbucket. However, your development setup may involve using a
@@ -432,15 +381,6 @@ means that the bookmarks are invisible to 'central' repository that has
 the hook in place (and sends the changes to Git). The only solution here
 is to clone (i.e. fork) Mercurial repositories and keep separate Git
 mirrors for them, instead of creating branches.
-
-* * * * *
-
-## Build badge
-
-Badges will display the status of your default branch. You can find the
-build badges on the project's page. Click on the **Badge** button and
-copy the markdown to your README file to display the status of most
-recent build on your Github or Bitbucket repo page.
 
 * * * * *
 

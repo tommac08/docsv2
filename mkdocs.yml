@@ -9,10 +9,13 @@ theme_dir: theme/shippable
 # Pages
 pages:
   - [index.md, Getting Started, Overview]
-  - [start.md, Getting Started, Getting Started]
+  - [start.md, Getting Started, Running your first build]
+  - [config.md, Getting Started, Important concepts]
 
-  - [yml.md, Configuration, Configuring Your YML]
-  - [config.md, Configuration, A Bit Deeper]
+  - [yml_overview.md, Configuration, Config overview]
+  - [yml_reference.md, Configuration, YML reference]
+  - [languages/index.md, Configuration, Language help]
+  - [languages/images.md, Configuration, Build images]
 
   - [deployment/index.md, Deployment, Continuous Deployment]
   - [deployment/heroku.md, Deployment, Heroku]
@@ -27,17 +30,6 @@ pages:
   - [gcr.md, Docker, Google Container Registry]
 
   - [api.md, API]
-
-  - [languages/index.md, Languages, Languages Specific Help]
-  - [languages/images.md, Languages, Language Specific Images]
-  - [languages/clojure.md, Languages, Clojure]
-  - [languages/go.md, Languages, Go]
-  - [languages/java.md, Languages, Java]
-  - [languages/nodejs.md, Languages, Nodejs]
-  - [languages/php.md, Languages, PHP]
-  - [languages/python.md, Languages, Python]
-  - [languages/ruby.md, Languages, Ruby]
-  - [languages/scala.md, Languages, Scala]
 
   - [glossary.md, Glossary]
 

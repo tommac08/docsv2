@@ -1,12 +1,12 @@
-page_title: Language_specific_images
+page_title: Build_images
 page_description: A brief description about how to use language specific docker images
 page_keywords: custom images, dedicated hosts, shippable images, language specific docker images
 
-# Language Specific Images
+# Build images
 
 Our default image, minv2, comes installed with popular versions of all
 supported languages, tools and services. This is the image that is used
-if nothing is specified in your shippable.yml with a **build_image**
+for your builds if nothing is specified in your shippable.yml with a **build_image**
 tag.
 
 However, you might prefer starting with a small image that only has
