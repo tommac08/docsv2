@@ -2,16 +2,9 @@ page_title: Custom Containers with Docker Build
 page_description: Running minions in a Docker container defined by a Dockerfile
 page_keywords: shippable, Docker, Container
 
-# Docker Registries
+# Docker Hub
 
-> **Note**
->
-> Docker Build Support is with dedicated hosts only!
-
-Shippable is the world's only CI/CD platform built natively on Docker.
-All builds are run on Docker containers and this gives us a unique
-ability to support advanced Docker workflows. We're constantly adding to
-our custom Docker support, so check back often!
+[Docker Hub](https://hub.docker.com/account/signup/) is a hosted registry that provides public and private Docker image storage.
 
 ## Connect your Docker Hub account to Shippable
 
@@ -36,7 +29,20 @@ correct at this point. The 'Docker Hub' icon will turn green after you
 save your creds, but if you run into problems with login to Docker Hub
 during the build, you should check your creds again.
 
----
+-------
+
+## Pull images from Docker Hub
+
+Shippable allows you to pull a public or private image from Docker Hub to run your builds on. To do this -
+
+- On the repo page on Shippable, go to the 'Settings' tab
+- If you want to pull a public image from Shippable's list of images, click on the image list dropdown, select your image, and save settings
+- If you want to pull a public image, enter the following information and save settings -
+    - Pull image from : docker_hub_username/image_name
+
+The username above should be the same as the Docker Hub credentials you entered while connecting Docker Hub to Shippable.
+
+-------
 
 ## Push to Docker Hub
 
@@ -52,7 +58,7 @@ commit_container: username/sample_project
 ```
 
 The username above should be the same as the Docker Hub credentials you
-entered in the previous step.
+entered while connecting Docker Hub to Shippable.
 
 ---
 
