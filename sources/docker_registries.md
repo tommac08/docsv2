@@ -17,7 +17,7 @@ We're always adding support for additional registries, so check back often or le
 The following is a matrix of supported and unsupported scenarios for our image registry integration feature -
 
 | Pull from                       | Push to                     | Support                  |
-| ------------------------------- |:---------------------------:| ------------------------ |
+| --------------------------------- |---------------------------------| ------------------------ |
 | public image on Docker Hub      | private image in Docker Hub | Supported with all plans |
 | public image on Docker Hub      | private image in GCR        | Supported with all plans |
 | private image from Docker Hub   | private image in Docker Hub | Requires Startup plan with dedicated hosts |
