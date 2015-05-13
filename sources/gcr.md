@@ -77,6 +77,8 @@ To enable GCR integration for the repository for which you want to push to GCR -
     - Push Build : Yes
     - Push image to : gcr.io/gcr_project_id/image_name
 
+*Note* - Pushing to GCR needs a credit card to be associated with your Google Cloud Platform account. If you do not have that configured in your [Google Dev Console](https://console.developers.google.com), the push will fail since GCR will reject it. 
+
 -------
 
 ## Build image from Dockerfile
