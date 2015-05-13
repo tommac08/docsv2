@@ -51,6 +51,17 @@ $(document).ready(function() {
     s.src = jquery_cookie_plugin_path;
     $("body").append(s);
 
+    //Clickable navbar
+    function update_dropdown_behaviour() {
+        if ($(window).width() >= 768) {
+            $('#navbar .dropdown-toggle').addClass('disabled');
+        } else {
+            $('#navbar .dropdown-toggle').removeClass('disabled');
+        }
+    };
+    $(window).resize(update_dropdown_behaviour);
+    update_dropdown_behaviour();
+
     //Sticky tocbar
     if ($('#sidebar .tocbar').height() + 50 < $(window).height()) {
         $('#sidebar .tocbar').affix({ offset: { top: 200 } });

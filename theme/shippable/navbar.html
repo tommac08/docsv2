@@ -17,7 +17,7 @@
         {% if section.children %}
         <li class="dropdown{% if section.active %} active{% endif %}">
           {% for first_item in section.children[:1] %}
-          <a href="/{{ first_item.url }}" class="dropdown-toggle disabled" data-toggle="dropdown">{{ section.title }} <b class="caret"></b></a>
+          <a href="/{{ first_item.url }}" class="dropdown-toggle" data-toggle="dropdown">{{ section.title }} <b class="caret"></b></a>
           {% endfor %}
           <ul class="dropdown-menu">
             {% for section in section.children %}
