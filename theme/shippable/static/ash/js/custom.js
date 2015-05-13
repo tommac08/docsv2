@@ -64,8 +64,10 @@ $(document).ready(function() {
 
     //Sticky tocbar
     if ($('#sidebar .tocbar').height() + 50 < $(window).height()) {
+        var set_tocbar_width = function() {
+            $('#sidebar .tocbar').width($('#sidebar').width());
+        };
         $('#sidebar .tocbar').affix({ offset: { top: 200 } });
-        function set_tocbar_width() { $('#sidebar .tocbar').width($('#sidebar').width()); }
         $(window).resize(set_tocbar_width);
         set_tocbar_width();
     }
