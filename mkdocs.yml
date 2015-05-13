@@ -26,6 +26,7 @@ pages:
   - [deployment/digitalocean.md, Deployment, DigitalOcean]
   - [deployment/codedeploy.md, Deployment, AWS CodeDeploy]
 
+  - [docker_registries.md, Docker, Overview]
   - [docker.md, Docker, Docker Hub]
   - [gcr.md, Docker, Google Container Registry]
 
