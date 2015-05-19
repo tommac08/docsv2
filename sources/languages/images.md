@@ -18,9 +18,9 @@ file to install these based on the project requirements. You can then
 enable caching to make sure your pre-requisites are not installed for
 each build.
 
-Build images are available on Docker Hub at
-<https://registry.hub.docker.com/repos/shippableimages/>. Dockerfiles
-for these images are at <https://github.com/shippableImages>
+Our build images are available on Docker Hub in the [shippableImages account]
+(https://registry.hub.docker.com/repos/shippableimages/) . Dockerfiles
+for these images are in our [GitHub repository](https://github.com/shippableImages) .
 
 The syntax to use language specific images is:
 
