@@ -363,7 +363,7 @@ script:
 ```
 
 Examples for other languages can be found in our
-Code Samples \<samplesref\> .
+[Code Samples](languages/).
 
 ### Code Coverage
 

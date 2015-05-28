@@ -83,7 +83,7 @@ attempt to 'guess' at the other settings and build your project.
 However, in most cases, you will need to specify additional
 configuration in the yml.
 
-**Complete documentation of YML is available** HERE \<ymlconfig\>.
+**Complete documentation of YML is available** [HERE](yml_reference/).
 
 ---
 
@@ -91,7 +91,7 @@ configuration in the yml.
 
 To use Shippable's test visualization feature, your code coverage output
 needs to be in cobertura xml format, and test results should be in junit
-format. More details can be found in our Code Samples \<samplesref\>.
+format. More details can be found in our [Code Samples](languages/).
 This is an optional feature.
 
 ---
