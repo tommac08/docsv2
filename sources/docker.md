@@ -10,7 +10,7 @@ Shippable allows you to interact with Docker Hub in any part of your build workf
 
  1. Connect your Docker Hub account to your Shippable Account
  2. Add the Docker Hub Integration to your project
- 3. Update your Project Settings to pull from or push to the specific image
+ 3. Update your Project Settings to pull from or push to Docker Hub
   
 Read on for detailed instructions -
 
@@ -23,8 +23,6 @@ Read on for detailed instructions -
 - Enter an Integration name, which will be used to refer to this integration on Shippable
 - Enter your credentials 
 - Click on `Save`
-
-![screen shot 2015-05-28 at 10 24 56 am](https://cloud.githubusercontent.com/assets/9526532/7866524/f1c11748-0524-11e5-95ea-b5d3fc5b30a6.png)
 
 Once the Docker Hub Integration is created at an Account level, you are ready to configure your project to pull from or push images to Docker Hub. 
 
