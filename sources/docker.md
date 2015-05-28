@@ -6,59 +6,59 @@ page_keywords: shippable, Docker, Container
 
 [Docker Hub](https://hub.docker.com/account/signup/) is a hosted registry that provides public and private Docker image storage.
 
-## Connect your Docker Hub account to Shippable
+Shippable allows you to interact with Docker Hub in any part of your build workflow. You can pull custom images from your Docker Hub repos or push images to Docker Hub. This is a 3-step process.
 
-If you want to interact with Docker Hub in any part of your build
-workflow, you need to connect your Docker Hub account to Shippable. This
-is a requirement for pulling custom images from your Docker Hub repos or
-pushing images to Docker Hub.
+ 1. Connect your Docker Hub account to your Shippable Account
+ 2. Add the Docker Hub Integration to your project
+ 3. Update your Project Settings to pull from or push to the specific image
+  
+Read on for detailed instructions -
 
-You can set up Docker Hub integration on a per-Org basis.
+### 1. Connect your Docker Hub account to Shippable
 
-1.  Go to your Organization's page on Shippable. You can find your
-    Organization name at the right side of your Dashboard and click on
-    it to go to the Org page.
-2.  If the 'Docker Hub' icon at the top right of your Org page is set to
-    ON, you have already connected your Docker Hub account to your Org.
-    If it is set to OFF, click on it, enter your Docker Hub credentials,
-    and click on Save.
+- Login to Shippable
+- Click on `Settings` in the top navbar
+- On the Account Settings page, click on `Integrations`
+- From the options presented, click on `Docker Hub Credentials`
+- Enter an Integration name, which will be used to refer to this integration on Shippable
+- Enter your credentials 
+- Click on `Save`
 
-We do not call the Docker Hub API until we need to do so during an
-actual build, so we have no way of knowing if your credentials are
-correct at this point. The 'Docker Hub' icon will turn green after you
-save your creds, but if you run into problems with login to Docker Hub
-during the build, you should check your creds again.
+![screen shot 2015-05-28 at 10 24 56 am](https://cloud.githubusercontent.com/assets/9526532/7866524/f1c11748-0524-11e5-95ea-b5d3fc5b30a6.png)
+
+Once the Docker Hub Integration is created at an Account level, you are ready to configure your project to pull from or push images to Docker Hub. 
 
 -------
 
-## Pull images from Docker Hub
+### 2. Add Docker Hub Integration to your project
 
-Shippable allows you to pull a public or private image from Docker Hub to run your builds on. To do this -
+- Go to your repository page on Shippable
+- Click on the drop down on the right panel called `Integrations`
+- Choose the appropriate Docker Hub Integration from the dropdown. If you don't see any, please follow the instructions in the previous section to Connect a Docker Hub Account to your Shippable Account.
 
-- On the repo page on Shippable, go to the 'Settings' tab
-- If you want to pull a public image from Shippable's list of images, click on the image list dropdown, select your image, and save settings
-- If you want to pull a public image, enter the following information and save settings -
+---------
+
+### 3a. Pull images from Docker Hub
+
+- On the repository page on Shippable, go to the 'Settings' tab
+- Choose the following to pull an image from Docker Hub -
     - Pull image from : docker_hub_username/image_name
+- You can also pull a public image from Shippable's list of images from the image list dropdown
+- Click on `Save`
 
 The username above should be the same as the Docker Hub credentials you entered while connecting Docker Hub to Shippable.
 
 -------
 
-## Push to Docker Hub
+### 3b. Push images to Docker Hub
 
-Shippable allows you to push an image to the Docker registry after a
-successful build. To do this, make sure your Docker Hub icon is set to
-ON on your Organization's page on Shippable.
+- On the repository page, go to 'Settings'.
+- Choose the following to push to Docker Hub -
+    - Push Build : Yes
+    - Push image to : docker_hub_username/image_name
+- Click on `Save`
 
-The following configuration in your shippable.yml will push the image to
-Docker Hub after the build is successful.
-
-```bash
-commit_container: username/sample_project
-```
-
-The username above should be the same as the Docker Hub credentials you
-entered while connecting Docker Hub to Shippable.
+The username above should be the same as the Docker Hub credentials you entered while connecting Docker Hub to Shippable.
 
 ---
 
