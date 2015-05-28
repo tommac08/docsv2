@@ -415,20 +415,4 @@ file with the path to your docker image.
 build_image: <docker_hub_username>/<image_name>
 ```
 
-You can also specify docker run options like **privileged** and
-**network** in your yml file. The following network modes are supported:
 
--   bridge - ( default) connect the container to the bridge
--   host - use the host's network stack inside the container
-
-Privileged is set to false by default. If you want to access all devices
-on the host, then you need to enable it using **privileged: true** tag
-in your yml file. Configure your yml file as shown below to use host's
-network mode.
-
-```python
-build_image:
-  name: <docker_hub_username>/<image_name>
-  net: host
-  privileged: true
-```
