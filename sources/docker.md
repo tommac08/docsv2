@@ -54,6 +54,7 @@ The username above should be the same as the Docker Hub credentials you entered 
 - Choose the following to push to Docker Hub -
     - Push Build : Yes
     - Push image to : docker_hub_username/image_name
+    - Push image tag : latest [*Optional field. We use build numbers as tags by default. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*]
 - Click on `Save`
 
 The username above should be the same as the Docker Hub credentials you entered while connecting Docker Hub to Shippable.
@@ -103,11 +104,12 @@ documentation](https://docs.dockerhub.com). You can also look at our
     - Custom image name : (docker hub username)/(image name)
     - Source code path : (source code path for image you want to build)
     - Push to Docker Hub : Check
+    - Push Image tag : (custom_tag|default:build_number)
 - Make sure the Dockerfile for the image you want to build is at the root of your repo
 - Trigger a manual or webhook build
 - After the build is complete, make sure your Docker Hub account has
-  the image you just pushed. The image should be tagged with the build
-  number on Shippable.
+  the image you just pushed. The image should be tagged with the tag you set up in `settings` or the build
+  number on Shippable
 
 ### Post-CI Dockerbuild
 
@@ -122,12 +124,13 @@ documentation](https://docs.dockerhub.com). You can also look at our
     - Docker build when finished : Check
     - Image to pull: Specify image you want to run tests on, default
       is shippable/minv2
-    -  Push to Docker Hub : Check
+    - Push to Docker Hub : Check
+    - Push Image tag : (custom_tag|default:build_number)
 - Make sure the Dockerfile for the image you want to build is at the
   root of your repo
 - Trigger a manual or webhook build
 - After the build is complete, make sure your Docker Hub account has
-  the right image. The image should be tagged with the build number on
+  the right image. The image should be tagged with the tag you set up in `settings` or the build number on
   Shippable.
 
 ### Copying artifacts to prod image
