@@ -54,7 +54,7 @@ The username above should be the same as the Docker Hub credentials you entered 
 - Choose the following to push to Docker Hub -
     - Push Build : Yes
     - Push image to : docker_hub_username/image_name
-    - Push image tag : latest [*Optional field. We use build numbers as tags by default. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*]
+    - Push image tag : (custom_tag|default:build_number) [*Optional field. You can set the custom_tag to `latest` here. We use build numbers as tags by default. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*]
 - Click on `Save`
 
 The username above should be the same as the Docker Hub credentials you entered while connecting Docker Hub to Shippable.
