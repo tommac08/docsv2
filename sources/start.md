@@ -83,7 +83,7 @@ attempt to 'guess' at the other settings and build your project.
 However, in most cases, you will need to specify additional
 configuration in the yml.
 
-**Complete documentation of YML is available** [HERE](yml_reference/).
+**Complete documentation of YML is available** [HERE](yml_overview/).
 
 ---
 
