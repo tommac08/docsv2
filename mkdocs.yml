@@ -8,11 +8,16 @@ theme_dir: theme/shippable
 
 # Pages
 pages:
-  - [index.md, Getting Started, Overview]
-  - [start.md, Getting Started, Running your first build]
-  - [config.md, Getting Started, Important concepts]
 
-  - [yml_overview.md, Configuration, Config overview]
+  - [index.md, About, What is Shippable?]
+  - [supported_lang.md, About, Supported Languages and Tools]
+
+  - [quick_start.md, Getting Started, Quick Start Scenarios]
+  - [start.md, Getting Started, Running your first build]
+  - [formations.md, Getting Started, Formation basics]
+  - [config.md, Getting Started, Advanced concepts]
+
+  - [yml_overview.md, Configuration, YML overview]
   - [yml_reference.md, Configuration, YML reference]
   - [languages/index.md, Configuration, Language help]
   - [languages/images.md, Configuration, Build images]
