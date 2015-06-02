@@ -34,8 +34,6 @@ point for your minion. Minions can be further customized by using the
 `before_install` and `install` tags in `shippable.yml` that is in the
 root of your code repository.
 
-(Coming soon) Our Windows minions are based on AWS AMI for Windows 2012.
-
 * * * * *
 
 ## Pull requests
@@ -109,16 +107,11 @@ recent build on your Github or Bitbucket repo page.
 
 Build will be forcefully terminated in the following scenarios:
 
--   If a command hangs for a long time or there hasn't been any log
-    output
--   If the build is still executing after 60 minutes
+-   If there has not been any log output or a command hangs for 10 minutes 
+-   If the build is still running after 60 minutes for Free Plans or 120 minutes for Paid Plans
 
-and the status of the build will be shown as **timeout**.
+When a build is forcefully terminated, the build status will indicate **timeout**.
 
-> **Note**
->
-> Build termination time depends on the pricing plan. If it is a
-> **Startup** plan, then the build will be terminated after 90 minutes.
 
 * * * * *
 
