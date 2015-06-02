@@ -375,37 +375,3 @@ the hook in place (and sends the changes to Git). The only solution here
 is to clone (i.e. fork) Mercurial repositories and keep separate Git
 mirrors for them, instead of creating branches.
 
-* * * * *
-
-## Dedicated hosts
-
-Shippable allows you to run builds using your own host machine. Build
-orchestration still happens through the multi-tenant service, but your
-builds are routed to your own hosts. This gives you complete control on
-your build system and also keeps your code on your machines. Dedicated
-hosts can be in the cloud or on premise.
-
-Another main advantage of dedicated hosts is the ability to run
-Dockerbuild or pull private custom images from Docker Hub for your
-builds.
-
-The minimum requirements for a host are -
-
--   64 bit OS, Ubuntu 12.04 or 14.04
--   30GB HDD
--   2GB RAM
-
-There is no CPU constraint, but builds will run slower on a slower CPU.
-
-The easiest way to get started is to provision a [\$20 DO
-droplet](https://www.digitalocean.com/pricing/) , follow instructions
-[here](http://blog.shippable.com/dedicated-hosts-) .
-
-You should then update the **build\_image** tag in your shippable.yml
-file with the path to your docker image.
-
-```python
-build_image: <docker_hub_username>/<image_name>
-```
-
-
