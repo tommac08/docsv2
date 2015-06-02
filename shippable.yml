@@ -11,13 +11,14 @@ branches:
 env:
   global:
     - AWS_S3_LOCAL_PATH='site'
-    - AWS_S3_BUCKET='s3://docs.shippable.com'
+    - AWS_S3_BUCKET='s3://shippabledocslb'
     - AWS_S3_REGION='us-west-2'
     # AWS_ACCESS_KEY_ID
     # AWS_SECRET_ACCESS_KEY
     #- secure: hhOsPQ4Uokl/xnHf5Gjs/kab3XX3+KGkj6NTLUsqcrFrT8inGP1KlPeKmeCFtxsJhBaqteBexXBx9op0SP4255IRcLrtBlqSJ1yUnQcy5lMQ846rOu/k80i9PZ9cndULssPHNNXWZOJ+seB7v3F9za2DBMrY+3sHqhgp/TcyZnp2EeYJw3LZgasz5DHMeBVCdUPflRv2mu7tzb0kY1pOivc8KWRDrD7GCS/9N4P9DttZWjncoLqt9bby+TUUOpRJypnqNirl3qHSCHb/FomWL5pZ+m56W5RL6xPWYktH0MNurOlT759JJGCg0P9+ycUK+5RhTvSqmhWZz4RmLMPepg==
-    - secure: yzuPV+wKjaUgqNbRyEC9yqHTIdYT9/8SuiXn4fQJgp6v7sGNS02BRwk9EmT7sz0eWO6iK3ES9Su8Mq7beQogbsa3HbB1WQR/zcUw1dtA278PrfmnyedOVWOPXXxONm/LhwfwECXEAPdy6uqHSlv2JY4dCF65FQqr014th1nK3kP79ae2yuX3NelMBygiimSNsJcXq/EmXgQ5cb5LpNCloRCW6a4FywflXxeWq+GaJwWOi/8sjckhKdgmz5U3C++FdzUx6cVzfYbJipAqI5xhxE5ZxkS9h3lpssowXdhyBXCIVVQTrRwBGS86TOJvF8KKBleKSGzh4op3TtX0Kppj7A==
-
+    #- secure: yzuPV+wKjaUgqNbRyEC9yqHTIdYT9/8SuiXn4fQJgp6v7sGNS02BRwk9EmT7sz0eWO6iK3ES9Su8Mq7beQogbsa3HbB1WQR/zcUw1dtA278PrfmnyedOVWOPXXxONm/LhwfwECXEAPdy6uqHSlv2JY4dCF65FQqr014th1nK3kP79ae2yuX3NelMBygiimSNsJcXq/EmXgQ5cb5LpNCloRCW6a4FywflXxeWq+GaJwWOi/8sjckhKdgmz5U3C++FdzUx6cVzfYbJipAqI5xhxE5ZxkS9h3lpssowXdhyBXCIVVQTrRwBGS86TOJvF8KKBleKSGzh4op3TtX0Kppj7A==
+     - secure: QbuhMLpv0FlUCMcLC3D5P2opNtxo+rC3iLkj4AjtLD1do1OxBMXg7lVep45V4ph1Ta4wRSgvaAxU42RXaLPBIvbzaLS6nlZIyKdgN2kd+TObzf+C6r6ECl77A31F5K4acvi4d+/FswwoXosx3murBUdNDpSba5d5Rs4aN+Nhok3C0hY9K7Q0aub+KiFmVj040QxnP9qkm5kuYuF/e0dNcAhNR78Hu/lOKIdPkRC1UZT7YTSymk8bXvQtLdKmoEccUucxJngyBxorjfUGHgc1DPuAALXnh/dWc8vCynWCCKMLm8k85ZsBnlMief33aapqZUNHTsydQWpjLnCsYNozDg==
+     
 install:
   - pip install -r requirements.txt
 
