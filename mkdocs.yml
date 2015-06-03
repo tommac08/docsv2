@@ -8,19 +8,21 @@ theme_dir: theme/shippable
 
 # Pages
 pages:
-  - [index.md, About, About Shippable]
+  - [index.md, About, Shippable]
 
-  - [quick_start.md, Getting Started, Quick Start Scenarios]
-  - [start.md, Getting Started, Running your first build]
-  - [formations.md, Getting Started, Formation basics]
-  - [config.md, Getting Started, Advanced concepts]
+  - [quick_start_build.md, Getting Started, 'Quick Start: Run your first build']
+  - [quick_start_formations.md, Getting Started, 'Quick Start: Setting up your first Formation']
 
-  - [yml_overview.md, Configuration, YML overview]
-  - [yml_reference.md, Configuration, YML reference]
-  - [languages/index.md, Configuration, Language help]
-  - [languages/images.md, Configuration, Build images]
+  - [overview_ci.md, Shippable CI, Overview]
+  - [user_guide_ci.md, Shippable CI, User Guide]
+  - [yml_reference.md, Shippable CI, YML reference]
+  - [languages/index.md, Shippable CI, Language help]
+  - [languages/images.md, Shippable CI, Build images]
 
-  - [deployment/index.md, Deployment, Continuous Deployment]
+  - [overview_formations.md, Shippable Formations, Overview]
+  - [user_guide_formations.md, Shippable Formations, User Guide]
+
+  - [deployment/index.md, Deployment, Overview]
   - [deployment/heroku.md, Deployment, Heroku]
   - [deployment/beanstalk.md, Deployment, Amazon Elastic Beanstalk]
   - [deployment/opswork.md, Deployment, AWS OpsWorks]
@@ -29,12 +31,11 @@ pages:
   - [deployment/digitalocean.md, Deployment, DigitalOcean]
   - [deployment/codedeploy.md, Deployment, AWS CodeDeploy]
 
-  - [docker_registries.md, Docker, Overview]
-  - [docker.md, Docker, Docker Hub]
-  - [gcr.md, Docker, Google Container Registry]
+  - [docker_registries.md, Registry, Overview]
+  - [docker.md, Registry, Docker Hub]
+  - [gcr.md, Registry, Google Container Registry]
 
-  - [api.md, API]
+  - [api.md, Reference, API]
+  - [shippable_samples.md, Reference, Samples]
+  - [faq.md, Reference, FAQ]
 
-  - [glossary.md, Glossary]
-
-  - [faq.md, FAQ]
