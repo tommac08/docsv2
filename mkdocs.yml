@@ -8,10 +8,9 @@ theme_dir: theme/shippable
 
 # Pages
 pages:
-  - [index.md, About, Shippable]
-
+  - [index.md, Getting Started, Shippable]
   - [quick_start_build.md, Getting Started, 'Quick Start: Run your first build']
-  - [quick_start_formations.md, Getting Started, 'Quick Start: Setting up your first Formation']
+  - [quick_start_formations.md, Getting Started, 'Quick Start: Set up your first Formation']
 
   - [overview_ci.md, Shippable CI, Overview]
   - [user_guide_ci.md, Shippable CI, User Guide]
