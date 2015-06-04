@@ -20,8 +20,8 @@ The following is a matrix of supported and unsupported scenarios for our image r
 | --------------------------------- |---------------------------------| ------------------------ |
 | public image on Docker Hub      | private image in Docker Hub | Supported with all plans |
 | public image on Docker Hub      | private image in GCR        | Supported with all plans |
-| private image from Docker Hub   | private image in Docker Hub | Requires Startup plan with dedicated hosts |
-| private image from GCR          | private image in GCR        | Requires Startup plan with dedicated hosts |
+| private image from Docker Hub   | private image in Docker Hub | Supported with all plans |
+| private image from GCR          | private image in GCR        | Supported with all plans |
 | private image from Docker Hub   | private image in GCR        | Unsupported |
 | private image from GCR          | private image in Docker Hub | Unsupported |
  
@@ -33,7 +33,7 @@ You should also check out our [sample project](https://github.com/shippableSampl
  
 ## Caching support
 
-In most cases, you can cache your images between builds by turning cache on through your shippable.yml or by configuring your project settings.
+In most cases, you can cache your images between builds by turning cache within your project settings.
 
 However, there are some exceptions where caching is not supported. Specifically, *if you are pushing images to Docker Hub or GCR, we do not recommend turning on caching*. It might still work in most cases, but there are some scenarios where caching breaks down and can cause your push to Docker Hub or GCR to fail. 
 
