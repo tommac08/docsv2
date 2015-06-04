@@ -63,12 +63,6 @@ The username above should be the same as the Docker Hub credentials you entered 
 
 ## Docker Build
 
-> **Note**
->
-> Docker Build Support is only available with dedicated hosts. To set up
-> a dedicated host, please follow instructions
-> [here](config.md#dedicated-hosts)
-
 You can run your build in a custom Docker container by building a Docker
 image from a Dockerfile. Aside from providing a custom environment for
 your build, this image created can be pushed to your Docker Hub account,
