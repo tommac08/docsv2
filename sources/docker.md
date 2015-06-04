@@ -54,7 +54,7 @@ The username above should be the same as the Docker Hub credentials you entered 
 - Choose the following to push to Docker Hub -
     - Push Build : Yes
     - Push image to : docker_hub_username/image_name
-    - Push image tag : (custom_tag|default:build_number) [*Optional field. You can set the custom_tag to `latest` here. We use build numbers as tags by default. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*]
+    - Push image tag : Click on the dropdown and choose the appropriate setting. You can choose your commitsha as your tag to keep it distinct or set the custom_tag to `latest`. By default, build numbers are used as tags. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*
 - Click on `Save`
 
 The username above should be the same as the Docker Hub credentials you entered while connecting Docker Hub to Shippable.
@@ -62,6 +62,12 @@ The username above should be the same as the Docker Hub credentials you entered 
 ---
 
 ## Docker Build
+
+> **Note**
+>
+> Docker Build Support is only available with dedicated hosts. To set up
+> a dedicated host, please follow instructions
+> [here](config.md#dedicated-hosts)
 
 You can run your build in a custom Docker container by building a Docker
 image from a Dockerfile. Aside from providing a custom environment for
@@ -98,7 +104,7 @@ documentation](https://docs.dockerhub.com). You can also look at our
     - Custom image name : (docker hub username)/(image name)
     - Source code path : (source code path for image you want to build)
     - Push to Docker Hub : Check
-    - Push Image tag : (custom_tag|default:build_number)
+    - Push image tag : Click on the dropdown and choose the appropriate setting. You can choose your commitsha as your tag to keep it distinct or set the custom_tag to `latest`. By default, build numbers are used as tags. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*
 - Make sure the Dockerfile for the image you want to build is at the root of your repo
 - Trigger a manual or webhook build
 - After the build is complete, make sure your Docker Hub account has
@@ -119,7 +125,7 @@ documentation](https://docs.dockerhub.com). You can also look at our
     - Image to pull: Specify image you want to run tests on, default
       is shippable/minv2
     - Push to Docker Hub : Check
-    - Push Image tag : (custom_tag|default:build_number)
+    - Push image tag : Click on the dropdown and choose the appropriate setting. You can choose your commitsha as your tag to keep it distinct or set the custom_tag to `latest`. By default, build numbers are used as tags. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*
 - Make sure the Dockerfile for the image you want to build is at the
   root of your repo
 - Trigger a manual or webhook build
