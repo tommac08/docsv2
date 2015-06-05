@@ -5,37 +5,26 @@ page_keywords: custom images, dedicated hosts, shippable images, language specif
 # Build images
 
 Our default image, minv2, comes installed with popular versions of all
-supported languages, tools and services. This is the image that is used
-for your builds if nothing is specified in your shippable.yml with a **build_image**
-tag.
+supported languages, tools and services. 
 
 However, you might prefer starting with a small image that only has
 versions of your language installed. To help with this, we have open
 sourced basic images for all supported languages. These images only come
 with popular versions of a language and are NOT pre-installed with any
-tools, addons or services. You will have to customize your shippable.yml
-file to install these based on the project requirements. You can then
-enable caching to make sure your pre-requisites are not installed for
-each build.
+tools, addons or services. 
 
 Our build images are available on Docker Hub in the [shippableImages account]
 (https://registry.hub.docker.com/repos/shippableimages/) . Dockerfiles
-for these images are in our [GitHub repository](https://github.com/shippableImages) .
+for these images are in our [GitHub repository](https://github.com/shippableImages).
 
-The syntax to use language specific images is:
-
-```yaml
-build_image: <docker_hub_username>/<image_name>
-```
+You can choose language specific images for your project under project settings.
+* Go to your Project page
+* Click Settings
+* Choose an appropriate image from the dropdown against `Pull Image from`
 
 As mentioned above, our language specific images do not come with any
 tools, addons, or services pre-installed. If you need pre-installed
 tools, addons or services, then you should use shippable/minv2 image.
-
-> **Note**
->
-> If you want to run builds using your own custom images, then you will
-> have to enable [Dedicated hosts](http://blog.shippable.com/dedicated-hosts-) You will need the **build_image** tag in shippable.yml file with the path of the image.
 
 The section will give you more details on specific images.
 
@@ -46,12 +35,11 @@ The section will give you more details on specific images.
 The build image available for clojure is
 [shippableimages/ubuntu1204_clojure](https://registry.hub.docker.com/u/shippableimages/ubuntu1204_clojure) ([Dockerfile](https://github.com/shippableImages/ubuntu1204_clojure/blob/master/Dockerfile))
 
-The lein version available in this image is lein2. You can use this image to run clojure builds. Configure your
-shippable.yml file as shown below to use this image.
+The lein version available in this image is lein2. You can use this image to run clojure builds. 
 
-```bash
-build_image: shippableimages/ubuntu1204_clojure
-```
+Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+
+`Pull Image from : shippableimages/ubuntu1204_clojure`
 
 A sample yml that helps you getting started with clojure image:
 
@@ -60,9 +48,6 @@ language: clojure
 
 lein:
   - lein2
-
-#specify the build_image
-build_image: shippableimages/ubuntu1204_clojure
 
 script:
   - lein test
@@ -87,9 +72,11 @@ The go versions available in these images are:
 - tip
 - release
 
-You can use these images to run go builds. Add **build_image** tag to
-your shippable.yml file and activate gvm in before_install section to
-run your build against the correct version of go.
+Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+
+`Pull Image from : shippableimages/ubuntu1204_go`
+
+Activate gvm in before_install section to run your build against the correct version of go.
 
 A sample yml that helps you getting started with go image:
 
@@ -99,9 +86,6 @@ language: go
 go:
   - 1.2
   - 1.3
-
-#specify the build_image
-build_image: shippableimages/ubuntu1204_go
 
 before_install:
   - source $HOME/.gvm/scripts/gvm;
@@ -142,9 +126,11 @@ The JDK's available in these images are:
 - oraclejdk7
 - oraclejdk8
 
-You can use these images to run java builds. Update your shippable.yml
-file with **build_image** tag and activate jdk in before_script
-section to run your build against the correct version.
+Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+
+`Pull Image from : shippableimages/ubuntu1204_java`
+
+Activate jdk in before_script section to run your build against the correct version.
 
 A sample yml that helps you getting started with java image:
 
@@ -156,9 +142,6 @@ jdk:
   - openjdk7
   - oraclejdk7
   - oraclejdk8
-
-# specify the build_image
-build_image: shippableimages/ubuntu1204_java
 
 # install maven
 before_install:
@@ -195,10 +178,12 @@ The node.js versions available in these images are:
 - 0.10
 - 0.11
 - 0.12
+ 
+Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
 
-You can use these images to run node.js builds. Add **build_image** tag
-to your shippable.yml file and activate nvm in before_install section
-to run your build against the correct version of node.js.
+`Pull Image from : shippableimages/ubuntu1204_nodejs`
+
+Activate nvm in before_install section to run your build against the correct version of node.js.
 
 A sample yml that helps you getting started with node.js image:
 
@@ -208,9 +193,6 @@ language: node_js
 node_js:
   - 0.10
   - 0.11
-
-#specify the build_image
-build_image: shippableimages/ubuntu1204_nodejs
 
 before_install:
 # Activate the required node.js version
@@ -244,9 +226,11 @@ The php versions available in these images are:
 - 5.5
 - 5.6
 
-You can use these images to run php builds. Add **build_image** tag to
-your shippable.yml file and activate the required version in
-before_install section to run your build against the correct version of
+Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+
+`Pull Image from : shippableimages/ubuntu1204_php`
+
+Activate the required version in before_install section to run your build against the correct version of
 php.
 
 A sample yml that helps you getting started with php image:
@@ -256,9 +240,6 @@ language: php
 
 php:
   - 5.3
-
-#specify the build_image
-build_image: shippableimages/ubuntu1204_php
 
 # Activate the required php version
 before_install:
@@ -288,9 +269,11 @@ The python versions available in these images are:
 - 3.3.5
 - 3.4.1
 
-You can use these images to run python builds. Add **build_image** tag
-to your shippable.yml file and activate the appropriate virtual
-envrionment in before_install section to run your build against the
+Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+
+`Pull Image from : shippableimages/ubuntu1204_python`
+
+Activate the appropriate virtual environment in before_install section to run your build against the
 correct version of python. You can use **$SHIPPABLE_PYTHON**
 environment variable to specify python versions.
 
@@ -303,8 +286,6 @@ python:
   - 2.7
   - 3.3
   - 3.4
-#specify the build_image
-build_image: shippableimages/ubuntu1204_python
 
 before_install:
 #  set up a virtualenv and activate the python version that you want to use
@@ -341,17 +322,16 @@ The ruby versions available in these images are:
 - jruby
 - ruby-head
 
-You can use these images to run ruby builds. Update your shippable.yml
-file with **build_image** tag and activate rvm in before_install or
-install section to run your build against the correct version of ruby.
+Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+
+`Pull Image from : shippableimages/ubuntu1204_ruby`
+
+Activate rvm in before_install or install section to run your build against the correct version of ruby.
 
 A sample yml that helps you getting started with ruby image:
 
 ```yaml
 language: ruby
-
-#specify the build_image
-build_image: shippableimages/ubuntu1204_ruby
 
 rvm:
   - 2.1.1
@@ -385,16 +365,14 @@ The build images available for scala:
 
 The scala version available in the image is 2.11.2
 
-You can use these images to run scala builds. Add **build_image** tag
-to your shippable.yml file and tell us what your build image is.
+Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+
+`Pull Image from : shippableimages/ubuntu1204_scala`
 
 A sample yml that helps you getting started with scala image:
 
 ```yaml
 language: scala
-
-#specify the build_image
-build_image: shippableimages/ubuntu1204_scala
 
 before_script:
   - export PATH=$PATH:$SHIPPABLE_REPO_DIR
