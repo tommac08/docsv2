@@ -13,7 +13,7 @@ pages:
   - [formations_quickstart.md, Getting Started, 'Quick Start: Set up your first Formation']
 
   - [ci_overview.md, Shippable CI, Overview]
-  - [basic_flow.md, Getting Started, Basic Build Flow]
+  - [basic_flow.md, Shippable CI, Basic Build Flow]
   - [build_config.md, Shippable CI, Build Configuration]
   - [ci_userguide.md, Shippable CI, User Guide]
   - [languages/index.md, Shippable CI, Language help]
