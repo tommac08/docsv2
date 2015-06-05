@@ -17,10 +17,11 @@ Our build images are available on Docker Hub in the [shippableImages account]
 (https://registry.hub.docker.com/repos/shippableimages/) . Dockerfiles
 for these images are in our [GitHub repository](https://github.com/shippableImages).
 
-You can choose language specific images for your project under project settings.
-* Go to your Project page
-* Click Settings
-* Choose an appropriate image from the dropdown against `Pull Image from`
+You can choose language specific images for your project under **project settings**:
+
+- Go to your Project page
+- Click on the Settings tab
+- Click on the dropdown against `Pull Image from` and choose an appropriate image
 
 As mentioned above, our language specific images do not come with any
 tools, addons, or services pre-installed. If you need pre-installed
@@ -37,7 +38,7 @@ The build image available for clojure is
 
 The lein version available in this image is lein2. You can use this image to run clojure builds. 
 
-Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+Go to your **Project Page**, click on **Settings** and choose the following image:
 
 `Pull Image from : shippableimages/ubuntu1204_clojure`
 
@@ -72,7 +73,7 @@ The go versions available in these images are:
 - tip
 - release
 
-Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+Go to your **Project Page**, click on **Settings** and choose the following image:
 
 `Pull Image from : shippableimages/ubuntu1204_go`
 
@@ -126,7 +127,7 @@ The JDK's available in these images are:
 - oraclejdk7
 - oraclejdk8
 
-Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+Go to your **Project Page**, click on **Settings** and choose the following image:
 
 `Pull Image from : shippableimages/ubuntu1204_java`
 
@@ -179,7 +180,7 @@ The node.js versions available in these images are:
 - 0.11
 - 0.12
  
-Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+Go to your **Project Page**, click on **Settings** and choose the following image:
 
 `Pull Image from : shippableimages/ubuntu1204_nodejs`
 
@@ -226,9 +227,9 @@ The php versions available in these images are:
 - 5.5
 - 5.6
 
-Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+Go to your **Project Page**, click on **Settings** and choose the following image:
 
-`Pull Image from : shippableimages/ubuntu1204_php`
+`Pull Image from: shippableimages/ubuntu1204_php`
 
 Activate the required version in before_install section to run your build against the correct version of
 php.
@@ -269,7 +270,7 @@ The python versions available in these images are:
 - 3.3.5
 - 3.4.1
 
-Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+Go to your **Project Page**, click on **Settings** and choose the following image:
 
 `Pull Image from : shippableimages/ubuntu1204_python`
 
@@ -322,7 +323,7 @@ The ruby versions available in these images are:
 - jruby
 - ruby-head
 
-Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+Go to your **Project Page**, click on **Settings** and choose the following image:
 
 `Pull Image from : shippableimages/ubuntu1204_ruby`
 
@@ -365,7 +366,7 @@ The build images available for scala:
 
 The scala version available in the image is 2.11.2
 
-Go to your Project Page, Click on Settings and Choose the following image from the Pull Image from dropdown:
+Go to your **Project Page**, click on **Settings** and choose the following image:
 
 `Pull Image from : shippableimages/ubuntu1204_scala`
 
