@@ -9,13 +9,13 @@ theme_dir: theme/shippable
 # Pages
 pages:
   - [index.md, Getting Started, About Shippable]
-  - [basic_flow.md, Getting Started, Basic Build Flow]
   - [build_quickstart.md, Getting Started, 'Quick Start: Run your first build']
   - [formations_quickstart.md, Getting Started, 'Quick Start: Set up your first Formation']
 
   - [ci_overview.md, Shippable CI, Overview]
+  - [basic_flow.md, Getting Started, Basic Build Flow]
+  - [build_config.md, Shippable CI, Build Configuration]
   - [ci_userguide.md, Shippable CI, User Guide]
-  - [yml_reference.md, Shippable CI, YML reference]
   - [languages/index.md, Shippable CI, Language help]
   - [languages/images.md, Shippable CI, Build images]
 
