@@ -2,8 +2,9 @@ page_title: Learn About What Makes Shippable Great
 page_description: Code examples, FAQs, language & platform support
 page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deployment, CI/CD, testing, automation
 
-# Formations Overview
+# Overview
 
+## Shippable Formations
 Shippable Formations allows you to manage your multi-container applications across multiple 
 environments with just a few clicks. 
 A formation is comprised of images, configuration variables and environments. Once these are set up 
@@ -20,18 +21,18 @@ number of containers is equal to the number of environments * number of containe
 
 ```Example Application goes here```
 
-# Formation Environment
+## Formation Environment
 
 A formation environment is a containerized replica of your production environment. You can manage 
 the number of replicas in your setting. They consist of one or more instances of formation templates. 
 Only one version of a formation template is active in an environment at any point. 
 
-# Formation Deploy Template 
+## Formation Deploy Template 
 
 Formation Deploy Template is the combination of images and configuration that forms the **service**, an instance of which is deployed
 to an environment 
 
-# Formation Deploy State:
+## Formation Deploy State
 
 Everytime a template is deployed to an environment, the state is stored and we refer to this as **Deploy State**. The history of Deploy States 
 that are stored enables you to look at historical deployments or rollback to a previous state.
