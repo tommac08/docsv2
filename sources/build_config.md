@@ -4,12 +4,6 @@ page_keywords: getting started, questions, documentation, shippable, config, yml
 
 # Build Configuration
 
-Build Configuration happens from two different places:
-- shippable.yml in the root of your repo
-- settings in your project page on the shippable UI
-
-## Project Settings
-
 ### Caching 
 
 Shippable does not cache dependencies between builds. Each build will
@@ -18,7 +12,7 @@ minion will be deleted. However, we also understand that installing
 dependencies for each build will take more time and it affects your
 build speed . Hence we have a caching feature that helps you to cache.
 
-In your project settings, set `Cache Container` to ON. Don't forget to hit `Save`.
+In your **Project Settings**, set `Cache Container` to ON. Don't forget to hit `Save`.
 
 Before the build, we will check for the **cache** flag and if it
 is ON, the entire minion will be cached if the build succeeds and the
@@ -34,7 +28,6 @@ Caching is done per build host, so it might take a few builds for all
 our hosts to get the cached minion. Additional details on caching can be
 found on our [blog](http://blog.shippable.com/container-caching) .
 
-# YML Reference
 ## command collections
  `shippable.yml` supports collections under each
 tag. This is nothing more than YML functionality and we will run it one
