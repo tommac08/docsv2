@@ -9,7 +9,7 @@ questions.... hope this helps!
 
 ## How do I update my Shippable plan?
 - Login to Shippable
-- Click on the Subscription you want to upgrade
+- Click on the subscription you want to upgrade from the `Organizations` list on your right
 - You will see a `Plan and Billing` icon on the top right of the Subscriptions Page. Click on the icon to see and/or update your plan
 
 ## Why can't I see some of my repositories in my Shippable account?
