@@ -4,7 +4,7 @@ page_keywords: getting started, questions, documentation, shippable, config, yml
 
 # Build Configuration
 
-### Caching 
+## Caching 
 
 Shippable does not cache dependencies between builds. Each build will
 run on a fresh minion and as soon as the build finishes execution, the
@@ -28,7 +28,7 @@ Caching is done per build host, so it might take a few builds for all
 our hosts to get the cached minion. Additional details on caching can be
 found on our [blog](http://blog.shippable.com/container-caching) .
 
-## command collections
+## Command collections
  `shippable.yml` supports collections under each
 tag. This is nothing more than YML functionality and we will run it one
 command at a time.
@@ -45,7 +45,7 @@ and then run `./minions/do_something-else.sh`. The only requirement is
 that all of these operations return a `0` exit code. Else the build will
 fail.
 
-### Retrying npm install 
+## Retrying npm install 
 
 Sometimes npm install may fail due to the intermittent network issues
 and affects your build execution. To avoid this, **shippable_retry**
@@ -64,7 +64,7 @@ before_install:
     - shippable_retry sudo apt-get install something
 ```
 
-### Git submodules
+## Git submodules
 
 Shippable supports git submodules. This is a cool functionality of
 breaking your projects down into manageable chunks. We automatically
@@ -94,7 +94,7 @@ git:
  submodules: false
 ```
 
-### Environment Variables
+## Environment Variables
 
 #### Standard environment variables 
 
@@ -173,7 +173,7 @@ env:
   - FOO=bar BAR=foo
 ```
 
-**Secure environment variables**
+#### Secure environment variables
 
 Shippable allows you to encrypt the environment variable definitions and
 keep your configurations private using **secure** tag. Go to the org
@@ -230,6 +230,7 @@ env:
     - secure: <encrypted output>
 ```
 
+
 > **Note**
 >
 > Due to the security risk of exposing your secure variables, we do not
@@ -239,7 +240,8 @@ env:
 > secured variables are also not displayed in the script tab for
 > security reasons.
 
-### Include/Exclude Branches
+
+## Include/Exclude Branches
 
 By default, Shippable builds all branches for enabled repositories as
 long as they have a shippable.yml at the root.
@@ -272,7 +274,7 @@ branches:
     - prod
 ```
 
-### Build matrix
+## Build matrix
 
 This is another powerful feature that Shippable has to offer. You can
 trigger multiple different test passes for a single code push. You might
@@ -302,7 +304,7 @@ env:
 The above example will fire 36 different builds for each push. Whoa!
 Need more minions?
 
-#### Exclude a version
+### Exclude a version
 
 It is also possible to exclude a specific version using exclude tag.
 Configure your yml file as shown below to exclude a specific version.
@@ -313,7 +315,7 @@ matrix:
     - rvm: 1.9.2
 ```
 
-#### Include a version
+### Include a version
 
 You can also configure your yml file to include entries into the matrix
 with include tag.
@@ -326,7 +328,7 @@ matrix:
       env: ISOLATED=false
 ```
 
-### Allow-failures
+## Allow-failures
 
 Allowed failures are items in your build matrix that are allowed to fail
 without causing the entire build to be shown as failed. You can define
