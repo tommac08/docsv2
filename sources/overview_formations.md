@@ -4,107 +4,31 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 
 # Overview
 
-## What is Shippable?
+Shippable Formations allows you to manage your multi-container applications across multiple 
+environments with just a few clicks. 
+A formation is comprised of images, configuration variables and environments. Once these are set up 
+in your formation, you will be ready to do one-click deployments and rollbacks across your environments.
 
-Shippable is a SaaS platform that lets you easily add Continuous
-Integration/Deployment to your Github and Bitbucket(Git) repositories.
-It is lightweight, super simple to setup, and runs your builds and tests
-faster than any other service. After building and testing your code, you
-can deploy it to any PaaS provider like Heroku & OpenShift and also to
-VMs, bare metal, OpenStack clusters, or any major infrastructure
-provider.
+How do you create a Shippable Formation?
+Choose Formation as the Subscription Type when you sign up (sign up link). 
+At this point, you will need to choose the number of containers you want to buy. At a minimum, 
+number of containers is equal to the number of environments * number of containers per environment.
 
-Shippable uses **Build Minions** - i.e. docker based containers - to run
-your workloads. Docker is the fastest growing linux container solution
-and this will light up some cool scenarios like portability and
-versioning in the coming weeks.
+<<Example Application goes here>>
 
-Common use cases for Shippable include:
+## Formation Environment
 
--  Automating the packaging and deployment of web applications
--  Automated testing and continuous integration/deployment
+A formation environment is a containerized replica of your production environment. You can manage 
+the number of replicas in your setting. They consist of one or more instances of formation templates. 
+Only one version of a formation template is active in an environment at any point. 
 
-> **Note**
->
-> Shippable is 100% free to use, even for private
-> repositories.
+## Formation Deploy Template 
 
-## What is supported?
+Formation Deploy Template is the combination of images and configuration that forms the **service**, an instance of which is deployed
+to an environment 
 
-### Languages
+## Formation Deploy State:
 
-We currently support the following programming languages:
+Everytime a template is deployed to an environment, the state is stored and we refer to this as **Deploy State**. The history of Deploy States 
+that are stored enables you to look at historical deployments or rollback to a previous state.
 
--  Ruby
--  Python
--  Node.js
--  Java
--  Scala
--  PHP
--  GO
--  Clojure
-
-### Platforms
-
-Your Minions can test your repos on:
-
--  Ubuntu 12.04 LTS
--  Ubuntu 13.10
--  Ubuntu 14.04
-
-### Services
-
-We support the following services natively:
-
--  MySQL
--  Postgres
--  Elastic Search
--  Redis
--  MongoDB
--  RabbitMQ
--  Neo4j
--  Cassandra
--  RethinkDB
--  CouchDB
--  Selenium
-
-### Tools
-
-A set of common tools are available on all minions. The following is a
-list of available tools -
-
--   Latest release of Git repository
--   apt installer
--   Networking tools
-    -   curl
-    -   wget
-    -   OpenSSL
--   Headless browser testing tools
-    -   xfvb
-    -   PhantomJS
--   Libraries
-    -   ImageMagik
-    -   OpenSSL
--   JDK Versions
-    -   Oracle JDK 7u6 (oraclejdk7)
-    -   OpenJDK 7 (alias: openjdk7)
-    -   OpenJDK 6 (openjdk6)
-    -   Oracle JDK 8 EA (oraclejdk8)
--   Build Tools
-    -   Maven 3
-    -   Gradle 1.9
-    -   Make
-    -   SBT 0.12.1
--   Preinstalled PIP Packages
-    -   mock
-    -   nosetests
-    -   py.test
--   Gems
-    -   Bundler
-    -   Rake
--   Addons
-    -   Firefox
-    -   Custom hostname
-    -   PostgreSQL
-
-Enough reading! [Get Started!](start.md)
