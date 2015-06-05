@@ -4,55 +4,6 @@ page_keywords: getting started, questions, documentation, shippable, config, yml
 
 # Shippable CI User Guide
 
-## Build Configuration
-
-Your shippable.yml file tells us about your project and how to run your
-builds and tests. This file should be at the root of your repository in
-order to build the repo with Shippable. Your yml can be as minimal or as
-customized as necessary, depending on the project.
-
-To help Travis CI users quickly test our platform, we support
-.travis.yml natively, so you will not need a shippable.yml in addition.
-Most tags in your .travis.yml are supported if the corresponding feature
-is available on Shippable.
-
-At a minimum, Shippable needs to have your language and build version
-specified in the yml. We will default to the most common commands if
-commands for the other sections are not specified.
-
-The descriptions below are generic to all build environments and all
-languages. If you are looking for language specific tags, please refer
-to our [language guides](languages/index.html) for more information.
-
-## Build Flow
-
-When we receive a build trigger through a webhook or manual run, we
-execute the following steps:
-
-1.  Clone/Pull the project from Github or Bitbucket. This depends on
-    whether the minion is in pristine state or not
-2.  `cd` into the workspace
-3.  Checkout the commit that is being built
-4.  Run the `before_install` commands. This is typically used to prep
-    your minion and install/update any packages
-5.  Run `install` section. This should be used to install any project
-    specific libraries or packages
-6.  Run `before_script` commands. Create any folders and unzip files
-    that might be needed for testing. Some users also restore DBs, copy
-    environment variables, etc. here
-7.  Run the `script` commands. This runs the build and all your tests
-8.  Run either `after_success` or `after_failure` commands, depending on
-    the result of your build. after\_success can be used to deploy to
-    any supported cloud provider
-9.  Run `after_script` command
-
-Build status is determined based on the outcome of the above steps. They
-need to return an exit code of `0` to be marked as success. Everything
-else is treated as a failure.
-
-Any errors in `after_script` will not affect the status of the build.
-
-
 ## YML Sections
 
 ### build_image
