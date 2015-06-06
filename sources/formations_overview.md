@@ -6,7 +6,9 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 
 ## Shippable Formations
 Shippable Formations allows you to manage your multi-container applications across multiple 
-environments with just a few clicks. 
+environments with just a few clicks. Behind the scenes, we use Kubernetes clusters that allows us 
+to abstract anything related to managing containers or infrastructure for our users.
+
 A formation is comprised of images, configuration variables and environments. Once these are set up 
 in your formation, you will be ready to do one-click deployments and rollbacks across your environments.
 
@@ -20,6 +22,8 @@ At this point, you will need to choose the number of containers you want to buy.
 number of containers is equal to the number of environments * number of containers per environment.
 
 ```Example Application goes here```
+
+## What happens when a Shippable Formation is created?
 
 ## Formation Environment
 
