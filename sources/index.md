@@ -6,10 +6,15 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 
 ## What is Shippable?
 
-Shippable is a SaaS platform for developers and devops teams that enables frictionless development and automated 
-deployment of multi-tier applications. You can easily add Continuous Integration/Deployment to your Github or Bitbucket(Git) repositories and manage multi-container environments without writing any DevOps code or managing infrastructure. 
+Shippable is a SaaS platform for developers and devops teams that significantly reduces the time taken for code to be built, tested and deployed to production.  
 
-Shippable comprises of two products:
+Shippable comprises of two products that enables you to ship code faster - 
+
+**Shippable CI:** a platform that allows you to easily add Continuous Integration/Deployment to your Git repositories
+
+**Shippable Formations:** a platform to manage the deployment of multi container applications to Dev and Test Environments
+
+![Shippable Overview](images/shippable_overview.gif)
 
 ### Shippable CI 
 Shippable CI is our Continuous Integration and Deployment Platform
@@ -20,7 +25,6 @@ to Docker Hub, Google Container Registry or any other private registry. You
 can also deploy it to any PaaS provider like Heroku & OpenShift and also to
 VMs, bare metal, OpenStack clusters, or any major infrastructure
 provider. 
-
 
 With Shippable CI, you can:
 
