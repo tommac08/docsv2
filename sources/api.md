@@ -6,7 +6,7 @@ page_keywords: shippable, API, HTTP
 
 > **Note**
 >
-> You must be on the Startup or Custom plan to use our API
+> You must be on one of our Paid Plans to use the API 
 
 ## Overview and Purpose
 
@@ -378,7 +378,6 @@ Reponse
     "displayName": "some user",
     "login": "user"
   },
-  "requiresDedicatedHost": false,
   "builds": [
     {
       "id": "5510w323223rfwfb00e9b701",
@@ -622,7 +621,6 @@ Reponse
   committer              | object   | An object of information about the commiter
   lastAuthor             | object   | An object of information about the last author
   triggeredBy            | object   | An object of information about the triggerer
-  requiresDedicatedHost  | boolean  | Set to true if this build has features that require a dedicated host
   builds                 | list     | A list of builds that are created by this build group
   createdDate            | string   | The date the repo was created
   updatedDate            | string   | The date of the last time the repo was updated
@@ -748,16 +746,4 @@ Response
 
 Deletes the specified account
 
-#### GET /accounts/:accountId/identities
 
-A string list of identity ids associated with this account. Your account
-can have multiple identities. There will always be at least one
-identity, and that is the identity of your linked github or bitbucket
-account. Another identity your account could take is the identity of an
-organization it belongs to.
-
-Response
-
-```javascript
-["322fasf323f3gd1", "322fasf323f3gd2"]
-```
