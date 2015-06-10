@@ -9,18 +9,21 @@ theme_dir: theme/shippable
 # Pages
 pages:
   - [index.md, Getting Started, About Shippable]
+  - [sign_up.md, Getting Started, 'Quick Start: Sign up for CI or Formations']
   - [build_quickstart.md, Getting Started, 'Quick Start: Run your first build']
   - [formations_quickstart.md, Getting Started, 'Quick Start: Set up your first Formation']
 
   - [ci_overview.md, Shippable CI, Overview]
   - [basic_flow.md, Shippable CI, Basic Build Flow]
   - [build_config.md, Shippable CI, Build Configuration]
+  - [lighthouse.md, Shippable CI, Watch Images]
   - [ci_userguide.md, Shippable CI, User Guide]
   - [languages/index.md, Shippable CI, Language help]
   - [languages/images.md, Shippable CI, Build images]
 
   - [formations_overview.md, Shippable Formations, Overview]
   - [formations_userguide.md, Shippable Formations, User Guide]
+  - [formations_faq.md, Shippable Formations, Formations FAQ]
 
   - [deployment/index.md, Deployment, Overview]
   - [deployment/heroku.md, Deployment, Heroku]
@@ -36,6 +39,5 @@ pages:
   - [gcr.md, Docker, Google Container Registry]
 
   - [api.md, Reference, API]
-  - [shippable_samples.md, Reference, Samples]
   - [faq.md, Reference, FAQ]
 
