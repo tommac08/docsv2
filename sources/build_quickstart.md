@@ -4,6 +4,10 @@ page_keywords: getting started, questions, documentation, shippable
 
 # Running your first build
 
+It is super simple to run your first build on Shippable -
+
+![Run a Build](images/build_flow.gif)
+
 ## **Step 1** : Sign Up
 
 You can sign in to Shippable using a GitHub or Bitbucket account. We use
@@ -42,7 +46,7 @@ You are now ready to build and test with Shippable!
 
 To enable a repository for CI -
 
--	Click on 'Repositories' on the right sidebar of your dashboard. 
+-	Click on 'Repositories' on the right sidebar of your dashboard.
 -	Find or search for your repository in the list, and click the **Enable** button.
 
 Now, whenever you push a commit to your GitHub/Bitbucket repository, Shippable will build that project as long as you have a
