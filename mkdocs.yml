@@ -16,7 +16,7 @@ pages:
   - [ci_overview.md, Shippable CI, Overview]
   - [basic_flow.md, Shippable CI, Basic Build Flow]
   - [build_config.md, Shippable CI, Build Configuration]
-  - [lighthouse.md, Shippable CI, Watch Images]
+  - [lighthouse.md, Shippable CI, Lighthouse]
   - [ci_userguide.md, Shippable CI, User Guide]
   - [languages/index.md, Shippable CI, Language help]
   - [languages/images.md, Shippable CI, Build images]
