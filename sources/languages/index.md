@@ -21,6 +21,8 @@ here, drop us a line at support @ shippable.com
 
 ## Clojure
 
+***Checking***
+
 This section helps you to create a shippable.yml file for your clojure
 project:
 

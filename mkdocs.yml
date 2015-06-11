@@ -16,12 +16,13 @@ pages:
 
   - [ci_overview.md, Shippable CI, Overview]
   - [basic_flow.md, Shippable CI, Basic Build Flow]
+  - [project_settings.md, Shippable CI, Project Settings]
   - [build_config.md, Shippable CI, Build Configuration]
-  - [lighthouse.md, Shippable CI, Lighthouse]
   - [ci_userguide.md, Shippable CI, User Guide]
   - [languages/index.md, Shippable CI, Language help]
   - [languages/images.md, Shippable CI, Build images]
   - [using_gitlab.md, Shippable CI, Using Shippable with Gitlab]
+  - [lighthouse.md, Shippable CI, Lighthouse]
 
   - [formations_overview.md, Shippable Formations, Overview]
   - [formations_userguide.md, Shippable Formations, User Guide]
