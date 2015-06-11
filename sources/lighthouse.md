@@ -2,13 +2,13 @@ page_title: Shippable Lighthouse Image Watcher | Shippable
 page_description: How to watch images using Shippable's Lighthouse Feature
 page_keywords: lighthouse, shippable ci, documentation, shippable, watch docker images
 
-# Lighthouse: Shippable's Image Watcher
+# Lighthouse: Image Watcher
 
 ## Overview
 
 Have you ever wasted your time debugging a broken build only to realize a few frustrated hours later that it was due to something that changed in one of the images you depend on?
 
-Well, Lighthouse to the rescue!
+This is where lighthouse can come to your rescue.
 
 Lighthouse is available to all users of Shippable (yes, for free). Using this feature, you can add any image from any registry that you want to track and get notified via email when there is an update. It is a simple set up and we will be adding more functionality to this feature over time - so keep a watch on our watcher.
 
@@ -18,11 +18,13 @@ Today, we support watching images that are hosted on either Docker Hub or Google
 
 ## Permissions
 
-ADD DETAILS about who is allowed to add, modify or delete an image
+**UPDATE PERMISSIONS**
 
 ## Adding an image to the Lighthouse
 
 ### Step 1: Prequisite: Set up Account Integration for the registry
+
+**If you have already set this up for your registry in Shippable, go to Step 2**
 
 **Docker Hub**
 
@@ -46,13 +48,13 @@ ADD DETAILS about who is allowed to add, modify or delete an image
 
 ### Step 2: Prerequisite: Add an email to receive notifications
 
-If you have already set this up for Lighthouse once before, you can skip this and go to Step 2.
+**If you have already added email integration for lighthouse image watcher, go to Step 3**
 
 - Login to Shippable
 - Go to `Account Settings` on the top bar
 - Click on the Integrations tab on the right
 - Add a new Integration by adding a (+)
-- Integration Name: `Example: my-shippable-emailid` ```Tip:Use an integration name that's easy to remember; you will need this later```
+- Integration Name: `Example: my-shippable-emailid` (Tip:Use a description integration name you can remember)
 - Master Integration: On the dropdown, choose `Email Notification for imagewatchers`
 - Integration Type: Automatically set
 - Email Address: `your_name@email.com`
@@ -69,14 +71,14 @@ If you have already set this up for Lighthouse once before, you can skip this an
  - Integration: The Integration Name from Step 1 that you created to connect to the registry
  - Click on the `Save` Icon
 
- ### Step 4: Configure Notifications for the Lighthouse Image
+### Step 4: Configure Notifications for the Lighthouse Image
 
  - Click on the image_name
  - This will open up the image modal where you can turn on notifications.
  - Scroll to the bottom where the email notifications that were set up in Step 2 will show up. By default, notifications are set to Off.
  - Use the toggle buttom to turn notifications ON for any email.
 
- ## Tags
+## Tags
 
  Lighthouse periodically polls the registry and the tags are updated when there is any update to the image in the source registry. You will see the latest tag against the image when the image is synced.
 
@@ -88,7 +90,7 @@ To update an image or change the notification settings, go to the Shippable Land
 - All images you have added will show up here.
 - Click on the image_name to update the notification setting
 
- ## Deleting an Image on Lighthouse
+## Deleting an Image on Lighthouse
 
  To delete an image on lighthouse, go to the Shippable Landing Page by clicking on the Shippable Icon on the top right.
 
