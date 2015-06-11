@@ -2,22 +2,26 @@ page_title: Sign Up to Shippable CI or Formations
 page_description: Getting Started - Sign up
 page_keywords: getting started, questions, documentation, sign up, shippable
 
-# Sign up for Shippable CI or Formations
+# Sign up for Shippable
 
-## **Sign in to Shippable**
+## Prerequisite
 
-You can sign in to Shippable using a GitHub or Bitbucket account. We use
-OAuth authentication, so you do not need to create a separate account on
-our platform.
+Shippable uses either your Github or Bitbucket account to authenticate. You must have your source code in one of these two repos to sign up for Shippable
+
+[Github](https://github.com)
+[Bitbucket](https://bitbucket.org)
+
+## Sign in to Shippable
+
+Since we use OAuth authentication, if you have either a Github or Bitbucket account, you do not need to create a separate account on our platform.
 
 To sign in, visit the [Shippable website](https://www.shippable.com),
-click **Login**, and choose between Github or Bitbucket auth.
+click **Login**, and choose between Github or Bitbucket auth. This will take you to either the Github or Bitbucket Sign In page, where you enter your credentials.
 
-## **Allow Access to repos**
+## Allow Access to repos
 
 After entering your credentials in the previous step, you will be prompted to give Shippable
-access to your repos. GitHub and Bitbucker auth behave a little
-differently as follows -
+access to your repos. GitHub and Bitbucker auth behave a little differently as follows -
 
 **GitHub**- By default, we will only ask for access to public repos. If
 you want to use Shippable to build your private repos, you will need to
@@ -36,19 +40,22 @@ granularity, so we ask for access to all repos on Bitbucket by default.
 > repos for our webhooks to work. We do not touch anything else in the
 > repo.
 
-By default, you will be signed up to our Free CI Plan that allows you to build and test with Shippable CI with one build container!
+## Choose what you want to do
 
-## **Add a Formation**
+Every user is signed up to our **Free CI Plan** by default. This allows you to run one build concurrently on Shippable CI.
 
-- Login to [Shippable](https://www.shippable.com)
-- On the Dashboard, Select "Add a Formation"
-- [[UPDATE AFTER UX is done]] This will take you to the "New Plan Addition" Page, where you can choose the number of containers you would like to buy for your Formation Subscription
+When you get to the landing page, on the drop down, you will see three sections on the dropdown -
 
-## **Upgrade your Shippable CI Plan**
+**Section 1: CI Subscriptions**
 
-- Login to Shippable
-- On the dropdown, select the "Subscription" you would like to upgrade
-- This will take you to the Subscriptions Dashboard. Click on `Settings` on the right side bar.
-- [[UPDATE AFTER UX is done]] Here you can choose to increase the number of containers for your Shippable CI plan
+- You may see one or many subscriptions in this section, if you are collaborating on multiple projects. Each subscription maps to a Github or Bitbucket Account.
 
+- If you want to continue onto doing Shippable CI, choose the appropriate subscription from the section.
 
+**Section 2: Add Formation**
+
+For more details on Formations, go to [Formations Overview](formations_overview.md)
+
+**Section 3: Lighthouse**
+
+For more details on Lighthouse, go to [Using Lighthouse](lighthouse.md)
