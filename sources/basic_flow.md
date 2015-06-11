@@ -1,4 +1,4 @@
-page_title: Shippable CI Build Flow | Shippable
+page_title: Shippable CI Build Flow | Documentation | Shippable
 page_description: This section describes how to set up tests and run a build on Shippable
 page_keywords: getting started, questions, documentation, shippable, config, yml
 

@@ -1,4 +1,4 @@
-page_title: Shippable CI User Guide | Shippable
+page_title: Shippable CI User Guide | Documentation | Shippable
 page_description: This section describes various concepts pertaining to Shippable CI
 page_keywords: getting started, questions, documentation, shippable, config, yml
 

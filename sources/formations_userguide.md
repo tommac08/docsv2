@@ -7,6 +7,7 @@ page_keywords: containers, deployment, formations, continuous deployment, kubern
 ## How to set up a simple two-tier app on Shippable Formations
 
  **Walk through RADAR set up on Shippable**
+
 ## Compose your templates to deploy to a Single Environment
 
 ## Compose your templates to deploy to Multiple Environments

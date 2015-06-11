@@ -1,10 +1,10 @@
-page_title: yml reference
-page_description: This section helps you write your shippable.yml
+page_title: Shippable Build Configuration| Documentation | Shippable
+page_description: How to write your Shippable YML and Set up your Build Configuration
 page_keywords: getting started, questions, documentation, shippable, config, yml
 
 # Build Configuration
 
-## Caching 
+## Caching
 
 Shippable does not cache dependencies between builds. Each build will
 run on a fresh minion and as soon as the build finishes execution, the
@@ -45,7 +45,7 @@ and then run `./minions/do_something-else.sh`. The only requirement is
 that all of these operations return a `0` exit code. Else the build will
 fail.
 
-## Retrying npm install 
+## Retrying npm install
 
 Sometimes npm install may fail due to the intermittent network issues
 and affects your build execution. To avoid this, **shippable_retry**
@@ -96,7 +96,7 @@ git:
 
 ## Environment Variables
 
-#### Standard environment variables 
+#### Standard environment variables
 
 The following environment variables are available for every build. You
 can use these in your scripts if required:

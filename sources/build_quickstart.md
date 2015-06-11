@@ -1,6 +1,6 @@
-page_title: Running your first build
-page_description: Basic getting started section
-page_keywords: getting started, questions, documentation, shippable
+page_title: How to Run your first build on Shippable | Documentation | Shippable
+page_description: Getting Started running your build on Shippable CI
+page_keywords: getting started, questions, documentation, shippable, Continuous Integration, Continuous Deployment, CI/CD
 
 # Running your first build
 

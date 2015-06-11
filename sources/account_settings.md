@@ -1,4 +1,4 @@
-page_title: Shippable Account Settings | Shippable
+page_title: Shippable Account Settings | Documentation | Shippable
 page_description: Account Settings, Integratons, Account Tokens, Credit Cards
 page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deployment, CI/CD, testing, automation, Tokens, account settings
 

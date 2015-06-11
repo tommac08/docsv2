@@ -1,4 +1,4 @@
-page_title: Shippable API
+page_title: Shippable API | Documentation | Shippable
 page_description: How to interface with Shippable's API
 page_keywords: shippable, API, HTTP
 
@@ -6,7 +6,7 @@ page_keywords: shippable, API, HTTP
 
 > **Note**
 >
-> You must be on one of our Paid Plans to use the API 
+> You must be on one of our Paid Plans to use the API
 
 ## Overview and Purpose
 

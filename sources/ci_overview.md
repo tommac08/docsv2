@@ -1,4 +1,4 @@
-page_title: Shippable Continuous Integration Overview | Shippable
+page_title: Shippable CI Overview | Documentation | Shippable
 page_description: Code examples, FAQs, language & platform support
 page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deployment, CI/CD, testing, automation
 
