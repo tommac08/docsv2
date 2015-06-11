@@ -1,4 +1,4 @@
-page_title: Languages
+page_title: Languages | Documentation | Shippable
 page_description: supported languages on Shippable
 page_keywords: languages, questions, documentation, shippable, ruby, node, java, .net, python, scala
 

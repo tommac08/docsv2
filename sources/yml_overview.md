@@ -1,4 +1,4 @@
-page_title: yml overview
+page_title: yml overview | Documentation | Shippable
 page_description: This section provides an overview of Shippable's config file shippable.yml
 page_keywords: getting started, questions, documentation, shippable, config, yml
 

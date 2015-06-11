@@ -1,3 +1,7 @@
+page_title: Deploying to Digital Ocean | Documentation | Shippable
+page_description: How to deploy your application to Digital Ocean
+page_keywords: digital ocean, continuous deployment, CI/CD
+
 # DigitalOcean
 
 DigitalOcean is a VPS provider that offers a number of pre-prepared

@@ -1,4 +1,4 @@
-page_title: Ruby
+page_title: Ruby | Documentation | Shippable
 page_description: Language specific guide for Ruby
 page_keywords: containers, lxc, concepts, explanation, image, minion, shippable, Ruby
 

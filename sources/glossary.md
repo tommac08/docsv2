@@ -1,4 +1,4 @@
-page_title: Glossary
+page_title: Glossary | Documentation | Shippable
 page_description: Definitions of terms used in Shippable documentation
 page_keywords: concepts, documentation, shippable, CI/CD
 

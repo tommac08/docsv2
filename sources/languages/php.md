@@ -1,4 +1,4 @@
-page_title: php
+page_title: php | Documentation | Shippable
 page_description: How to configure shippable.yml file for php
 page_keywords: yml,php,composer,phpunit
 

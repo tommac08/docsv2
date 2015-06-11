@@ -1,4 +1,4 @@
-page_title: Custom Containers with Docker Build
+page_title: Custom Containers with Docker Build | Documentation | Shippable
 page_description: Running minions in a Docker container defined by a Dockerfile
 page_keywords: shippable, Docker, Container
 
@@ -11,7 +11,7 @@ Shippable allows you to interact with Docker Hub in any part of your build workf
  1. Connect your Docker Hub account to your Shippable Account
  2. Add the Docker Hub Integration to your project
  3. Update your Project Settings to pull from or push to Docker Hub
-  
+
 Read on for detailed instructions -
 
 ## Connect your Docker Hub account to Shippable
@@ -21,10 +21,10 @@ Read on for detailed instructions -
 - On the Account Settings page, click on `Integrations`
 - From the options presented, click on `Docker Hub Credentials`
 - Enter an Integration name, which will be used to refer to this integration on Shippable
-- Enter your credentials 
+- Enter your credentials
 - Click on `Save`
 
-Once the Docker Hub Integration is created at an Account level, you are ready to configure your project to pull from or push images to Docker Hub. 
+Once the Docker Hub Integration is created at an Account level, you are ready to configure your project to pull from or push images to Docker Hub.
 
 -------
 

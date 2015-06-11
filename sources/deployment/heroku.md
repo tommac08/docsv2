@@ -1,3 +1,7 @@
+page_title: Deploying to Heroku| Documentation | Shippable
+page_description: How to deploy your application to Heroku
+page_keywords: heroku, continuous deployment, CI/CD
+
 # Heroku
 
 Heroku supports Ruby, Java, Python, Node.js, PHP, Clojure and Scala

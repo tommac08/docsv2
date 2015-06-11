@@ -1,4 +1,4 @@
-page_title: java
+page_title: java | Documentation | Shippable
 page_description: How to configure shippable.yml file for java
 page_keywords: yml,java,maven,oraclejdk6,openjdk6,oraclejdk7,openjdk7
 

@@ -1,4 +1,4 @@
-page_title: go
+page_title: go | Documentation | Shippable
 page_description: How to configure shippable.yml file for go
 page_keywords: yml,go,test,tip
 

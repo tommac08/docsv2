@@ -1,3 +1,7 @@
+page_title: Deploying to Openshift | Documentation | Shippable
+page_description: How to deploy your application on openshift
+page_keywords: red hat openshift, continuous deployment, CI/CD
+
 # Red Hat OpenShift
 
 Red Hat OpenShift supports wide variety of runtime environments (called

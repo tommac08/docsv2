@@ -1,17 +1,17 @@
-page_title: Build images
+page_title: Build images | Documentation | Shippable
 page_description: A brief description about how to use language specific docker images
 page_keywords: custom images, dedicated hosts, shippable images, language specific docker images
 
 # Build images
 
 Our default image, minv2, comes installed with popular versions of all
-supported languages, tools and services. 
+supported languages, tools and services.
 
 However, you might prefer starting with a small image that only has
 versions of your language installed. To help with this, we have open
 sourced basic images for all supported languages. These images only come
 with popular versions of a language and are NOT pre-installed with any
-tools, addons or services. 
+tools, addons or services.
 
 Our build images are available on Docker Hub in the [shippableImages account]
 (https://registry.hub.docker.com/repos/shippableimages/) . Dockerfiles
@@ -36,7 +36,7 @@ The section will give you more details on specific images.
 The build image available for clojure is
 [shippableimages/ubuntu1204_clojure](https://registry.hub.docker.com/u/shippableimages/ubuntu1204_clojure) ([Dockerfile](https://github.com/shippableImages/ubuntu1204_clojure/blob/master/Dockerfile))
 
-The lein version available in this image is lein2. You can use this image to run clojure builds. 
+The lein version available in this image is lein2. You can use this image to run clojure builds.
 
 Go to your **Project Page**, click on **Settings** and choose the following image:
 
@@ -179,7 +179,7 @@ The node.js versions available in these images are:
 - 0.10
 - 0.11
 - 0.12
- 
+
 Go to your **Project Page**, click on **Settings** and choose the following image:
 
 `Pull Image from : shippableimages/ubuntu1204_nodejs`

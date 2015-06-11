@@ -1,4 +1,4 @@
-page_title: Sign Up to Shippable CI or Formations
+page_title: Sign Up to Shippable | Documentation | Shippable
 page_description: Getting Started - Sign up
 page_keywords: getting started, questions, documentation, sign up, shippable
 

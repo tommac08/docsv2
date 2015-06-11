@@ -1,4 +1,4 @@
-page_title: python
+page_title: python | Documentation | Shippable
 page_description: Configuring yml file for python
 page_keywords: Python, pip, nosetests, mirrors
 

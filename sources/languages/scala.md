@@ -1,4 +1,4 @@
-page_title: Scala
+page_title: Scala | Documentation | Shippable
 page_description: configuring yml file for scala
 page_keywords: scala,SBT,OracleJDK6,OracleJDK7,OpenJDK6,OpenJDK7
 

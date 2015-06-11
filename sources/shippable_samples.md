@@ -1,4 +1,4 @@
-page_title: Build images
+page_title: Shippable CI Build images | Documentation | Shippable
 page_description: A brief description about how to use language specific docker images
 page_keywords: custom images, dedicated hosts, shippable images, language specific docker images
 

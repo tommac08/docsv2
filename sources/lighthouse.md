@@ -1,4 +1,4 @@
-page_title: Shippable Lighthouse Image Watcher | Shippable
+page_title: Shippable Lighthouse Image Watcher | Documentation | Shippable
 page_description: How to watch images using Shippable's Lighthouse Feature
 page_keywords: lighthouse, shippable ci, documentation, shippable, watch docker images
 

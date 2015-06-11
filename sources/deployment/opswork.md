@@ -1,3 +1,7 @@
+page_title: Deploying to AWS OpsWorks | Documentation | Shippable
+page_description: How to deploy your application to AWS OpsWorks
+page_keywords: aws opsworks, continuous deployment, CI/CD
+
 # AWS OpsWorks
 
 AWS OpsWorks is a new PaaS offering from Amazon that targets advanced IT

@@ -1,6 +1,6 @@
-page_title: Continuous deployment configuration
+page_title: Continuous deployment configuration | Documentation | Shippable
 page_description: Setting up continuous deployment
-page_keywords: shippable, Heroku, Amazon Elastic Beanstalk, AWS OpsWorks
+page_keywords: shippable, Heroku, Amazon Elastic Beanstalk, AWS OpsWorks, App Engine, Red Hat Openshift, Digital Ocean
 
 # Continuous Deployment
 

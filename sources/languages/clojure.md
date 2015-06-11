@@ -1,4 +1,4 @@
-page_title: clojure
+page_title: clojure | Documentation | Shippable
 page_description: How to configure shippable.yml file for clojure
 page_keywords: yml,clojure,lein,lein2
 

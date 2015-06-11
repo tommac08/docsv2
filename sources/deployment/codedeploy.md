@@ -1,3 +1,7 @@
+page_title: Deploying to AWS CodeDeploy | Documentation | Shippable
+page_description: How to deploy your application to AWS CodeDeploy
+page_keywords: AWS codedeploy, continuous deployment, CI/CD, continuous integration
+
 # AWS CodeDeploy
 
 AWS CodeDeploy is a service that handles automated deployment of
