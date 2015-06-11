@@ -52,7 +52,7 @@ If you have already set this up for Lighthouse once before, you can skip this an
 - Go to `Account Settings` on the top bar
 - Click on the Integrations tab on the right
 - Add a new Integration by adding a (+)
-- Integration Name: `Example: lighthouse-account name`
+- Integration Name: `Example: my-shippable-emailid` ```Tip:Use an integration name that's easy to remember; you will need this later```
 - Master Integration: On the dropdown, choose `Email Notification for imagewatchers`
 - Integration Type: Automatically set
 - Email Address: `your_name@email.com`
@@ -62,24 +62,37 @@ If you have already set this up for Lighthouse once before, you can skip this an
 
  **[SCREENSHOT NEEDED]**
 
- - Go back to your subscriptions page by click on the Lighthouse at the very bottom on the Dropdown
+ - Go back to the Shippable Landing Page by clicking on the main Shippable Icon on the top left
+ - Click on the dropdown and select Lighthouse at the very bottom
  - On the Lighthouse page, fill in the details as below:
- - Image Name: `your_repo_name/image_name`
- - Integration: The Integration from Step 1 above that we use to connect to the registry
+ - Image Name: `your_repo_name/image_name` (the image from either DockerHub or GCR)
+ - Integration: The Integration Name from Step 1 that you created to connect to the registry
  - Click on the `Save` Icon
+
+ ### Step 4: Configure Notifications for the Lighthouse Image
+
+ - Click on the image_name
+ - This will open up the image modal where you can turn on notifications.
+ - Scroll to the bottom where the email notifications that were set up in Step 2 will show up. By default, notifications are set to Off.
+ - Use the toggle buttom to turn notifications ON for any email.
 
  ## Tags
 
+ Lighthouse periodically polls the registry and the tags are updated when there is any update to the image in the source registry. You will see the latest tag against the image when the image is synced.
 
+## Updating an Image on Lighthouse
 
+To update an image or change the notification settings, go to the Shippable Landing Page by clicking on the Shippable Icon on the top right.
 
- ## Updating an Image on Lighthouse
-
-
-
-
+- Navigate to the bottom of the dropdowm and click on `Lighthouse`
+- All images you have added will show up here.
+- Click on the image_name to update the notification setting
 
  ## Deleting an Image on Lighthouse
 
+ To delete an image on lighthouse, go to the Shippable Landing Page by clicking on the Shippable Icon on the top right.
 
-
+- Navigate to the bottom of the dropdowm and click on `Lighthouse`
+- You will see the list of images being watched on the Lighthouse Dashboard
+- Click on the DELETE icon at the top of the table
+- Now you can choose the images you want to delete by clicking on the delete icon against each of the images and clicking confirm.
