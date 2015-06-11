@@ -1,51 +1,45 @@
-page_title: Learn About What Makes Shippable Great
-page_description: Code examples, FAQs, language & platform support
-page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deployment, CI/CD, testing, automation
+page_title: Shippable Account Settings | Shippable
+page_description: Account Settings, Integratons, Account Tokens, Credit Cards
+page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deployment, CI/CD, testing, automation, Tokens, account settings
 
-# Overview
+# Account Settings
 
-## What is Shippable?
+You can get to your Account Settings by clicking on the _gear_ icon on the top bar to the right.
 
-Shippable is a SaaS platform for developers and devops teams that significantly reduces the time taken for code to be built, tested and deployed to production.  
+This page will explain the various options in Account Settings Page
 
-Shippable comprises of two products that enables you to ship code faster - 
+## Account Information
 
-**Shippable CI:** a platform that allows you to easily add Continuous Integration/Deployment to your Git repositories
+**Id:** This is your account id in Shippable. This is the id that is linked to any access tokens you create or credit cards you add to your account.
 
-**Shippable Formations:** a platform to manage the deployment of multi container applications to Dev and Test Environments
+**Force Sync:** We periodically sync account info with Github and Bitbucket. Currently this is every hour. Use this button to sync your account if you would like to see any changes made upstream immediately. Example: You have been added to a new subscription as an owner/collaborator; you have new repos in github and want to see it immediately; you linked your bitbucket account to this account and want to see your bitbucket repositories right away.
 
-![Shippable Overview](images/shippable_overview.gif)
+## Github Identity
 
-### Shippable CI 
-Shippable CI is our Continuous Integration and Deployment Platform
-which is lightweight, super simple to setup, and runs your builds and tests
-faster than any other service. It uses **Build Minions** which are docker based 
-containers to run your workloads.  After building and testing your code, you can push your docker image
-to Docker Hub, Google Container Registry or any other private registry. You
-can also deploy it to any PaaS provider like Heroku & OpenShift and also to
-VMs, bare metal, OpenStack clusters, or any major infrastructure
-provider. 
+If you are using a Github Account to log in, this displays the github user settings.
 
-With Shippable CI, you can:
+**Public On:** This indicates that we have access to your Public Repos in Github. This is turned on by default, since signing into Shippable requires you to authorize this access on Github.
 
-- automate the packaging and deployment of web applications
-- automate testing and continuous integration/deployment
+**Private On/Off:** This indicates whether Shippable has access to your Private Repos. This needs to be turned on for Shippable to run any builds on repos that are private on Github.
 
-### Shippable Formations
-Shippable Formations is a system based on Kubernetes that allows you to manage your multi-tier 
-application across multiple environments without writing any DevOps code. It is persistent, fully orchestrated 
-and scalable. Each of your developers can now have their own fully integrated test environment at a fraction of the cost! 
+> **Note**
+>
+> It is not possible to turn OFF the Private repos, once you have given us access. That would
+> require you to delete the Shippable Account and go through the sign up process again.
 
-With Shippable Formations, you can:
+## Bitbucket Identity
 
-- manage multi-container environments that can be easily configured by developers or DevOps teams
-- no code deployment and rollback
-- easily integrate with existing services
-- have persistent, fully orchestrated and scalable dev/test labs
-- automate deployment pipelines without machine provisioning
+If you are using a Bitbucket Account to log in, this displays the bitbucket user settings.
 
-Check out our **Quick Start Guides** to get yourselves set up on **Shippable CI** or **Formations**
- in just a few minutes:
+**All Repos ON:** Bitbucket does not separate public and private repo access, so this is turned on by default when you sign in and authorize Shippable to access Bitbucket.
 
-- [Run your first build](build_quickstart.md)
-- [Set up your first formation](formations_quickstart.md)
+_If you have accounts on both Github and Bitbucket, you can link both of these here, so you see a combined list of repositories on your Shippable Account_
+
+## Misc Settings
+
+**Show Private Forks:** If you would like to track forks from your repo (you must be an owner of the repo), then set this to ON. This is OFF by default.
+
+## Delete Account
+
+Clicking on this will delete all account data, project data, build data and formation data from our systems.
+
