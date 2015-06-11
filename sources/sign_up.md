@@ -4,21 +4,18 @@ page_keywords: getting started, questions, documentation, sign up, shippable
 
 # Sign up for Shippable
 
-## Prerequisite
+## Step 0: Prerequisite
 
-Shippable uses either your Github or Bitbucket account to authenticate. You must have your source code in one of these two repos to sign up for Shippable
+Shippable uses either your [Github](https://github.com) or [Bitbucket](https://bitbucket.org) account to authenticate. You must have your source code in one of these two repos to sign up for Shippable.
 
-[Github](https://github.com)
-[Bitbucket](https://bitbucket.org)
+## Step 1: Sign in to Shippable
 
-## Sign in to Shippable
-
-Since we use OAuth authentication, if you have either a Github or Bitbucket account, you do not need to create a separate account on our platform.
+We use OAuth authentication. What this means is if you have either a Github or Bitbucket account, you do not need to create a separate account on our platform.
 
 To sign in, visit the [Shippable website](https://www.shippable.com),
 click **Login**, and choose between Github or Bitbucket auth. This will take you to either the Github or Bitbucket Sign In page, where you enter your credentials.
 
-## Allow Access to repos
+## Step 2: Allow Access to repos
 
 After entering your credentials in the previous step, you will be prompted to give Shippable
 access to your repos. GitHub and Bitbucker auth behave a little differently as follows -
@@ -40,7 +37,7 @@ granularity, so we ask for access to all repos on Bitbucket by default.
 > repos for our webhooks to work. We do not touch anything else in the
 > repo.
 
-## Choose what you want to do
+## Step 3: Choose what you want to do
 
 Every user is signed up to our **Free CI Plan** by default. This allows you to run one build concurrently on Shippable CI.
 
@@ -48,14 +45,14 @@ When you get to the landing page, on the drop down, you will see three sections 
 
 **Section 1: CI Subscriptions**
 
-- You may see one or many subscriptions in this section, if you are collaborating on multiple projects. Each subscription maps to a Github or Bitbucket Account.
+Choose the appropriate subscription from the section to continue onto Shippable CI. You may see more than one subscription here if you have been added to other projects you are collaborating on.
 
-- If you want to continue onto doing Shippable CI, choose the appropriate subscription from the section.
+For more details on Shippable CI, go to [Shippable CI Overview](ci_overview.md).
 
 **Section 2: Add Formation**
 
-For more details on Formations, go to [Formations Overview](formations_overview.md)
+For more details on Formations, go to [Formations Overview](formations_overview.md).
 
 **Section 3: Lighthouse**
 
-For more details on Lighthouse, go to [Using Lighthouse](lighthouse.md)
+To learn more about Lighthouse, go to [Using Lighthouse](lighthouse.md).
