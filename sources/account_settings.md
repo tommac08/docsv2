@@ -27,13 +27,36 @@ If you are using a Github Account to log in, this displays the github user setti
 > It is not possible to turn OFF the Private repos, once you have given us access. That would
 > require you to delete the Shippable Account and go through the sign up process again.
 
+(see the section on linking accounts as well)
+
 ### Bitbucket Identity
 
 If you are using a Bitbucket Account to log in, this displays the bitbucket user settings.
 
 **All Repos ON:** Bitbucket does not separate public and private repo access, so this is turned on by default when you sign in and authorize Shippable to access Bitbucket.
 
-_If you have accounts on both Github and Bitbucket, you can link both of these here, so you see a combined list of repositories on your Shippable Account_
+(see the section below on linking accounts as well)
+
+### Linking your Bitbucket and Github Accounts
+
+If you want to use Shippable to build both GitHub and Bitbucket
+repositories, you can connect the two accounts in this page to get a
+consolidated view of all your projects in one Shippable account.
+
+To connect your accounts -
+
+1. Sign in with the GitHub/BitBucket account that you want to be your primary account.
+2. You will go through the [authorization flow](sign_up.md) to sign in.
+3. If you signed in with Github, you will see an option to link Bitbucket under the **Bitbucket Identity Section**. Click on that and follow the authorization flow for Bitbucket.
+4. If you signed in with Bitbucket, you will see an option to link Github under the **Github Identity Section**. Click on that and follow the authorization flow for Github.
+
+Once your accounts are both connected to Shippable, you should see a
+consolidated list of orgs and projects in your account. You can sign in
+with either of your credentials after this point.
+
+> **Tip**
+>
+> Click on **Force Sync** against your Account Id if you want to see the linked account repositories immediately (see section on Account Information)
 
 ### Misc Settings
 
