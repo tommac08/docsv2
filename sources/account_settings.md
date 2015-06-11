@@ -4,9 +4,7 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 
 # Account Settings
 
-You can get to your Account Settings by clicking on the _gear_ icon on the top bar to the right.
-
-This page will explain the various options in Account Settings Page
+You can get to your Account Settings by clicking on the _gear_ icon on the top bar to the right. This page will explain the different options available in the Account Settings Page.
 
 ## Account Info
 
@@ -44,6 +42,8 @@ _If you have accounts on both Github and Bitbucket, you can link both of these h
 ### Delete Account
 
 Clicking on this will delete all account data, project data, build data and formation data from our systems.
+
+*****
 
 ## Integrations
 
@@ -86,6 +86,8 @@ This is the integration that is used to set up email notifications for Lighthous
 4. Enter your email address: `janedoe@shippable.com`
 5. Click on `Save`
 
+*****
+
 ## Tokens
 
 This is where you generate, view and manage access tokens to use our [API](api.md).
@@ -100,6 +102,8 @@ This is where you generate, view and manage access tokens to use our [API](api.m
 > NEVER commit code containing your API token to a public repository.
 > Doing so will compromise the security of your Shippable account. Treat
 > your API token like a password
+
+*****
 
 ## Cards
 
