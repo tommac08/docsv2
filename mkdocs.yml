@@ -21,6 +21,7 @@ pages:
   - [ci_userguide.md, Shippable CI, User Guide]
   - [languages/index.md, Shippable CI, Language help]
   - [languages/images.md, Shippable CI, Build images]
+  - [using_gitlab.md, Shippable CI, Using Shippable with Gitlab]
 
   - [formations_overview.md, Shippable Formations, Overview]
   - [formations_userguide.md, Shippable Formations, User Guide]
