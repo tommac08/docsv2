@@ -119,3 +119,30 @@ Our webhook processor will look for the string **[ci skip]** or **[skip
 ci]** in the commit message and if it exists, then that particular
 webhook build will not be executed.
 
+## Build Images
+
+Our default image, shippable/minv2, comes installed with popular versions of all
+supported languages, tools and services.
+
+However, you might prefer starting with a small image that only has
+versions of your language installed. To help with this, we have open
+sourced basic images for all supported languages. These images only come
+with popular versions of a language and are NOT pre-installed with any
+tools, addons or services.
+
+Our build images are available on Docker Hub in the [shippableImages account]
+(https://registry.hub.docker.com/repos/shippableimages/) . Dockerfiles
+for these images are in our [GitHub repository](https://github.com/shippableImages).
+
+You can choose language specific images for your project under **project settings**:
+
+- Go to your Project page
+- Click on the Settings tab
+- Click on the dropdown against `Pull Image from` and choose an appropriate image
+
+As mentioned above, our language specific images do not come with any
+tools, addons, or services pre-installed. If you need pre-installed
+tools, addons or services, then you should use shippable/minv2 image.
+
+Check out our [language help page](languages.md) for language specific info about build images.
+
