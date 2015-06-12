@@ -832,10 +832,7 @@ installation.
 
 ## Python
 
-This section helps you to configure the yml file for your python
-project.
-
-### Choosing Python versions to test against
+This section helps you to configure the yml file for your python project.
 
 - Set the appropriate language and the version number. You can test against multiple versions for a single push by adding more entries. Python minions use `python` by default to set the version.
 
