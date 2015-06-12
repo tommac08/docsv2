@@ -32,9 +32,8 @@ before_install:
   - git remote -v | grep ^openshift || git remote add openshift $OPENSHIFT_REPO
 ```
 
-You also need to give Shippable permissions to deploy to the repository.
-It can be easily done by copying your deployment key from Shippable
-admin panel and adding it in the 'Public Keys' section of [OpenShift administration panel](https://openshift.redhat.com/app/console/settings).
+You also need to give Shippable permissions to deploy to the repository. To do this,
+get the [Shippable Deployment Key](ci_settings/#deployment-key) and add it in the 'Public Keys' section of [OpenShift administration panel](https://openshift.redhat.com/app/console/settings).
 
 After this, deployment is as simple, as pushing to the OpenShift
 repository in `after_success` step:
