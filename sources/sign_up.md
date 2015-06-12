@@ -43,16 +43,20 @@ Every user is signed up to our **Free CI Plan** by default. This allows you to r
 
 When you get to the landing page, on the drop down, you will see three sections on the dropdown -
 
-**Section 1: CI Subscriptions**
+**Section 1: Shippable CI**
 
-Choose the appropriate subscription from the section to continue onto Shippable CI. You may see more than one subscription here if you have been added to other projects you are collaborating on.
+This section displays all the subscriptions that you are either an owner or a collaborator for. Choose the appropriate subscription from the section to continue onto Shippable CI.
 
 For more details on Shippable CI, go to [Shippable CI Overview](ci_overview.md).
 
-**Section 2: Add Formation**
+**Section 2: Shippable Formation**
+
+Click on `Add Formation` to add a new formation. Existing Formation Subscriptions will be listed in this section as well.
 
 For more details on Formations, go to [Formations Overview](formations_overview.md).
 
 **Section 3: Lighthouse**
+
+This will lead you to the Lighthouse dashboard that manages images that you want to watch.
 
 To learn more about Lighthouse, go to [Using Lighthouse](lighthouse.md).
