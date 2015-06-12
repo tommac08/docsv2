@@ -8,17 +8,17 @@ Having trouble with your builds? Here is a list of frequently asked
 questions.... hope this helps!
 
 ## How do I update my Shippable plan?
-- Login to Shippable
-- Click on the subscription you want to upgrade from the `Organizations` list on your right
-- You will see a `Plan and Billing` icon on the top right of the Subscription Page. Click on the icon to see and/or update your plan
+
+Go to `Settings` under either your CI Subscription Page or Formations Page. You will update your plan from either of these places.
+
+Documentation:[Subscription Plan Management](ci_settings/#subscription-plan-management)
 
 ## Why can't I see some of my repositories in my Shippable account?
 
 This happens due to one of the following reasons:
 
-- You haven't enabled private repositories in your Shippable account.  If this is the reason, please click on the 'Private repos off' icon on your dashboard and give us permissions to access your private repositories.
-- Your account hasn't yet been synced with the latest permissions from GitHub. To fix
-this, please click on the 'Sync account' icon on your dashboard.
+- You haven't enabled private repositories in your Shippable account. Go to our [Account Settings Documentation](account_settings.md) to learn how to turn on Private Repos for your Github Account.
+- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings. (the `gear` on the top nav bar)
 -  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
 
 ## Why do I get an error when I try to enable a project that is listed on my dashboard?
@@ -54,24 +54,11 @@ restrictions' Under the 'Third-party application access policy' section.
 
 ## How do I link my github and bitbucket accounts?
 
-Shippable allows you to link both github and bitbucket service providers
-into a single account. Click on the bitbucket icon or github icon on the
-top right to link the respective account from the dashboard page.
-
-For example: Sign in to shippable with your github account and click on
-the bitbucket icon on the top right to link your bitbucket account.
-
-If you have already logged in to shippable with both the service
-providers account separately, then it will not allow you to link the
-accounts. You have to delete one of your shippable account and then
-click on the respective service provider icon from the other account.
-Deleting the account will also remove all its associated projects and
-builds, so first you need to decide which account you want to delete and
-then delete the account from the profile dropdown.
+Check out our documentation on [linking bitbucket and github accounts](account_settings/#linking-your-bitbucket-and-github-accounts)
 
 ## Why am I not able to see BitBucket org repos after deleting and recreating my account on Shippable?
 
-Deleting the shippable account will also delete all the permissions
+Deleting the shippable account will also delete the permissions
 associated with the account. If you recreate your account, bitbucket
 will not allow us to pull all the permissions you have, unless the owner
 of that organization logs in back to shippable and then click on the
