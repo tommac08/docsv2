@@ -269,43 +269,50 @@ on github for more details.
 
 ## Java
 
-This section helps you to create a shippable.yml file for your Java
-project:
+This section helps you to create a shippable.yml file for your Java project:
 
 - Set the appropriate language and the jdk. You can test against Openjdk6, Openjdk7, Oraclejdk7 and Oraclejdk8 for a single push by adding more entries. Java minions use `jdk` by default to set the runtime platform:
 
-         # language setting
-         language: java
-         # jdk tag
-         jdk:
-           - openjdk7
-           - oraclejdk7
-           - openjdk6
-           - oraclejdk8
+```
+# language setting
+language: java
+# jdk tag
+jdk:
+- openjdk7
+- oraclejdk7
+- openjdk6
+- oraclejdk8
+```
 
-### Testing using Java build tool
+### Test Scripts
 
 #### Maven
 
 - If your repository root has pom.xml file, then our Java builder will use Maven 3 to build it. By default it will run the test using **mvn test**.
 - Java builder will execute the below line to install project dependencies with Maven before it starts running tests.
 
-         mvn install -DskipTests=true
+```
+mvn install -DskipTests=true
+```
 
 #### Gradle
 
 - If your repository root has "build.gradle", then our Java builder will use gradle to build it. By default it will use **gradle check** to run the test.
 - Java builder will execute the below line to install the project dependencies with gradle.
 
-         gradle assemble
+```
+gradle assemble
+```
 
 #### Ant
 
 - If your repository root does not have gradle or maven files, then our Java builder will use Ant to build it. By default it will use **Ant test** to run the test suite.
 - Since there is no standard way to install Ant dependencies, you will need to specify the **install:** key to install your project dependencies with Ant.
 
-         language: java
-         install: ant deps
+```
+language: java
+install: ant deps
+```
 
 Save the test output in shippable/testresults and the codecoverage output in shippable/codecoverage folder to get the reports parsed. If the test and codecoverage output is not saved as specified, you will not find the reports in our CI.
 
@@ -376,6 +383,57 @@ Ubuntu minion. Once the build finishes execution, you can check for the
 console output, test and codecoverage results on the respective build's
 page.
 
+### Build Image
+
+The following build images are available for Java:
+
+1. [shippableimages/ubuntu1204_java](https://registry.hub.docker.com/u/shippableimages/ubuntu1204_java) ([Dockerfile](https://github.com/shippableImages/ubuntu1204_java/blob/master/Dockerfile))
+2. [shippableimages/ubuntu1404_java](https://registry.hub.docker.com/u/shippableimages/ubuntu1404_java) ([Dockerfile](https://github.com/shippableImages/ubuntu1404_java/blob/master/Dockerfile))
+
+The JDK's available in these images are:
+
+- openjdk6
+- openjdk7
+- oraclejdk7
+- oraclejdk8
+
+Go to your **Project Page**, click on **Settings** and choose the following image:
+
+`Pull Image from : shippableimages/ubuntu1204_java`
+
+Activate jdk in before_script section to run your build against the correct version.
+
+A sample yml that helps you getting started with java image:
+
+```yaml
+language: java
+
+jdk:
+  - openjdk6
+  - openjdk7
+  - oraclejdk7
+  - oraclejdk8
+
+# install maven
+before_install:
+  - apt-get install -y maven
+
+# Activate jdk
+before_script:
+  - if [[ $SHIPPABLE_JDK_VERSION == "openjdk7" ]] ; then export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"; export PATH="$PATH:/usr/lib/jvm/java-7-openjdk-amd64/bin"; export java_path="/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java"; fi
+  - if [[ $SHIPPABLE_JDK_VERSION == "oraclejdk7" ]] ; then export JAVA_HOME="/usr/lib/jvm/java-7-oracle"; export PATH="$PATH:/usr/lib/jvm/java-7-oracle/bin"; export java_path="/usr/lib/jvm/java-7-oracle/jre/bin/java"; fi
+  - if [[ $SHIPPABLE_JDK_VERSION == "openjdk6" ]] ; then export JAVA_HOME="/usr/lib/jvm/java-6-openjdk-amd64"; export PATH="$PATH:/usr/lib/jvm/java-6-openjdk-amd64/bin"; export java_path="/usr/lib/jvm/java-6-openjdk-amd64/jre/bin/java"; fi
+  - if [[ $SHIPPABLE_JDK_VERSION == "oraclejdk8" ]] ; then export JAVA_HOME="/usr/lib/jvm/java-8-oracle"; export PATH="$PATH:/usr/lib/jvm/java-8-oracle/bin"; export java_path="/usr/lib/jvm/java-8-oracle/jre/bin/java"; fi
+  - update-alternatives --set java $java_path
+  - java -version
+
+script:
+  - mvn test
+```
+
+Refer [sample_ubuntu1204_java](https://github.com/shippableSamples/sample_ubuntu1204_java)
+on github for more details.
+
 ### Multi-module Maven builds
 
 When using multi-module (Reactor) builds, please remember to output all
@@ -421,57 +479,65 @@ for details.
 
 ## Nodejs
 
-This section helps you to configure the yml file for your node_js
-project.
-
-### Node_js versions for testing
+This section helps you to configure the yml file for your node_js project.
 
 - Set the appropriate language and the version number. You can test against multiple versions for a single push by adding more entries. node_js minions use `node_js` by default to set the version.
 
-         # language setting
-         language: node_js
+```
+# language setting
+language: node_js
 
-         # version numbers
-         node_js:
-           - "0.11"
-           - "0.10"
-           - "0.8"
-           - "0.6"
+# version numbers
+node_js:
+  - "0.11"
+  - "0.10"
+  - "0.8"
+  - "0.6"
+```
 
-    > **Note**
-    >
-    > We are setting multiple versions of node_js here which means a single
-    > push to repo will trigger multiple builds.
+> **Note**
+>
+> We are setting multiple versions of node_js here which means a single push to repo will trigger multiple builds.
 
 ### Test scripts
 
 -   To run your test suites using NPM, specify it using script key.
 
-         script: npm test
+```
+script: npm test
+```
 
 -   You can also add testing frameworks like Vows, Expresso in the
     package.json file.
 -   To test using Vows:
 
-         "scripts": {
-             "test": "vows --spec"
-         }
+```
+"scripts": {
+"test": "vows --spec"
+}
+```
 
 -   To test using Expresso:
 
-         "scripts": {
-             "test": "expresso test "
-         }
+```
+"scripts": {
+"test": "expresso test "
+}
+```
 
 -   You can also install your project dependencies using [NPM](http://npmjs.org/)
 
-         node_js:
-             - "0.10"
-         before_install: npm install -g grunt-cli
+```
+node_js:
+  - "0.10"
+before_install: npm install -g grunt-cli
+```
 
 -   If you want to build a project with node versions like 0.6, 0.8, 0.10, and 0.11 and want to use the same package.json, add the following line to your yml file, which will upgrade the npm to v.1.4 for node versions 0.6 and 0.8.
 
-         if [[ $SHIPPABLE_NODE_VERSION =~ [0].[6-8] ]]; then npm install -g npm@~1.4.6; fi
+```
+if [[ $SHIPPABLE_NODE_VERSION =~ [0].[6-8] ]]; then npm install -g npm@~1.4.6; fi
+```
 
 -   Keep the output of test and code coverage generated in the Shippable
     folders to get the visualization of your reports.
@@ -559,63 +625,80 @@ Enable the repo sample_node and run it using an Ubuntu minion. Once the
 build finishes execution, you can check for the console output, test and
 codecoverage results on the respective build's page.
 
+### Build Image
+
+The following build images are available for node.js:
+
+1. [shippableimages/ubuntu1204_nodejs](https://registry.hub.docker.com/u/shippableimages/ubuntu1204_nodejs) ([Dockerfile](https://github.com/shippableImages/ubuntu1204_nodejs/blob/master/Dockerfile))
+2. [shippableimages/ubuntu1404_nodejs](https://registry.hub.docker.com/u/shippableimages/ubuntu1404_nodejs) ([Dockerfile](https://github.com/shippableImages/ubuntu1404_nodejs/blob/master/Dockerfile))
+
+The node.js versions available in these images are:
+
+- 0.8
+- 0.10
+- 0.11
+- 0.12
+
+Go to your **Project Page**, click on **Settings** and choose the following image:
+
+`Pull Image from : shippableimages/ubuntu1204_nodejs`
+
+Activate nvm in before_install section to run your build against the correct version of node.js.
+
+A sample yml that helps you getting started with node.js image:
+
+```yaml
+language: node_js
+
+node_js:
+  - 0.10
+  - 0.11
+
+before_install:
+# Activate the required node.js version
+  - source ~/.nvm/nvm.sh && nvm install $SHIPPABLE_NODE_VERSION
+  - node --version
+  - npm install -g grunt-cli
+
+#install the required dependencies
+install:
+  - npm install
+
+script:
+  - grunt
+```
+
+Refer [sample_ubuntu1204_nodejs](https://github.com/shippableSamples/sample_ubuntu1204_nodejs) on github for more details.
+
 ## PHP
 
-This section helps you to create a shippable.yml file for your php
-project.
+This section helps you to create a shippable.yml file for your php project.
 
 - Set the appropriate language and the version number. You can test against multiple versions for a single push by adding more entries. PHP minions use `php` by default to set the runtime platform.
 
-         # language setting
-         language: php
-         # php tag
-         php:
-           - 5.3
-           - 5.4
-           - 5.5
-           - 5.6
-           - hhvm
+```
+# language setting
+language: php
+# php tag
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+  - 5.6
+  - hhvm
+```
 
 ### Test scripts
 
 -   Use the script key in shippable.yml file to specify what command to run tests with.
 
-         script: phpunit UnitTest
-
-    > **Note**
-    >
-    > Runs the tests that are provided by the class UnitTest. This class is
-    > expected to be declared in the UnitTest.php sourcefile.
-
-### PHP extensions
-
-Our minions are pre-installed with the following PHP extensions:
-
-1. [amqp.so](http://php.net/amqp)
-2. [apc.so](http://php.net/apc)
-3. [memcache.so](http://php.net/memcache)
-4. [memcached.so](http://php.net/memcached)
-5. [mongo.so](http://php.net/mongo)
-6. [redis.so](http://pecl.php.net/package/redis)
-7. [xdebug.so](http://xdebug.org/)
-8. [zmq.so](http://in1.php.net/manual/en/book.zmq.php)
-
-You will have to add **extension=<extension>.so** to php.ini file to
-enable the extension. For example, configure your yml file as shown
-below to enable redis.so.
-
 ```
-echo "extension = redis.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+script: phpunit UnitTest
 ```
 
-It is also possible to install custom PHP extensions using [PECL](http://pecl.php.net/):
-
-```
-pecl install <extension>
-```
-
-PECL will automatically enable the extension at the end of the
-installation.
+> **Note**
+>
+> Runs the tests that are provided by the class UnitTest. This class is expected to be declared in the UnitTest.php sourcefile.
 
 ### Build Examples
 
@@ -675,6 +758,77 @@ Ubuntu minion. Once the build finishes execution, you can check for the
 console output, test and code coverage output on the respective build’s
 tab.
 
+### Build Image
+
+The following build images are available for php
+
+1.  [shippableimages/ubuntu1204_php](https://registry.hub.docker.com/u/shippableimages/ubuntu1204_php) ([Dockerfile](https://github.com/shippableImages/ubuntu1204_php/blob/master/Dockerfile))
+2.  [shippableimages/ubuntu1404_php](https://registry.hub.docker.com/u/shippableimages/ubuntu1404_php) ([Dockerfile](https://github.com/shippableImages/ubuntu1404_php/blob/master/Dockerfile))
+
+The php versions available in these images are:
+
+- 5.3
+- 5.4
+- 5.5
+- 5.6
+
+Go to your **Project Page**, click on **Settings** and choose the following image:
+
+`Pull Image from: shippableimages/ubuntu1204_php`
+
+Activate the required version in before_install section to run your build against the correct version of
+php.
+
+A sample yml that helps you getting started with php image:
+
+```bash
+language: php
+
+php:
+  - 5.3
+
+# Activate the required php version
+before_install:
+  - export PATH=$HOME/.phpenv/bin:$HOME/.phpenv/extensions:$PATH && eval "$(phpenv init -)"
+  - phpenv global $SHIPPABLE_PHP_VERSION
+  - php --version
+
+script:
+  - phpunit  tests/calculator_test.php
+```
+
+Refer [sample_ubuntu1204_php](https://github.com/shippableSamples/sample_ubuntu1204_php)
+on github for more details.
+
+### PHP extensions
+
+Our minions are pre-installed with the following PHP extensions:
+
+1. [amqp.so](http://php.net/amqp)
+2. [apc.so](http://php.net/apc)
+3. [memcache.so](http://php.net/memcache)
+4. [memcached.so](http://php.net/memcached)
+5. [mongo.so](http://php.net/mongo)
+6. [redis.so](http://pecl.php.net/package/redis)
+7. [xdebug.so](http://xdebug.org/)
+8. [zmq.so](http://in1.php.net/manual/en/book.zmq.php)
+
+You will have to add **extension=<extension>.so** to php.ini file to
+enable the extension. For example, configure your yml file as shown
+below to enable redis.so.
+
+```
+echo "extension = redis.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+```
+
+It is also possible to install custom PHP extensions using [PECL](http://pecl.php.net/):
+
+```
+pecl install <extension>
+```
+
+PECL will automatically enable the extension at the end of the
+installation.
 
 ## Python
 
@@ -685,45 +839,53 @@ project.
 
 - Set the appropriate language and the version number. You can test against multiple versions for a single push by adding more entries. Python minions use `python` by default to set the version.
 
-         # language setting
-         language: python
+```
+# language setting
+language: python
 
-         # version numbers
-         python:
-           - "2.7"
-           - "3.2"
-           - "3.3"
-           - "pypy"
+# version numbers
+python:
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "pypy"
+```
 
 - We support different versions of python like 2.6, 2.7, 3.2, 3.3, 3.4
   and pypy.
 - Install dependencies for your project using the **install** key.
 
-         install: "pip install -r requirements.txt --use-mirrors"
+```
+install: "pip install -r requirements.txt --use-mirrors"
+```
 
--   **Test scripts** : Use the **script** key in the shippable.yml file to specify what command to run tests with.
+### Test scripts
 
-         # command to run tests
-         script: nosetests
+Use the **script** key in the shippable.yml file to specify what command to run tests with.
+
+```
+# command to run tests
+script: nosetests
+```
 
 -   Test against multiple versions of Django by setting the **env** key and then install the required dependencies for it using the install key.
 
-         env:
-           - DJANGO_VERSION=1.2.7
-           - DJANGO_VERSION=1.3.7
-           - DJANGO_VERSION=1.4.10
-           - DJANGO_VERSION=1.5.5
-           - DJANGO_VERSION=1.6
+```
+env:
+- DJANGO_VERSION=1.2.7
+- DJANGO_VERSION=1.3.7
+- DJANGO_VERSION=1.4.10
+- DJANGO_VERSION=1.5.5
+- DJANGO_VERSION=1.6
 
-         install:
-           - pip install -q mock==0.8 Django==$DJANGO_VERSION
-           - pip install . --use-mirrors
+install:
+- pip install -q mock==0.8 Django==$DJANGO_VERSION
+- pip install . --use-mirrors
+```
 
-
-    > **Note**
-    >
-    > We are setting multiple versions here which means a single push to
-    > repo will trigger multiple builds.
+> **Note**
+>
+> We are setting multiple versions here which means a single push to repo will trigger multiple builds.
 
 ### Build Examples
 
@@ -808,101 +970,153 @@ Enable the repo sample_python and run it using an Ubuntu minion. Once
 the build finishes execution, you can check for the console output, test
 and codecoverage results on the respective build's page.
 
+### Build Image
+
+The following build images are available for python :
+
+1.  [shippableimages/ubuntu1204_python](https://registry.hub.docker.com/u/shippableimages/ubuntu1204_python) ([Dockerfile](https://github.com/shippableImages/ubuntu1204_python/blob/master/Dockerfile))
+2.  [shippableimages/ubuntu1404_python](https://registry.hub.docker.com/u/shippableimages/ubuntu1404_python) ([Dockerfile](https://github.com/shippableImages/ubuntu1404_python/blob/master/Dockerfile))
+
+The python versions available in these images are:
+
+- 2.7.3
+- 3.3.5
+- 3.4.1
+
+Go to your **Project Page**, click on **Settings** and choose the following image:
+
+`Pull Image from : shippableimages/ubuntu1204_python`
+
+Activate the appropriate virtual environment in before_install section to run your build against the
+correct version of python. You can use **$SHIPPABLE_PYTHON**
+environment variable to specify python versions.
+
+A sample yml that helps you getting started with python image:
+
+```yaml
+language: python
+
+python:
+  - 2.7
+  - 3.3
+  - 3.4
+
+before_install:
+#  set up a virtualenv and activate the python version that you want to use
+  - mkdir -p $HOME/bldve/
+  - virtualenv -p $SHIPPABLE_PYTHON  $HOME/bldve/
+  - source $HOME/bldve/bin/activate
+
+install:
+#install the required dependencies
+  - pip install -r requirements.txt
+
+script:
+  - python test.py
+```
+
+Refer [sample_ubuntu1204_python](https://github.com/shippableSamples/sample_ubuntu1204_python) on github for more details.
 
 ## Ruby
 
-This section helps you to set the build environment and other
-configuration specific to Ruby projects.
-
-### Ruby versions for testing
+This section helps you to set the build environment and other configuration specific to Ruby projects.
 
 - Set the appropriate language and version number. You can test against multiple versions for a single push by adding more entries. Ruby minions use `rvm` by default to set the version
 
-         # language setting
-         language: ruby
+```
+# language setting
+language: ruby
 
-         # version numbers
-         rvm:
-           - 1.8.7
-           - 1.9.2
-           - 1.9.3
-           - 2.0.0
-           - 2.1.0
-           - 2.1.1
-           - 2.1.2
-           - jruby-18mode
-           - jruby-19mode
-           - rbx
-           - ruby-head
-           - jruby-head
-           - ree
+# version numbers
+rvm:
+  - 1.8.7
+  - 1.9.2
+  - 1.9.3
+  - 2.0.0
+  - 2.1.0
+  - 2.1.1
+  - 2.1.2
+  - jruby-18mode
+  - jruby-19mode
+  - rbx
+  - ruby-head
+  - jruby-head
+  - ree
+```
 
-    > **Note**
-    >
-    > We are setting multiple versions of Ruby here which means a single
-    > push to repo will trigger multiple builds.
+> **Note**
+>
+> We are setting multiple versions of Ruby here which means a single push to repo will trigger multiple builds.
 
 -  Though we pre-install only a few versions of Ruby, all versions of Ruby are supported. As long as they are available as a binary for Ubuntu 12.04, you can specify custom patchlevels.
 
-         language: ruby
-         rvm: 2.0.0-p247
+```
+language: ruby
+rvm: 2.0.0-p247
+```
 
-    > **Note**
-    >
-    > This binds you to potentially unsupported releases of Ruby. It also
-    > extends your build time as downloading and installing a custom Ruby
-    > can add an extra 60 seconds or more to your build the first time it
-    > installs.
+> **Note**
+>
+> This binds you to potentially unsupported releases of Ruby. It also extends your build time as downloading and installing a custom Ruby can add an extra 60 seconds or more to your build the first time it installs.
 
-    We are using Bundler, `bundle install` to install all your gems. We also
-    use `rake` by default to run your build and hence you need to specify it
-    in your gemfile
+We are using Bundler, `bundle install` to install all your gems. We also
+use `rake` by default to run your build and hence you need to specify it
+in your gemfile
 
 - If you are using a custom gemfile thats not in default location you can specify it with the `gemfile` tag
 
-         # gemfile tag
-         gemfile: gemfiles/Gemfile.ci
+```
+# gemfile tag
+gemfile: gemfiles/Gemfile.ci
+```
 
-    > **Note**
-    >
-    > If you specify multiple gemfiles in the above tag, a matrix build is
-    > triggered for every version of the gemfile.
+> **Note**
+>
+> If you specify multiple gemfiles in the above tag, a matrix build is triggered for every version of the gemfile.
 
 -  Additional arguments can be added to `bundle install` command and we will append them to the default command
 
-         # bundle_args
-         bundler_args: --binstubs
+```
+# bundle_args
+bundler_args: --binstubs
+```
 
 - If you want to run some other commands before install you can do this
 
-         # before_install tag
-         before_install: gem install bundler --pre
+```
+# before_install tag
+before_install: gem install bundler --pre
+```
 
 -   You can also set multiple environment variables and test against multiple different versions by using the env variable in your code. This will fire 3 different builds, one for each env variable
 
-         # env tag
-         env:
-           - CHEF_VERSION=0.9.18
-           - CHEF_VERSION=0.10.2
-           - CHEF_VERSION=0.10.4
+```
+# env tag
+env:
+- CHEF_VERSION=0.9.18
+- CHEF_VERSION=0.10.2
+- CHEF_VERSION=0.10.4
+```
 
 -   You can also test against multiple `jdk` versions
 
-         # jdk tag
-         jdk:
-           - openjdk7
-           - oraclejdk7
-           - openjdk6
+```
+# jdk tag
+jdk:
+  - openjdk7
+  - oraclejdk7
+  - openjdk6
+```
 
--   You can also update the versions on your minion by running a simple
-    command or even downgrade if you choose to. The script below
-    demonstrates an upgrade and downgrade - .. code-block:: python
+-   You can also update the versions on your minion by running a simple command or even downgrade if you choose to. The script below demonstrates an upgrade and downgrade - .. code-block:: python
 
-         before_install:
-           - gem update --system
-           - gem --version
-           - gem update --system 2.1.11
-           - gem --version
+```
+before_install:
+- gem update --system
+- gem --version
+- gem update --system 2.1.11
+- gem --version
+```
 
 ### Build Examples
 
@@ -966,6 +1180,57 @@ Enable the repo sample_ruby and run it using an Ubuntu minion. Once the
 build finishes execution, you can check for the console output, test and
 codecoverage results on the respective build's page.
 
+### Build Image
+
+The following build images are available for ruby:
+
+1. [shippableimages/ubuntu1204_ruby](https://registry.hub.docker.com/u/shippableimages/ubuntu1204_ruby) ([Dockerfile](https://github.com/shippableImages/ubuntu1204_ruby/blob/master/Dockerfile))
+2. [shippableimages/ubuntu1404_ruby](https://registry.hub.docker.com/u/shippableimages/ubuntu1404_ruby) ([Dockerfile](https://github.com/shippableImages/ubuntu1404_ruby/blob/master/Dockerfile))
+
+The ruby versions available in these images are:
+
+- 1.8.7
+- 1.9.2
+- 1.9.3
+- 2.0.0
+- 2.1.1
+- jruby
+- ruby-head
+
+Go to your **Project Page**, click on **Settings** and choose the following image:
+
+`Pull Image from : shippableimages/ubuntu1204_ruby`
+
+Activate rvm in before_install or install section to run your build against the correct version of ruby.
+
+A sample yml that helps you getting started with ruby image:
+
+```yaml
+language: ruby
+
+rvm:
+  - 2.1.1
+
+# activate rvm
+before_install:
+  - source ~/.rvm/scripts/rvm
+  - rvm install $SHIPPABLE_RUBY --verify-downloads 1
+  - source ~/.bashrc && ~/.rvm/scripts/rvm && rvm use $SHIPPABLE_RUBY
+
+#install the dependencies
+install:
+  - bundle install --gemfile="Gemfile"
+  - ruby -v
+
+script:
+  - bundle exec rake
+```
+
+Refer [sample_ubuntu1204_ruby](https://github.com/shippableSamples/sample_ubuntu1204_ruby)
+on github for more details.
+
+-------
+
 ## Scala
 
 This section helps you specify the build environment and other
@@ -974,34 +1239,40 @@ configuration specific to Scala projects.
 - Set the appropriate language and version number. You can test
   against multiple versions for a single push by adding more entries.
   Scala minions use `scala` by default to set the version.
+
 - We support SBT, oraclejdk8, oraclejdk7, openjdk6 and openjdk7. Specify Scala versions like 2.8.x, 2.9.x and 2.10.x in the shippable.yml file as shown below.
 
-         language: scala
-         scala:
-           - 2.8.2
-           - 2.9.2
+```
+language: scala
+scala:
+  - 2.8.2
+  - 2.9.2
+```
 
 -   Scala builder assumes dependency management based on projects like
     Maven, Gradle or SBT and it will pull down project dependencies
     automatically before running tests.
 -   To test against multiple JDKs, use jdk tags. For example, to test against the oraclejdk8, oraclejdk7, openjdk6 and openjdk7
 
-         jdk:
-           - oraclejdk8
-           - oraclejdk7
-           - openjdk6
-           - openjdk7
+```
+jdk:
+- oraclejdk8
+- oraclejdk7
+- openjdk6
+- openjdk7
+```
 
-### SBT projects
+### Test Scripts
 
 -   If your repository root has **Project** directory or build.sbt file, then our scala builder will run the test suite using
 
-         sbt ++$SHIPPABLE_SCALA_VERSION test
+```
+sbt ++$SHIPPABLE_SCALA_VERSION test
+```
 
 ### Build Examples
 
-This sample will help you get started with Shippable. Testing framework
-used here is [ScalaTest](http://scalatest.org/).
+This sample will help you get started with Shippable. Testing framework used here is [ScalaTest](http://scalatest.org/).
 
 [Scala Sample](https://github.com/shippableSamples/sample_scala)
 
@@ -1034,3 +1305,32 @@ scala:
 Enable the repo sample_scala and run it using an Ubuntu minion. Once
 the build finishes execution, you can check for the console output, test
 and codecoverage results on the respective build's page.
+
+### Build Image
+
+The build images available for scala:
+
+1. [shippableimages/ubuntu1204_scala](https://registry.hub.docker.com/u/shippableimages/ubuntu1204_scala) ([Dockerfile](https://github.com/shippableImages/ubuntu1204_scala/blob/master/Dockerfile))
+2. [shippableimages/ubuntu1404_scala](https://registry.hub.docker.com/u/shippableimages/ubuntu1404_scala) ([Dockerfile](https://github.com/shippableImages/ubuntu1404_scala/blob/master/Dockerfile))
+
+The scala version available in the image is 2.11.2
+
+Go to your **Project Page**, click on **Settings** and choose the following image:
+
+`Pull Image from : shippableimages/ubuntu1204_scala`
+
+A sample yml that helps you getting started with scala image:
+
+```yaml
+language: scala
+
+before_script:
+  - export PATH=$PATH:$SHIPPABLE_REPO_DIR
+
+script:
+  - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
+  - sbt clean scoverage:test
+```
+
+Refer [sample_ubuntu1204_scala](https://github.com/shippableSamples/sample_ubuntu1204_scala)
+on github for more details.
