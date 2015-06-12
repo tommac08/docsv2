@@ -86,7 +86,7 @@ You will need this to pull or push images to Docker Hub as part of building your
 
 You will need this to pull or push images to Google Container Registry as part of building your project. More details on using GCR is [here](gcr.md)
 
-1. On the [Google Developers Console](https://console.developers.google.com/), select the project you just created
+1. On the [Google Developers Console](https://console.developers.google.com/), select the project you want to integrate with Shippable
 2. In the sidebar on the left, expand 'APIs & auth' and select 'Credentials'
 3. Click 'Create new Client ID' and select 'Service Account' in the pop-up window
 4. Click on 'Create Client ID'. A dialog box appears. To proceed, click 'Okay, got it'

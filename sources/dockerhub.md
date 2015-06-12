@@ -16,23 +16,15 @@ Read on for detailed instructions -
 
 ## Connect your Docker Hub account to Shippable
 
-- Login to Shippable
-- Click on `Settings` in the top navbar
-- On the Account Settings page, click on `Integrations`
-- From the options presented, click on `Docker Hub Credentials`
-- Enter an Integration name, which will be used to refer to this integration on Shippable
-- Enter your credentials
-- Click on `Save`
+Follow the instructions from the [Account Settings Page] (account_settings/#connect-to-docker-hub) to set up your Dockerhub Integration
 
-Once the Docker Hub Integration is created at an Account level, you are ready to configure your project to pull from or push images to Docker Hub.
+At this point, you have set up Dockerhub integration at an account level. To push and pull from Dockerhub, you will also need to enable repo-level access as described in the scenarios below.
 
 -------
 
 ## Add Docker Hub Integration to your project
 
-- Go to your repository page on Shippable
-- Click on the drop down on the right panel called `Integrations`
-- Choose the appropriate Docker Hub Integration from the dropdown. If you don't see any, please follow the instructions in the previous section to Connect a Docker Hub Account to your Shippable Account.
+Follow instructions [here](project_settings.md) to add a Dockerhub integration to your project
 
 ---------
 
@@ -41,7 +33,6 @@ Once the Docker Hub Integration is created at an Account level, you are ready to
 - On the repository page on Shippable, go to the 'Settings' tab
 - Choose the following to pull an image from Docker Hub -
     - Pull image from : docker_hub_username/image_name
-- You can also pull a public image from Shippable's list of images from the image list dropdown
 - Click on `Save`
 
 The username above should be the same as the Docker Hub credentials you entered while connecting Docker Hub to Shippable.
@@ -88,44 +79,37 @@ can be found in Docker's official documentation [Docker's official
 documentation](https://docs.dockerhub.com). You can also look at our
 [Docker build sample app](https://github.com/cadbot/dockerized-nodejs).
 
-### Pre-CI Dockerbuild
+### Pre CI Dockerbuild
 
-- Make sure your Shippable org is connected to your Docker Hub account
 - Enable the repository on Shippable
-- On the repo page, go to 'Settings'. Choose the following:
-    - Build image : Custom Image
-    - Custom image action : Build
-    - Custom image name : (docker hub username)/(image name)
-    - Source code path : (source code path for image you want to build)
-    - Push to Docker Hub : Check
-    - Push image tag : Click on the dropdown and choose the appropriate setting. You can choose your commitsha as your tag to keep it distinct or set the custom_tag to `latest`. By default, build numbers are used as tags. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*
+- Make sure that Dockerhub integration is created in your Account settings and that Dockerhub Integration is enabled for your repo
+- On the repo page, go to 'Settings'. Choose the following -
+    - Docker Build : ON
+    - Docker Build Order : Pre-CI
+    - Push Build : Yes if you want to push to Dockerhub, No if you don't want to push to Dockerhub
+    - Push Image to : (dockerhub_username))/(image_name)
+      _We need an image name for the image we build from your Dockerfile, even if you choose not to push to Dockerhub_
+    - Push image tag : Click on the dropdown and choose the appropriate setting. You can choose your commitsha as your tag to keep it distinct or set the custom_tag to `latest`. By default, build numbers are used as tags.
+    - Source Location : (source code location where tests will be run)
 - Make sure the Dockerfile for the image you want to build is at the root of your repo
 - Trigger a manual or webhook build
-- After the build is complete, make sure your Docker Hub account has
-  the image you just pushed. The image should be tagged with the tag you set up in `settings` or the build
-  number on Shippable
+- After the build is complete, make sure your repo on Dockerhub shows the image you just pushed. The image should be tagged with the build number on Shippable.
 
-### Post-CI Dockerbuild
+### Post CI Dockerbuild
 
-- Make sure your Shippable org is connected to your Docker Hub account
 - Enable the repository on Shippable
+- Make sure that Dockerhub integration is created in your Account settings and that Dockerhub Integration is enabled for your repo
 - On the repo page, go to 'Settings'. Choose the following -
-    - Build image : Custom Image
-    - Custom image action : Build
-    - Custom image name : (docker hub username)/(image name)
-    - Source code path : (source code path for image you want to
-      build)
-    - Docker build when finished : Check
-    - Image to pull: Specify image you want to run tests on, default
-      is shippable/minv2
-    - Push to Docker Hub : Check
-    - Push image tag : Click on the dropdown and choose the appropriate setting. You can choose your commitsha as your tag to keep it distinct or set the custom_tag to `latest`. By default, build numbers are used as tags. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*
-- Make sure the Dockerfile for the image you want to build is at the
-  root of your repo
+    - Docker Build : ON
+    - Dockerbuild order : Post-CI
+    - Push Build : Yes if you want to push to Dockerhub, No if you don't want to push to Dockerhub
+    - Push image to :(dockerhub_username))/(image_name)
+    _We need an image name for the image we build from your Dockerfile, even if you choose not to push to Dockerhub_
+    - Push image tag : Click on the dropdown and choose the appropriate setting. You can choose your commitsha as your tag to keep it distinct or set the custom_tag to `latest`. By default, build numbers are used as tags.
+    - Pull image from : Since your Dockerbuild is happening post CI, enter the image you want to use for CI
+- Make sure the Dockerfile for the image you want to build is at the root of your repo
 - Trigger a manual or webhook build
-- After the build is complete, make sure your Docker Hub account has
-  the right image. The image should be tagged with the tag you set up in `settings` or the build number on
-  Shippable.
+- After the build is complete, make sure your repo on Dockerhub shows the image you just pushed. The image should be tagged with the build number on Shippable.
 
 ### Copying artifacts to prod image
 
