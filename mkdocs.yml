@@ -14,13 +14,12 @@ pages:
   - [build_quickstart.md, Getting Started, 'Quick Start: Run your first build']
   - [formations_quickstart.md, Getting Started, 'Quick Start: Set up your first Formation']
 
+  - [ci_userguide.md, Shippable CI, User Guide]
   - [ci_overview.md, Shippable CI, Overview]
   - [basic_flow.md, Shippable CI, Basic Build Flow]
   - [project_settings.md, Shippable CI, Project Settings]
   - [build_config.md, Shippable CI, Build Configuration]
-  - [ci_userguide.md, Shippable CI, User Guide]
-  - [languages/index.md, Shippable CI, Language help]
-  - [languages/images.md, Shippable CI, Build images]
+  - [languages.md, Shippable CI, Language help]
   - [using_gitlab.md, Shippable CI, Using Shippable with Gitlab]
   - [lighthouse.md, Shippable CI, Lighthouse]
 
