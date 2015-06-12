@@ -17,7 +17,7 @@ pages:
   - [ci_overview.md, Shippable CI, Overview]
   - [ci_userguide.md, Shippable CI, User Guide]
   - [basic_flow.md, Shippable CI, Basic Build Flow]
-  - [ci_settings.md, Shippable CI, CI Subscription Settings]
+  - [ci_settings.md, Shippable CI, CI Settings]
   - [project_settings.md, Shippable CI, Project Settings]
   - [build_config.md, Shippable CI, Build Configuration]
   - [languages.md, Shippable CI, Language help]

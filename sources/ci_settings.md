@@ -2,7 +2,7 @@ page_title: Shippable CI Settings| Documentation | Shippable
 page_description: How to configure Shippable CI Subscription Settings
 page_keywords: ci settings, subscription settings, CI/CD, shippable CI, documentation, shippable, config, yml
 
-# Shippable CI Subscription Settings
+# CI Subscription Settings
 
 This page explains the different options available in the `SETTINGS` tab for your Subscription.
 
