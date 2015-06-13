@@ -10,7 +10,7 @@ This page describes the different integrations you can set up for your account. 
 
 ## Docker Hub
 
-You will need this to pull or push images to Docker Hub as part of building your project. More details on using Docker Hub is [here](dockerhub.md)
+You will need this to pull or push images to Docker Hub as part of building your project.
 
 1. Click on Account Settings (the gear icon on the top bar) and scroll down to the `Integrations` section
 2. To add a new integration, click on (+)
@@ -23,7 +23,7 @@ You will need this to pull or push images to Docker Hub as part of building your
 
 ## Google Container Registry (GCR)
 
-You will need this to pull or push images to Google Container Registry as part of building your project. More details on using GCR is [here](gcr.md)
+You will need this to pull or push images to Google Container Registry as part of building your project.
 
 1. On the [Google Developers Console](https://console.developers.google.com/), select the project you want to integrate with Shippable
 2. In the sidebar on the left, expand 'APIs & auth' and select 'Credentials'
