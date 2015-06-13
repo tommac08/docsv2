@@ -31,7 +31,7 @@ In most cases, you can cache your images between builds by turning cache within 
 
 However, there are some exceptions where caching is not supported. Specifically, *if you are pushing images to Docker Hub or GCR, we do not recommend turning on caching*. It might still work in most cases, but there are some scenarios where caching breaks down and can cause your push to Docker Hub or GCR to fail.
 
-If you run into this issue, you should include [reset_minion] in your commit message to clear cache for that project, and try running your build again.
+If you run into this issue, you should include ```[reset_minion]``` in your commit message to clear cache for that project, and try running your build again.
 
 -------
 
@@ -41,31 +41,35 @@ Shippable allows you to interact with Docker Hub in any part of your build workf
 
 Check out the [Docker Hub Documentation](https://docs.docker.com/docker-hub/) to learn more.
 
+
 ### Pull images from Docker Hub
 
-1. Follow the instructions to [Integrate your DockerHub account to Shippable](integrations_dockerhub.md).
-2. Follow instructions on the [Project Settings Page](project_settings.md) to add the integration to your project.
-3. On your Project page, click on the `Settings` tab and set the following options:
+1. Follow the instructions to [integrate your DockerHub account to Shippable](integrations.md).
+2. Go to your project page and click on the `Settings` tab
+3. Scroll down to **Project Integrations** and click on `Hub`
+4. Choose the integration name from Step 1.
+5. Scroll back to **Project Settings** and set the following option:
   - Pull image from : docker_hub_username/image_name
-4. Click on `Save`
+6. Click on `Save`
 
 _The username above should be the same as the Docker Hub credentials you entered while connecting Docker Hub to Shippable._
 
--------
 
-## Push images to Docker Hub
+### Push images to Docker Hub
 
-1. Follow the instructions to [Integrate your DockerHub account to Shippable](integrations_dockerhub.md).
-2. Follow instructions on the [Project Settings Page](project_settings.md) to add the integration to your project.
-3. On your Project page, click on the `Settings` tab and set the following options:
+1. Follow the instructions to [integrate your DockerHub account to Shippable](integrations.md).
+2. Go to your project page and click on the `Settings` tab
+3. Scroll down to **Project Integrations** and click on `Hub`
+4. Choose the integration name from Step 1.
+5. Scroll back to **Project Settings** and set the following options:
    - Push Build : Yes
    - Push image to : docker_hub_username/image_name
    - Push image tag : Click on the dropdown and choose the appropriate setting. You can choose your commitsha as your tag to keep it distinct or set the custom_tag to `latest`. By default, build numbers are used as tags. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*
-4. Click on `Save`
+6. Click on `Save`
 
 _The username above should be the same as the Docker Hub credentials you entered while connecting Docker Hub to Shippable._
 
----
+----
 
 ## Google Container Registry
 
@@ -73,29 +77,35 @@ Shippable allows you to interact with Google Container Registry(GCR) in any part
 
 Learn more about GCR at [Google's documentation](https://cloud.google.com/tools/container-registry) or [announcement blog](http://googlecloudplatform.blogspot.com/2015/01/secure-hosting-of-private-Docker-repositories-in-Google-Cloud-Platform.html).
 
+
 ### Pull images from GCR
 
-1. Follow the instructions to [Integrate your GCR account with Shippable](integrations_gcr.md).
-2. Follow instructions on the [Project Settings Page](project_settings.md) to add the integration to your project.
-3. On your Project page, click on the `Settings` tab and set the following option:
+1. Follow the instructions to [Integrate your GCR account with Shippable](integrations.md).
+2. Go to your project page and click on the `Settings` tab
+3. Scroll down to **Project Integrations** and click on `Hub`
+4. Choose the integration name from Step 1.
+5. Scroll back to **Project Settings** and set the following option:
   - Pull image from : gcr.io/gcr_project_id/image_name
-4. Click on `Save`
+6. Click on `Save`
 
--------
 
 ### Push images to GCR
 
-1. Follow the instructions to [Integrate your GCR account to Shippable](integrations_gcr.md).
-2. Follow instructions on the [Project Settings Page](project_settings.md) to add the integration to your project.
-3. On your Project page, click on the `Settings` tab and set the following options:
+1. Follow the instructions to [Integrate your GCR account to Shippable](integrations.md).
+2. Go to your project page and click on the `Settings` tab
+3. Scroll down to **Project Integrations** and click on `Hub`
+4. Choose the integration name from Step 1.
+5. Scroll back to **Project Settings** and set the following options:
    - Push Build : Yes
    - Push image to : gcr.io/gcr_project_id/image_name
    - Push image tag : Click on the dropdown and choose the appropriate setting. You can choose your commitsha as your tag to keep it distinct or set the custom_tag to `latest`. By default, build numbers are used as tags. Check out our [blog](http://blog.shippable.com/immutable-containers-with-version-tags-on-docker-hub) on immutable containers to know why*
-4. Click on `Save`
+6. Click on `Save`
 
 >**Note**
 >
 >Pushing to GCR needs a credit card to be associated with your Google Cloud Platform account. If you do not have that configured in your [Google Dev Console](https://console.developers.google.com), the push will fail since GCR will reject it.
+
+-----
 
 ## Docker Build
 
@@ -118,6 +128,7 @@ Post-CI workflow is:
 
 To use these workflows, your app must be "Dockerized". Details on this can be found in Docker's official documentation [Docker's official documentation](https://docs.dockerhub.com). See the [sample projects](#sample-projects) section for an example.
 
+
 ### Pre CI Dockerbuild
 
 1. Enable the repository on Shippable
@@ -134,6 +145,7 @@ To use these workflows, your app must be "Dockerized". Details on this can be fo
 5. Trigger a manual or webhook build
 6. After the build is complete, make sure your repo on Dockerhub or GCR project shows the image you just pushed. The image should be tagged with the Push image tag you set.
 
+
 ### Post CI Dockerbuild
 
 1. Enable the repository on Shippable
@@ -149,6 +161,7 @@ To use these workflows, your app must be "Dockerized". Details on this can be fo
 4. Make sure the Dockerfile for the image you want to build is at the root of your repo
 5. Trigger a manual or webhook build
 6. After the build is complete, make sure your repo on Dockerhub or GCR project shows the image you just pushed. The image should be tagged with the Push image tag you set.
+
 
 ### Copying artifacts to prod image
 
@@ -179,6 +192,8 @@ ADD ./buildoutput/(artifacts file) (target)
 
 And that's it. Any artifacts you need will be available in your prod
 image.
+
+--------
 
 ## Sample Projects
 
