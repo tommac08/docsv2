@@ -74,7 +74,7 @@ This is where we collect the information needed to connect to the different serv
 
 ### Connect to Docker Hub
 
-You will need this to pull or push images to Docker Hub as part of building your project. More details on using Docker Hub is [here](dockerhub.md)
+You will need this to pull or push images to Docker Hub as part of building your project. More details on using Docker Hub is [here](docker_registries.md/#docker-hub)
 
 1. To add a new integration, click on (+)
 2. **Master Integration:** Click on `Docker`
@@ -84,7 +84,7 @@ You will need this to pull or push images to Docker Hub as part of building your
 
 ### Connect to GCR (Google Container Registry)
 
-You will need this to pull or push images to Google Container Registry as part of building your project. More details on using GCR is [here](gcr.md)
+You will need this to pull or push images to Google Container Registry as part of building your project. More details on using GCR is [here](docker_registries.md/#google-container-registry)
 
 1. On the [Google Developers Console](https://console.developers.google.com/), select the project you want to integrate with Shippable
 2. In the sidebar on the left, expand 'APIs & auth' and select 'Credentials'
