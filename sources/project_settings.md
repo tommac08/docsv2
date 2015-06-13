@@ -8,7 +8,9 @@ page_keywords: project settings, CI/CD, shippable CI, documentation, shippable, 
 
 This page explains the different options available in the `SETTINGS` tab in your Project Page.
 
-## Docker Build OFF
+## Build Settings
+
+### Docker Build OFF
 
 This is the default CI mode. In this mode, builds are run as per your configuration in your shippable.yml and the rest of the settings on this page.
 
@@ -63,13 +65,12 @@ You can decide whether you want to be notified via Lighthouse if this image chan
 
 See our [Lighthouse Page](lighthouse.md) for details on how to use the feature.
 
-## Docker Build ON
+### Docker Build ON
 
 You can run your build in a custom Docker container by building a Docker image from a Dockerfile. Aside from providing a custom environment for your build, this image created can be pushed to your Docker Hub account, for later use in your deployment step.
 
-> **Note**
->
-> See [Docker's Official Documentation] (https://docs.dockerhub.com) for more details on how to "Dockerize" your app.
+See [Docker's Official Documentation](https://docs.dockerhub.com) for more details on how to "Dockerize" your app.
+
 
 ### Docker Build Order: Pre-CI or Post-CI
 
