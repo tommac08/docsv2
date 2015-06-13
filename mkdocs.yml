@@ -17,7 +17,7 @@ pages:
   - [ci_overview.md, Shippable CI, Overview]
   - [basic_flow.md, Shippable CI, Basic Build Flow]
   - [ci_settings.md, Shippable CI, CI Subscription Settings]
-  - [ci_dashboard.md, Shippable CI, CI Dashboard]
+  - [ci_dashboard.md, Shippable CI, CI Subscription Dashboard]
   - [project_settings.md, Shippable CI, Project Settings]
   - [project_dashboard.md, Shippable CI, Project Dashboard]
   - [build_dashboard.md, Shippable CI, Build Dashboard]
