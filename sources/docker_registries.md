@@ -197,6 +197,6 @@ image.
 
 ## Sample Projects
 
-The [Docker build sample app](https://github.com/shippableSamples/docker-build-nodejs) demonstrates how to dockerize a simple nodejs app.
+[This Docker Build Sample App](https://github.com/shippableSamples/docker-build-nodejs) demonstrates how to dockerize a simple nodejs app.
 
-The [sample project](https://github.com/shippableSamples/sample-gcr) demonstrates a simple scenario - choose a public image from Docker Hub, run CI on that container, and if CI passes, push the resulting image to a private GCR image.
+[This Sample Project](https://github.com/shippableSamples/sample-gcr) demonstrates a simple scenario - choose a public image from Docker Hub, run CI on that container, and if CI passes, push the resulting image to a private GCR image.
