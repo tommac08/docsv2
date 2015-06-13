@@ -31,9 +31,7 @@ pages:
   - [formations_settings.md, Shippable Formations, Formations Settings]
   - [formations_faq.md, Shippable Formations, Formations FAQ]
 
-  - [integrations_dockerhub.md, Integrations, DockerHub]
-  - [integrations_gcr.md, Integrations, GCR]
-  - [integrations_lighthouse.md, Integrations, Lighthouse]
+  - [integrations.md, Integrations]
 
   - [languages.md, How To, Use specific languages]
   - [using_gitlab.md, How To, Use Shippable with Gitlab]
