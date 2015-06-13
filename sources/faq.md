@@ -13,6 +13,10 @@ Go to `Settings` under either your CI Subscription Page or Formations Page. You 
 
 Documentation:[Subscription Plan Management](ci_settings/#subscription-plan-management)
 
+## How are permissions managed on Shippable?
+
+Check out our [Permissions section](sign_up/permissions) for details on how we manage permissions.
+
 ## Why can't I see some of my repositories in my Shippable account?
 
 This happens due to one of the following reasons:

@@ -60,3 +60,23 @@ For more details on Formations, go to [Formations Overview](formations_overview.
 This will lead you to the Lighthouse dashboard that manages images that you want to watch.
 
 To learn more about Lighthouse, go to [Using Lighthouse](lighthouse.md).
+
+## Permissions
+
+We closely mimic GitHub and Bitbucket permissions for Orgs and projects.
+Anyone who has access to an organization or repository in
+GitHub/Bitbucket will also have access to build information and/or
+repository and build actions on Shippable. This happens automatically,
+so if you enable a repository in your Org on Shippable and another team
+member signs in, they will see the enabled repository and build history
+already present in their account.
+
+We support 2 roles -
+
+**Owner :** Owners have all privileges for an Org or Project. They can
+enable, run and delete projects, upgrade pricing plans, and view/run,
+cancel, and delete builds.
+
+**Collaborator :** Collaborators can enable projects and view/run builds
+on Shippable. They cannot delete enabled projects or upgrade pricing
+plans.

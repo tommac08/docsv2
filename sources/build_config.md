@@ -4,95 +4,62 @@ page_keywords: getting started, questions, documentation, shippable, config, yml
 
 # Build Configuration
 
-## Caching
+## Build Images
 
-Shippable does not cache dependencies between builds. Each build will
-run on a fresh minion and as soon as the build finishes execution, the
-minion will be deleted. However, we also understand that installing
-dependencies for each build will take more time and it affects your
-build speed . Hence we have a caching feature that helps you to cache.
+Our default image, shippable/minv2, comes installed with popular versions of all
+supported languages, tools and services.
 
-In your **Project Settings**, set `Cache Container` to ON. Don't forget to hit `Save`.
+However, you might prefer starting with a small image that only has
+versions of your language installed. To help with this, we have open
+sourced basic images for all supported languages. These images only come
+with popular versions of a language and are NOT pre-installed with any
+tools, addons or services.
 
-Before the build, we will check for the **cache** flag and if it
-is ON, the entire minion will be cached if the build succeeds and the
-cached minion will be reused for further builds.
+Our build images are available on Docker Hub in the [shippableImages account]
+(https://registry.hub.docker.com/repos/shippableimages/) . Dockerfiles
+for these images are in our [GitHub repository](https://github.com/shippableImages).
 
-You can use the **[reset_minion]** tag in your commit message to reset
-the minion. We will clear all the cached dependencies and packages, when
-we see a [reset_minion] tag and your build will run on a fresh minion.
-Once this build finishes execution, we will cache the minion once again
-so that further builds can run using the cached minion.
+You can choose language specific images for your project under **project settings**:
 
-Caching is done per build host, so it might take a few builds for all
-our hosts to get the cached minion. Additional details on caching can be
-found on our [blog](http://blog.shippable.com/container-caching) .
+- Go to your Project page
+- Click on the Settings tab
+- Click on the dropdown against `Pull Image from` and choose an appropriate image
 
-## Command collections
- `shippable.yml` supports collections under each
-tag. This is nothing more than YML functionality and we will run it one
-command at a time.
+As mentioned above, our language specific images do not come with any
+tools, addons, or services pre-installed. If you need pre-installed
+tools, addons or services, then you should use shippable/minv2 image.
 
-```yaml
-# collection scripts
-script:
- - ./minions/do_something.sh
- - ./minions/do_something_else.sh
-```
+Check out our [language help page](languages.md) for language specific info about build images.
 
-In the example above, our minions will run `./minions/do_something.sh`
-and then run `./minions/do_something-else.sh`. The only requirement is
-that all of these operations return a `0` exit code. Else the build will
-fail.
+## Build matrix
 
-## Retrying npm install
-
-Sometimes npm install may fail due to the intermittent network issues
-and affects your build execution. To avoid this, **shippable_retry**
- will try to install the command again. It will check the return
-code of a command and if it is non-zero, then it will re-try to install
-up to three times.
-
-**shippable_retry** functionality is available for all default
-installation commands and it will re-try to install on failure. You can
-also use this functionality for any custom installation from external
-resources. For example:
+This is another powerful feature that Shippable has to offer. You can
+trigger multiple different test passes for a single code push. You might
+want to test against different versions of ruby, or different aspect
+ratios for your Selenium tests or best yet, just different jdk versions.
+You can do it all with Shippable's matrix build mechanism.
 
 ```yaml
-before_install:
-    - shippable_retry sudo apt-get update
-    - shippable_retry sudo apt-get install something
+rvm:
+  - 1.8.7 # (current default)
+  - 1.9.2
+  - 1.9.3
+  - rbx
+  - jruby
+  - ruby-head
+  - ree
+gemfile:
+  - gemfiles/Gemfile.rails-2.3.x
+  - gemfiles/Gemfile.rails-3.0.x
+  - gemfiles/Gemfile.rails-3.1.x
+  - gemfiles/Gemfile.rails-edge
+env:
+  - ISOLATED=true
+  - ISOLATED=false
 ```
 
-## Git submodules
-
-Shippable supports git submodules. This is a cool functionality of
-breaking your projects down into manageable chunks. We automatically
-initialize the `.gitmodules` file in the root of the repo.
-
-> **Note**
->
-> If you are using private repos, add the deploy keys so that our minion
-> ssh keys are allowed to pull from the repo. This can be done via
-> shippable.com
-
-If its your own public repos then do this
-
-```python
-# for public modules use
-git://github.com/someuser/somelibrary.git
-
-# for private modules use
-git@github.com:someuser/somelibrary.git
-```
-
-If you would like to turn submodules off completely -
-
-```yaml
-# for public modules use
-git:
- submodules: false
-```
+The above example will fire 36 different builds for each push. Whoa!
+Need more minions?
 
 ## Environment Variables
 
@@ -230,7 +197,6 @@ env:
     - secure: <encrypted output>
 ```
 
-
 > **Note**
 >
 > Due to the security risk of exposing your secure variables, we do not
@@ -240,6 +206,70 @@ env:
 > secured variables are also not displayed in the script tab for
 > security reasons.
 
+
+## Command collections
+ `shippable.yml` supports collections under each tag. This is nothing more than YML functionality and we will run it one command at a time.
+
+```yaml
+# collection scripts
+script:
+ - ./minions/do_something.sh
+ - ./minions/do_something_else.sh
+```
+
+In the example above, our minions will run `./minions/do_something.sh`
+and then run `./minions/do_something-else.sh`. The only requirement is
+that all of these operations return a `0` exit code. Else the build will
+fail.
+
+## Retrying npm install
+
+Sometimes npm install may fail due to the intermittent network issues
+and affects your build execution. To avoid this, **shippable_retry**
+ will try to install the command again. It will check the return
+code of a command and if it is non-zero, then it will re-try to install
+up to three times.
+
+**shippable_retry** functionality is available for all default
+installation commands and it will re-try to install on failure. You can
+also use this functionality for any custom installation from external
+resources. For example:
+
+```yaml
+before_install:
+    - shippable_retry sudo apt-get update
+    - shippable_retry sudo apt-get install something
+```
+
+## Git submodules
+
+Shippable supports git submodules. This is a cool functionality of
+breaking your projects down into manageable chunks. We automatically
+initialize the `.gitmodules` file in the root of the repo.
+
+> **Note**
+>
+> If you are using private repos, add the deploy keys so that our minion
+> ssh keys are allowed to pull from the repo. This can be done via
+> shippable.com
+
+If its your own public repos then do this
+
+```python
+# for public modules use
+git://github.com/someuser/somelibrary.git
+
+# for private modules use
+git@github.com:someuser/somelibrary.git
+```
+
+If you would like to turn submodules off completely -
+
+```yaml
+# for public modules use
+git:
+ submodules: false
+```
 
 ## Include/Exclude Branches
 
@@ -273,36 +303,6 @@ branches:
     - stage
     - prod
 ```
-
-## Build matrix
-
-This is another powerful feature that Shippable has to offer. You can
-trigger multiple different test passes for a single code push. You might
-want to test against different versions of ruby, or different aspect
-ratios for your Selenium tests or best yet, just different jdk versions.
-You can do it all with Shippable's matrix build mechanism.
-
-```yaml
-rvm:
-  - 1.8.7 # (current default)
-  - 1.9.2
-  - 1.9.3
-  - rbx
-  - jruby
-  - ruby-head
-  - ree
-gemfile:
-  - gemfiles/Gemfile.rails-2.3.x
-  - gemfiles/Gemfile.rails-3.0.x
-  - gemfiles/Gemfile.rails-3.1.x
-  - gemfiles/Gemfile.rails-edge
-env:
-  - ISOLATED=true
-  - ISOLATED=false
-```
-
-The above example will fire 36 different builds for each push. Whoa!
-Need more minions?
 
 ### Exclude a version
 
@@ -729,3 +729,45 @@ Sample javascript code using
 [Selenium](https://github.com/shippableSamples/sample_node_selenium) .
 
 ---
+
+## Pull requests
+
+Shippable will integrate with github to show your pull request status on
+CI. Whenever a pull request is opened for your repo, we will run the
+build for the respective pull request and notify you about the status.
+You can decide whether to merge the request or not, based on the status
+shown. If you accept the pull request, Shippable will run one more build
+for the merged repo and will send email notifications for the merged
+repo. To rerun a pull request build, go to your project's page -\> Pull
+Request tab and then click on the **Build this Pull Request** button.
+
+* * * * *
+
+## Build badge
+
+Badges will display the status of your default branch. You can find the build badges on the project's page. Click on the **Badge** button and copy the markdown to your README file to display the status of most recent build on your Github or Bitbucket repo page.
+
+* * * * *
+
+## Build termination
+
+Build will be forcefully terminated in the following scenarios:
+
+-   If there has not been any log output or a command hangs for 10 minutes
+-   If the build is still running after 60 minutes for Free Plans or 120 minutes for Paid Plans
+
+When a build is forcefully terminated, the build status will indicate **timeout**.
+
+* * * * *
+
+## Skipping a build
+
+Any changes to your source code will trigger a build automatically on
+Shippable. So if you do not want to run build for a particular commit,
+then add **[ci skip]** or **[skip ci]** to your commit message.
+
+Our webhook processor will look for the string **[ci skip]** or **[skip
+ci]** in the commit message and if it exists, then that particular
+webhook build will not be executed.
+
+

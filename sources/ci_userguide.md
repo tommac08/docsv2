@@ -4,68 +4,6 @@ page_keywords: getting started, questions, documentation, shippable, config, yml
 
 # Shippable CI User Guide
 
-## Connecting your GitHub and Bitbucket accounts
-
-If you want to use Shippable to build both GitHub and Bitbucket
-repositories, you can connect the two accounts in order to get a
-consolidated view of all your projects in one Shippable account.
-
-To connect your accounts, sign in with the GitHub/BitBucket account that
-you want to be your primary account. You will go through the auth flow
-and land on your Shippable dashboard.
-
-If you signed in with GitHub, you can click on the BitBucker icon on the
-top right of your dashboard and then follow the auth flow for Bitbucket.
-
-If you originally signed up with Bitbucket, you can click on the GitHub
-icons on the top right of your dashboard and then follow the auth flow
-for GitHub.
-
-Once your accounts are both connected to Shippable, you should see a
-consolidated list of orgs and projects in your account. You can sign in
-with either of your credentials after this point.
-
-* * * * *
-
-## Permissions
-
-We closely mimic GitHub and Bitbucket permissions for Orgs and projects.
-Anyone who has access to an organization or repository in
-GitHub/Bitbucket will also have access to build information and/or
-repository and build actions on Shippable. This happens automatically,
-so if you enable a repository in your Org on Shippable and another team
-member signs in, they will see the enabled repository and build history
-already present in their account.
-
-We support 2 roles -
-
-**Owner :** Owners have all privileges for an Org or Project. They can
-enable, run and delete projects, upgrade pricing plans, and view/run,
-cancel, and delete builds.
-
-**Collaborator :** Collaborators can enable projects and view/run builds
-on Shippable. They cannot delete enabled projects or upgrade pricing
-plans.
-
-* * * * *
-
-## Minions
-
-Minions are Docker based containers that run your builds and tests. You
-can think of them as Build VMs. Each minion runs one build at a time, so
-the more minions you have, the more concurrency you will get.
-
-Minions are automatically provisioned whenever a build is triggered and
-it will get deleted after the build finishes execution. We will
-automatically add additional minions, as appropriate, based on your
-subscription plan.
-
-Each minion starts from a base image and can be customized by specifying
-`before_install` scripts in the YML file. A minion can be configured to
-run any package, library, or service that your application requires.
-There are some preinstalled tools and services that you can use to
-customize your minions even further.
-
 ### Operating systems
 
 All our Linux minions start from a vanilla base image from the Docker

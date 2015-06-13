@@ -15,7 +15,6 @@ pages:
   - [formations_quickstart.md, Getting Started, 'Quick Start: Set up your first Formation']
 
   - [ci_overview.md, Shippable CI, Overview]
-  - [ci_userguide.md, Shippable CI, User Guide]
   - [basic_flow.md, Shippable CI, Basic Build Flow]
   - [ci_settings.md, Shippable CI, CI Settings]
   - [project_settings.md, Shippable CI, Project Settings]
@@ -42,5 +41,6 @@ pages:
   - [gcr.md, Docker, Google Container Registry]
 
   - [api.md, Reference, API]
+  - [glossary.md, Reference, Glossary]
   - [faq.md, Reference, FAQ]
 
