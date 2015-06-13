@@ -6,6 +6,8 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 
 This page describes the different integrations you can set up for your account. These are set up once for each type of integration and can be re-used in different parts of the Shippable pipeline.
 
+------
+
 ## Docker Hub
 
 You will need this to pull or push images to Docker Hub as part of building your project. More details on using Docker Hub is [here](dockerhub.md)
@@ -16,6 +18,8 @@ You will need this to pull or push images to Docker Hub as part of building your
 4. Enter a name for your integration. Use a distinctive name that's easy to associate to the integration and recall. `Example:docker-mydockerusername`
 5. Enter your credentials
 6. Click on `Save`
+
+--------
 
 ## Google Container Registry (GCR)
 
@@ -34,6 +38,8 @@ You will need this to pull or push images to Google Container Registry as part o
 11. Enter your JSON key that you saved earlier
 12. Click on `Save`
 
+------------
+
 ## Lighthouse Notification
 
 This is the integration that is used to set up email notifications for Lighthouse, our image monitor. To learn more about lighthouse, go [here](lighthouse.md)
@@ -44,4 +50,3 @@ This is the integration that is used to set up email notifications for Lighthous
 4. Enter a name for your integration. Use a distinctive name that's easy to associate to the integration and recall. Example: `Example: my-shippable-emailid`
 5. Enter your email address: `janedoe@shippable.com`
 6. Click on `Save`
-
