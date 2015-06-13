@@ -25,14 +25,14 @@ Common use cases for Shippable include:
 
 We currently support the following programming languages:
 
--  Ruby
--  Python
--  Node.js
--  Java
--  Scala
--  PHP
--  GO
--  Clojure
+-  [Clojure](languages/#clojure)
+-  [GO](languages/#go)
+-  [Java](languages/#java)
+-  [Node.js](languages/#node)
+-  [PHP](languages/#php)
+-  [Python](languages/#python)
+-  [Ruby](languages/#ruby)
+-  [Scala](languages/#scala)
 
 ### Platforms
 
@@ -60,7 +60,7 @@ We support the following services natively:
 
 ### Tools
 
-A set of common tools are available on all minions. The following is a
+A set of common tools are available on all [minions](glossary/#minions). The following is a
 list of available tools -
 
 -   Latest release of Git repository
