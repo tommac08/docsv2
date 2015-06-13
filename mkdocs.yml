@@ -33,7 +33,7 @@ pages:
 
   - [integrations.md, Integrations]
 
-  - [languages.md, How To, Use specific languages]
+  - [languages.md, How To, Use Specific Languages]
   - [using_gitlab.md, How To, Use Shippable with Gitlab]
   - [heroku.md, How To, Deploy to Heroku]
   - [beanstalk.md, How To, Deploy to Amazon Elastic Beanstalk]
