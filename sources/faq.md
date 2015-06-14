@@ -7,11 +7,46 @@ page_keywords: concepts, documentation, shippable, CI/CD
 Having trouble with your builds? Here is a list of frequently asked
 questions.... hope this helps!
 
-## How do I update my Shippable plan?
+### How can I update my Shippable plan?
 
-Go to `Settings` under either your CI Subscription Page or Formations Page. You can update your plan from either of these places.
+Shippable CI and Shippable Formations are 2 different subscriptions under your account. These need to be purchased separately.
 
-Documentation:[Subscription Plan Management](ci_settings/#subscription-plan-management)
+To purchase additional containers for Shippable CI:
+
+- Click on **CI** on the Shippable Landing page
+- Click on your **CI Subscription** in the dropdown
+- Go to the **Settings** tab
+- Make sure your plan is set to `Multi-Tenant CI`
+- Use the slider to select the number of containers you want for your subscription.
+- Enter your payment details and click `Buy`
+- Your CI Plan is now updated
+
+To purchase containers for a new or existing Shippable Formation:
+
+- Click on **Formations** on the Shippable Landing page
+- Click on your **Add a new formation** in the dropdown
+- This will take you to our payment page. Choose `Multi-Tenant Formation` as your plan
+- Use the slider to select the number of containers you want for your formation
+- Enter your payment details and click `Buy`
+- You are ready to start on your new formation
+
+To update containers in an existing Shippable Formation:
+
+- Click on **Formations** on the Shippable Landing page
+- Choose the Formation that you want to update
+- Go to the **Settings** tab
+- In the first section, choose `Multi-Tenant Formation` as your plan
+- Use the slider to select the number of containers you want for your formation
+- Enter your payment details and click `Buy`
+- Your plan is now updated
+
+## Why can't I see some of my repositories in my Shippable account?
+
+This happens due to one of the following reasons:
+
+- You haven't enabled private repositories in your Shippable account. Go to our [Account Settings Documentation](account_settings.md) to learn how to turn on Private Repos for your Github Account.
+- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings. (the `gear` on the top nav bar)
+-  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
 
 ## How are permissions managed on Shippable?
 
@@ -32,14 +67,6 @@ cancel, and delete builds.
 **Collaborator :** Collaborators can enable projects and view/run builds
 on Shippable. They cannot delete enabled projects or upgrade pricing
 plans.
-
-## Why can't I see some of my repositories in my Shippable account?
-
-This happens due to one of the following reasons:
-
-- You haven't enabled private repositories in your Shippable account. Go to our [Account Settings Documentation](account_settings.md) to learn how to turn on Private Repos for your Github Account.
-- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings. (the `gear` on the top nav bar)
--  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
 
 ## Why do I get an error when I try to enable a project that is listed on my dashboard?
 
