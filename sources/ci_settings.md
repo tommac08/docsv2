@@ -6,11 +6,12 @@ page_keywords: ci settings, subscription settings, CI/CD, shippable CI, document
 
 This page explains the different options available in the `SETTINGS` tab for your Subscription.
 
+****ADD SCREENSHOT****
+
 ## Subscription Plan Management
 
 This is where you can manage your subscription plan and add more containers.
 
-** DETAILS TO BE ADDED AFTER UI PAGE EXISTS**
 
 
 ## Invoices

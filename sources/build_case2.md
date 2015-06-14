@@ -16,11 +16,15 @@ You will learn how to -
 - Enable your project and run a build
 - Download Artifacts
 
+*****
+
 ## Sample Project
 
 We will walk through this guide with a [sample nodejs project](https://github.com/shippableSamples/sample_ubuntu1204_nodejs). This is a public project, so you can fork it to your repo and update the yml as you walk through the guide.
 
 Read more about other languages in our [how-to guide on languages](languages.md)
+
+*****
 
 ## Create your YML file
 
@@ -98,6 +102,8 @@ script:
 - true #or any custom command
 ```
 
+*****
+
 ### Test and Coverage Reports
 
 Test and Coverage tools used in the sample are [istanbul](https://npmjs.org/package/istanbul) and [mocha](https://npmjs.org/package/mocha).
@@ -105,6 +111,7 @@ Test and Coverage tools used in the sample are [istanbul](https://npmjs.org/pack
 To use Shippable's test visualization feature,
  - The test and code coverage output has to be in special folders Shippable/testresults and Shippable/codecoverage
  - The test results must be in JUNIT format and the code coverage output needs to be in cobertura xml format
+
 
 #### env
 
@@ -133,6 +140,8 @@ before_script:
      - ./node_modules/.bin/istanbul cover grunt -- -u tdd
      - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
 ```
+
+*****
 
 ### Complete YML for Sample Project
 
@@ -165,6 +174,8 @@ after_script:
       - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
 ```
 
+*****
+
 ## Build Image in Project Settings
 
 Go to your **Project Page**, click on **Settings** and choose the following image:
@@ -175,12 +186,16 @@ This is the image used for the sample project.
 
 You can find other build images [here](https://github.com/shippableImages/)
 
+*****
+
 ## Enable the repo
 
 - On the Shippable Landing page, click on `CI`
 - Find your subscription on the dropdown
 - If this is your first time, click on (+) to enable a new project
 - On the New Projects page, click the `Enable` (key) Icon
+
+*****
 
 ## Run the build
 
@@ -191,6 +206,8 @@ manually run a build. It will redirect you to the build's page where you can see
 
 **Webhooks:** Our webhooks are triggered when a commit is pushed to your repo, or if a
 pull request is created. Webhooks are a good way to verify that commits to your project build in a clean environment, and not just on the committer's machine.
+
+*****
 
 ## Check output
 
@@ -213,6 +230,8 @@ log when the tests are executed. Since we have added test reports to our project
 
 **Script Tab:** The Script tab shows you the details of the build script and the environment variables used for your build
 
+*****
+
 ## Useful Additions
 
 ### Artifacts
@@ -225,6 +244,7 @@ archive: true
 
 All files in the ./shippable folder at the root of the project are automatically archived for each run upon completion.
 You can download a tarball of your build's artifacts by clicking on the download archive button on the build page.
+
 
 ### after_success or after_failure
 
