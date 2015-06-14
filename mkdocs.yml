@@ -6,6 +6,9 @@ repo_url: https://github.com/lekhab
 docs_dir: sources
 theme_dir: theme/shippable
 
+#Google Analytics
+google_analytics: ['UA-50610279-1', 'auto']
+
 # Pages
 pages:
   - [index.md, Getting Started]
@@ -30,6 +33,7 @@ pages:
   - [integrations.md, Account, Integrations]
   - [payment_methods.md, Account, Payment Methods]
 
+  - [build_case2.md, How To, Run a build with Test and Coverage]
   - [docker_build.md, How To, Do a Docker Build]
   - [docker_registries.md, How To, Use a Docker Registry]
   - [languages.md, How To, Use Specific Languages for CI]
