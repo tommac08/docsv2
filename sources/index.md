@@ -81,8 +81,8 @@ A complete reference to your project settings and build configuration is availab
 *** TO ADD ONCE THE FLOW IS FINALIZED ****
 
 
-
 *****
+
 
 ## FAQ
 
@@ -128,5 +128,5 @@ This happens due to one of the following reasons:
 - Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings (the `gear` on the top nav bar).
 -  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
 
-Go to our [FAQ Page](faq.md) for more.
+Visit our[FAQ Page](faq.md) for answers to more frequently asked questions.
 
