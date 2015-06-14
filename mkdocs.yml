@@ -43,7 +43,9 @@ pages:
   - [digitalocean.md, How To, Deploy to DigitalOcean]
   - [codedeploy.md, How To, Deploy to AWS CodeDeploy]
 
-  - [api.md, Reference, API]
-  - [glossary.md, Reference, Glossary]
+  - [api.md, API]
+
   - [faq.md, Reference, FAQ]
+  - [glossary.md, Reference, Glossary]
+
 
