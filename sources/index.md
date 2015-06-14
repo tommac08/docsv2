@@ -18,6 +18,8 @@ Go to [Shippable CI overview](ci_overview.md) to learn more.
 
 Go to [Shippable Formations Overview](formations_overview.md) to learn more.
 
+*****
+
 ## Quick Start: Run a build
 
 ![Run a Build](images/build_flow.gif)
@@ -83,12 +85,15 @@ To enable a repository for CI -
 
 You can learn how automated webhook builds can be run [here](build_case2.md)
 
+*****
+
 ## Quick Start: Create a Formation
 
 *** TO ADD ONCE THE FLOW IS FINALIZED ****
 
 
 
+*****
 
 ## FAQ
 
