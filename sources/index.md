@@ -70,7 +70,7 @@ To enable a repository for CI -
 
 - On the Project Page, click on the `Run Build` icon to run a manual build
 
-This is a very basic version of a build. Go [here](build_case2.md) to learn how to customize your build further.
+**This is a very basic version of a build. To learn how to customize your build further, go [here](build_case2.md)**
 
 A complete reference to your project settings and build configuration is available [here](project_settings.md).
 
@@ -88,9 +88,36 @@ A complete reference to your project settings and build configuration is availab
 
 ### How can I update my Shippable plan?
 
-Go to `Settings` under either your CI Subscription Page or Formations Page. You can update your plan from either of these places.
+Shippable CI and Shippable Formations are 2 different subscriptions under your account. These need to be purchased separately.
 
-Documentation:[Subscription Plan Management](ci_settings/#subscription-plan-management)
+To purchase additional containers for Shippable CI:
+
+- Click on **CI** on the Shippable Landing page
+- Click on your **CI Subscription** in the dropdown
+- Go to the **Settings** tab
+- The first section is Subscription Plan Management. Choose `Multi-Tenant CI` as your plan
+- Use the slider to select the number of containers you want for your subscription.
+- Enter your payment details and click `Buy`
+- Your CI Plan is now updated
+
+To purchase a new Shippable Formation:
+
+- Click on **Formations** on the Shippable Landing page
+- Click on your **Add a new formation** in the dropdown
+- This will take you to our payment page. Choose `Multi-Tenant Formation` as your plan
+- Use the slider to select the number of containers you want for your formation
+- Enter your payment details and click `Buy`
+- You are ready to start on your new formation
+
+To update containers in an existing Shippable Formation:
+
+- Click on **Formations** on the Shippable Landing page
+- Choose the Formation that you want to update
+- Go to the **Settings** tab
+- In the first section, choose `Multi-Tenant Formation` as your plan
+- Use the slider to select the number of containers you want for your formation
+- Enter your payment details and click `Buy`
+- Your plan is now updated
 
 ### How do I link my github and bitbucket accounts?
 
