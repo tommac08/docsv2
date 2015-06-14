@@ -4,7 +4,7 @@ page_keywords: languages, questions, documentation, shippable, ruby, node, java,
 
 # Language Specific Help
 
-We support the following languages:
+We support the following languages on Shippable CI:
 
 -  [clojure](#clojure)
 -  [go](#go)
