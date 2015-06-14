@@ -119,16 +119,13 @@ To update containers in an existing Shippable Formation:
 - Enter your payment details and click `Buy`
 - Your plan is now updated
 
-### How do I link my github and bitbucket accounts?
-
-Check out our documentation on [linking bitbucket and github accounts](account_settings/#linking-your-bitbucket-and-github-accounts)
 
 ### Why can't I see some of my repositories in my Shippable account?
 
 This happens due to one of the following reasons:
 
 - You haven't enabled private repositories in your Shippable account. Go to our [Account Settings Documentation](account_settings.md) to learn how to turn on Private Repos for your Github Account.
-- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings. (the `gear` on the top nav bar)
+- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings (the `gear` on the top nav bar).
 -  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
 
 Go to our [FAQ Page](faq.md) for more.
