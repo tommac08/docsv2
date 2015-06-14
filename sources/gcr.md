@@ -1,7 +1,6 @@
 page_title: Google Container registry integration
 page_description: Build and Deploy Docker applications to Google Cloud Platform with Shippable-GCR integration
 page_keywords: shippable, Docker, Container, Google, Google container registry, Google Cloud Platform, Google Compute Engine, Google Container Engine
-google_analytics: ['UA-50610279-1', 'auto']
 
 # Google Container Registry
 
