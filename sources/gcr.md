@@ -156,3 +156,5 @@ before_script:
 ```
 
 And that's it. Any artifacts you need will be available in your prod image.
+
+google_analytics: ['UA-50610279-1', 'auto']
