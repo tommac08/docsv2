@@ -10,7 +10,7 @@ This assumes you have already signed into Shippable through Github or Bitbucket.
 
 You will learn how to -
 
-- Use some of the basic YML Tags (language, before_install, install, script, before_script, after_script)
+- Use some of the basic YML Tags (_language_, _before\_install_, _install_, _script_, _before\_script_, _after\_script_)
 - Choose an appropriate build image for your project
 - Turn on Test reports and Coverage Visualization
 - Enable your project and run a build
