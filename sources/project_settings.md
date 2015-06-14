@@ -705,7 +705,7 @@ other databases.
 Sample python code using
 [SQLite](https://github.com/shippableSamples/sample_python_sqllite).
 
-### Elastic Search
+#### Elastic Search
 
 ```yaml
 # elastic search is on default port 9200
@@ -911,7 +911,7 @@ Sample javascript code using
 
 ---
 
-### Pull requests
+## Pull requests
 
 Shippable will integrate with github to show your pull request status on
 CI. Whenever a pull request is opened for your repo, we will run the
@@ -919,18 +919,18 @@ build for the respective pull request and notify you about the status.
 You can decide whether to merge the request or not, based on the status
 shown. If you accept the pull request, Shippable will run one more build
 for the merged repo and will send email notifications for the merged
-repo. To rerun a pull request build, go to your project's page -\> Pull
+repo. To rerun a pull request build, go to your project's page Pull
 Request tab and then click on the **Build this Pull Request** button.
 
 * * * * *
 
-### Build badge
+## Build badge
 
 Badges will display the status of your default branch. You can find the build badges on the project's page. Click on the **Badge** button and copy the markdown to your README file to display the status of most recent build on your Github or Bitbucket repo page.
 
 * * * * *
 
-### Build termination
+## Build termination
 
 Build will be forcefully terminated in the following scenarios:
 
@@ -941,7 +941,7 @@ When a build is forcefully terminated, the build status will indicate **timeout*
 
 * * * * *
 
-### Skipping a build
+## Skipping a build
 
 Any changes to your source code will trigger a build automatically on
 Shippable. So if you do not want to run build for a particular commit,
