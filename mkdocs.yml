@@ -8,31 +8,26 @@ theme_dir: theme/shippable
 
 # Pages
 pages:
-  - [index.md, Getting Started, About Shippable]
-  - [sign_up.md, Getting Started, 'Sign up for Shippable']
-  - [account_settings.md, Getting Started, 'Account Settings']
+  - [index.md, Getting Started]
 
   - [ci_overview.md, Shippable CI, Overview]
-  - [build_quickstart.md, Shippable CI, 'Quick Start: Run your first build']
   - [basic_flow.md, Shippable CI, Basic Build Flow]
   - [ci_settings.md, Shippable CI, CI Subscription Settings]
   - [ci_dashboard.md, Shippable CI, CI Subscription Dashboard]
   - [project_settings.md, Shippable CI, Project Settings]
   - [project_dashboard.md, Shippable CI, Project Dashboard]
   - [build_dashboard.md, Shippable CI, Build Dashboard]
-  - [docker_registries.md, Shippable CI, Docker]
-  - [lighthouse.md, Shippable CI, 'Lighthouse:Image Monitor']
 
   - [formations_overview.md, Shippable Formations, Overview]
-  - [formations_quickstart.md, Shippable Formations, 'Quick Start: Set up your first Formation']
-  - [formations_add.md, Shippable Formations, Add a New Formation]
-  - [formations_status.md, Shippable Formations, Formations Status Page]
+  - [formations_status.md, Shippable Formations, Formations Dashboard]
   - [formations_components.md, Shippable Formations, Formation Components]
   - [formations_settings.md, Shippable Formations, Formations Settings]
-  - [formations_faq.md, Shippable Formations, Formations FAQ]
+
+  - [lighthouse.md, Lighthouse]
 
   - [integrations.md, Integrations]
 
+  - [docker_registries.md, How To, How to do a Docker Build]
   - [languages.md, How To, Use Specific Languages for CI]
   - [using_gitlab.md, How To, Use Shippable CI with Gitlab]
   - [heroku.md, How To, Deploy to Heroku]

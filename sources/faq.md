@@ -15,7 +15,23 @@ Documentation:[Subscription Plan Management](ci_settings/#subscription-plan-mana
 
 ## How are permissions managed on Shippable?
 
-Check out our [Permissions section](sign_up/permissions) for details on how we manage permissions.
+We closely mimic GitHub and Bitbucket permissions for Orgs and projects.
+Anyone who has access to an organization or repository in
+GitHub/Bitbucket will also have access to build information and/or
+repository and build actions on Shippable. This happens automatically,
+so if you enable a repository in your Org on Shippable and another team
+member signs in, they will see the enabled repository and build history
+already present in their account.
+
+We support 2 roles -
+
+**Owner :** Owners have all privileges for an Org or Project. They can
+enable, run and delete projects, upgrade pricing plans, and view/run,
+cancel, and delete builds.
+
+**Collaborator :** Collaborators can enable projects and view/run builds
+on Shippable. They cannot delete enabled projects or upgrade pricing
+plans.
 
 ## Why can't I see some of my repositories in my Shippable account?
 
