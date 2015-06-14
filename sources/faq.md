@@ -9,7 +9,7 @@ questions.... hope this helps!
 
 ## How do I update my Shippable plan?
 
-Go to `Settings` under either your CI Subscription Page or Formations Page. You will update your plan from either of these places.
+Go to `Settings` under either your CI Subscription Page or Formations Page. You can update your plan from either of these places.
 
 Documentation:[Subscription Plan Management](ci_settings/#subscription-plan-management)
 

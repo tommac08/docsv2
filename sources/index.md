@@ -11,32 +11,19 @@ Shippable is a SaaS platform for developers and devops teams that significantly 
 Shippable comprises of two products that enables you to ship code faster -
 
 ### Shippable CI
-Shippable CI is our Continuous Integration and Deployment Platform
-which is lightweight, super simple to setup, and runs your builds and tests
-faster than any other service. It uses **Build Minions** which are docker based
-containers to run your workloads.  After building and testing your code, you can push your docker image to Docker Hub, Google Container Registry or any other private registry. You
-can also deploy it to any PaaS provider like Heroku & OpenShift and also to
-VMs, bare metal, OpenStack clusters, or any major infrastructure
-provider.
+Shippable CI is our Continuous Integration and Deployment Platform. It uses **Build Minions** which are docker based containers to run your workloads. After building and testing your code, you can push your docker image to Docker Hub, Google Container Registry or any other private registry.
 
-With Shippable CI, you can:
-
-- automate the packaging and deployment of web applications
-- automate testing and continuous integration/deployment
+Go to [Shippable CI overview](ci_overview.md) to learn more.
 
 ### Shippable Formations
 Shippable Formations is a system based on Kubernetes that allows you to manage your multi-tier
-application across multiple environments without writing any DevOps code. It is persistent, fully orchestrated and scalable. Each of your developers can now have their own fully integrated test environment at a fraction of the cost!
+application across multiple environments without writing any DevOps code. It is persistent, fully orchestrated and scalable.
 
-With Shippable Formations, you can:
+Go to [Shippable Formations Overview](formations_overview.md) to learn more.
 
-- manage multi-container environments that can be easily configured by developers or DevOps teams
-- no code deployment and rollback
-- easily integrate with existing services
-- have persistent, fully orchestrated and scalable dev/test labs
-- automate deployment pipelines without machine provisioning
+## Quick Start: Run a build on Shippable CI
 
-## Sign Up for Shippable
+![Run a Build](images/build_flow.gif)
 
 ### Step 0: Prerequisite
 
@@ -44,58 +31,24 @@ Shippable uses either your [Github](https://github.com) or [Bitbucket](https://b
 
 ### Step 1: Sign in to Shippable
 
-We use OAuth authentication. What this means is if you have either a Github or Bitbucket account, you do not need to create a separate account on our platform.
-
 To sign in, visit the [Shippable website](https://www.shippable.com),
 click **Login**, and choose between Github or Bitbucket auth. This will take you to either the Github or Bitbucket Sign In page, where you enter your credentials.
 
 ### Step 2: Allow Access to repos
 
-After entering your credentials in the previous step, you will be prompted to give Shippable
-access to your repos. GitHub and Bitbucker auth behave a little differently as follows -
+Click `Authorize` on Github to allow access to public repos.
 
-**GitHub**- By default, we will only ask for access to public repos. If
-you want to use Shippable to build your private repos, you will need to
-authorize us for private repositories. To do that, click on Private
-Repos off icon at the top right of your dashboard and go through the
-GitHub auth flow. The 'Private Repos' icon should show 'ON' when you
-return to the dashboard.
+And Voila! you are now ready to test and run your build on Shippable.
 
-**Bitbucket**- The Bitbucket API does not have public/private
-granularity, so we ask for access to all repos on Bitbucket by default.
+### Step 3: Create YML file
 
-> **Note**
->
-> We realize that most people do not want to give write access to their
-> repo. However, we need write permissions to add deploy keys to your
-> repos for our webhooks to work. We do not touch anything else in the
-> repo.
+Create a shippable.yml file at the root of the repository you want to build with Shippable.
 
-And you are now ready to test and run your build with shippable! Every user is signed up to our **Free CI Plan** by default. This allows you to run one build concurrently on Shippable CI. Read on further to see how you can run your first build on Shippable or try out a simple formation.
+Your yml needs a couple of entries at the very minumum - the language and the version(s) of the language you want to test against.
 
-## Quick Start: Run your First Build using Shippable CI
-
-It is super simple to run your first build on Shippable -
-
-![Run a Build](images/build_flow.gif)
-
-### Create YML file
-
-We require a shippable.yml file at the root of the repository you want
-to build with Shippable. This yml file is the config for your build.
-
-> **Note**
->
-> If you use TravisCI, we support `.travis.yml` natively, so that
-> you can test your repos in parallel with Shippable and compare the
-> speed and rich visualizations.
-
-Your yml needs a couple of entries at the very minumum - the language
-and the version(s) of the language you want to test against.
-
-```python
+```
 # language setting
-language: node_js
+language: nodejs
 
 # version numbers, testing against two versions of node
 node_js:
@@ -112,28 +65,53 @@ attempt to 'guess' at the other settings and build your project.
 However, in most cases, you will need to specify additional
 configuration in the yml.
 
-**Complete documentation of YML is available** [HERE](yml_overview/).
+Check out our How To guide on [Running a build with Test Reports and Coverage](build_case2.md) for a more detailed version of the project settings.
 
-### Enable CI for repos
+A full reference to your project settings and build configuration is available** [HERE](project_settings.md/).
+
+### Step 4: Enable CI for repos
 
 To enable a repository for CI -
 
-- Click on 'CI' on the Shippable landing page
-- Find your subscription from the dropdown **update enable project process**
+- Click on the 'CI' on the Shippable landing page
+- Find your subscription from the dropdown and go to your Subscriptions page
+- Click on the (+) to enable a new project
+- Find the repo you want to enable and click the `Enable` (the key icon) button
+- Your project is now enabled and you can see it under your `Project Status`
+
+### Step 5: Run the build
+
+- Click on the project you want to run a build for
+- Click the `Run Build` icon to run a manual build
+
+You can learn how automated webhook builds can be run [here](build_case2.md)
+
+## Quick Start: Create a Formation on Shippable Formation
+
+*** TO ADD ONCE THE FLOW IS FINALIZED ****
 
 
-Now, whenever you push a commit to your GitHub/Bitbucket repository, Shippable will build that project as long as you have a shippable.yml (or .travis.yml) at the root of your repository.
 
-### Run the build
 
-Builds can be triggered through webhooks or manually through
-shippable.com.
+## FAQ
 
-**Webhooks:** Our webhooks are triggered when a commit is pushed to your repo, or if a
-pull request is created. Webhooks are a code way to verify that commits to your project build in a clean environment, and not just on the committer's machine.
+### How can I update my Shippable plan?
 
-**Manual Builds:** After enabling the project, click the **Build this project** button to
-manually run a build. Instantly, it will redirect you to the build's page and the console log from your build minion starts to stream to your browser through sockets.
+Go to `Settings` under either your CI Subscription Page or Formations Page. You can update your plan from either of these places.
 
-## Quick Start: Create a Simple Formation using Shippable Formation
+Documentation:[Subscription Plan Management](ci_settings/#subscription-plan-management)
+
+### How do I link my github and bitbucket accounts?
+
+Check out our documentation on [linking bitbucket and github accounts](account_settings/#linking-your-bitbucket-and-github-accounts)
+
+### ## Why can't I see some of my repositories in my Shippable account?
+
+This happens due to one of the following reasons:
+
+- You haven't enabled private repositories in your Shippable account. Go to our [Account Settings Documentation](account_settings.md) to learn how to turn on Private Repos for your Github Account.
+- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings. (the `gear` on the top nav bar)
+-  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
+
+Go to our [FAQ Page](faq.md) for more.
 
