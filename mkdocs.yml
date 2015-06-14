@@ -35,3 +35,6 @@ pages:
   - [glossary.md, Glossary]
 
   - [faq.md, FAQ]
+  
+  # Google Analytics
+  google_analytics: ['UA-50610279-1', 'auto']
