@@ -15,8 +15,8 @@ pages:
   - [ci_settings.md, Shippable CI, CI Subscription Settings]
   - [project_settings.md, Shippable CI, Project Settings]
   - [project_dashboard.md, Shippable CI, Project Dashboard]
-  - [pr_builds.md], Shippable CI, PR Builds]
-  - [queued_builds.md], Shippable CI, Queued Builds]
+  - [pr_builds.md, Shippable CI, PR Builds]
+  - [queued_builds.md, Shippable CI, Queued Builds]
   - [build_dashboard.md, Shippable CI, Build Page]
 
   - [formations_overview.md, Shippable Formations, Overview]
@@ -46,5 +46,3 @@ pages:
 
   - [faq.md, Reference, FAQ]
   - [glossary.md, Reference, Glossary]
-
-
