@@ -43,7 +43,7 @@ And Voila! you are now ready to test and run your build on Shippable.
 
 Create a shippable.yml file at the root of the repository you want to build with Shippable.
 
-Your yml needs a couple of entries at the very minumum - the language and the version(s) of the language you want to test against.
+Your yml needs a couple of entries at the very minumum - the language and the version(s) of the language you want to test against. We will use defaults for the other settings in this case.
 
 ```
 # language setting
@@ -54,6 +54,7 @@ node_js:
     - 0.10.25
     - 0.11
 ```
+
 
 ### Step 4: Enable CI for repos
 
@@ -69,9 +70,9 @@ To enable a repository for CI -
 
 - On the Project Page, click on the `Run Build` icon to run a manual build
 
-This is a very basic version of getting a build going. Check out our [Detailed How To guide](build_case2.md) to learn how to customize your build further, add test/coverage reports and so on.
+This is a very basic version of a build. Go [here](build_case2.md) to learn how to customize your build further.
 
-A full reference to your project settings and build configuration is available [here](project_settings.md).
+A complete reference to your project settings and build configuration is available [here](project_settings.md).
 
 *****
 
