@@ -11,10 +11,9 @@ pages:
   - [index.md, Getting Started, About Shippable]
   - [sign_up.md, Getting Started, 'Sign up for Shippable']
   - [account_settings.md, Getting Started, 'Account Settings']
-  - [build_quickstart.md, Getting Started, 'Quick Start: Run your first build']
-  - [formations_quickstart.md, Getting Started, 'Quick Start: Set up your first Formation']
 
   - [ci_overview.md, Shippable CI, Overview]
+  - [build_quickstart.md, Shippable CI, 'Quick Start: Run your first build']
   - [basic_flow.md, Shippable CI, Basic Build Flow]
   - [ci_settings.md, Shippable CI, CI Subscription Settings]
   - [ci_dashboard.md, Shippable CI, CI Subscription Dashboard]
@@ -25,6 +24,7 @@ pages:
   - [lighthouse.md, Shippable CI, 'Lighthouse:Image Monitor']
 
   - [formations_overview.md, Shippable Formations, Overview]
+  - [formations_quickstart.md, Shippable Formations, 'Quick Start: Set up your first Formation']
   - [formations_add.md, Shippable Formations, Add a New Formation]
   - [formations_status.md, Shippable Formations, Formations Status Page]
   - [formations_components.md, Shippable Formations, Formation Components]
