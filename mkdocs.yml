@@ -33,7 +33,7 @@ pages:
   - [integrations.md, Account, Integrations]
   - [payment_methods.md, Account, Payment Methods]
 
-  - [build_case2.md, How To, Run a build with Test and Coverage]
+  - [build_case2.md, How To, Use CI with Test and Coverage]
   - [docker_build.md, How To, Do a Docker Build]
   - [docker_registries.md, How To, Use a Docker Registry]
   - [languages.md, How To, Use Specific Languages for CI]
