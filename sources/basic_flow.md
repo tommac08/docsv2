@@ -20,7 +20,7 @@ commands for the other sections are not specified.
 
 The descriptions below are generic to all build environments and all
 languages. If you are looking for language specific tags, please refer
-to our [language guides](languages/index.html) for more information.
+to our [language guides](languages.md) for more information.
 
 ## Build Flow
 
@@ -60,9 +60,9 @@ along with all supported tools and services. If you want to use the
 default image, you do not need the `build_image` tag in your yml.
 
 The recommended approach is to use one of our [language specific
-images](languages/images.md).
+images](languages.md).
 
-Please note that language specific images do not have any tools and services pre-installed, so you w$
+Please note that language specific images do not have any tools and services pre-installed, so you will need to install these in your yml.
 
 ### language
 
