@@ -18,7 +18,7 @@ Go to [Shippable CI overview](ci_overview.md) to learn more.
 
 Go to [Shippable Formations Overview](formations_overview.md) to learn more.
 
-## Quick Start: Run a build on Shippable CI
+## Quick Start: Run a build
 
 ![Run a Build](images/build_flow.gif)
 
@@ -83,7 +83,7 @@ To enable a repository for CI -
 
 You can learn how automated webhook builds can be run [here](build_case2.md)
 
-## Quick Start: Create a Formation on Shippable Formation
+## Quick Start: Create a Formation
 
 *** TO ADD ONCE THE FLOW IS FINALIZED ****
 
@@ -102,7 +102,7 @@ Documentation:[Subscription Plan Management](ci_settings/#subscription-plan-mana
 
 Check out our documentation on [linking bitbucket and github accounts](account_settings/#linking-your-bitbucket-and-github-accounts)
 
-### ## Why can't I see some of my repositories in my Shippable account?
+### Why can't I see some of my repositories in my Shippable account?
 
 This happens due to one of the following reasons:
 
