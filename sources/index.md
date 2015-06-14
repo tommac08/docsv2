@@ -55,19 +55,6 @@ node_js:
     - 0.11
 ```
 
-The rest of the yml is composed of standard sections - `before_install`,
-`install`, `before_script`, `script`, `after_success` or
-`after_failure`, and `after_script`.
-
-If you just have the language and language version in your yml, we will
-attempt to 'guess' at the other settings and build your project.
-However, in most cases, you will need to specify additional
-configuration in the yml.
-
-Check out our How To guide on [Running a build with Test Reports and Coverage](build_case2.md) for a more detailed version of the project settings.
-
-A full reference to your project settings and build configuration is available** [HERE](project_settings.md/).
-
 ### Step 4: Enable CI for repos
 
 To enable a repository for CI -
@@ -80,10 +67,11 @@ To enable a repository for CI -
 
 ### Step 5: Run the build
 
-- Click on the project you want to run a build for
-- Click the `Run Build` icon to run a manual build
+- On the Project Page, click on the `Run Build` icon to run a manual build
 
-You can learn how automated webhook builds can be run [here](build_case2.md)
+This is a very basic version of getting a build going. Check out our [Detailed How To guide](build_case2.md) to learn how to customize your build further, add test/coverage reports and so on.
+
+A full reference to your project settings and build configuration is available [here](project_settings.md).
 
 *****
 
