@@ -33,7 +33,7 @@ click **Login**, and choose between Github or Bitbucket auth. This will take you
 
 ### Step 2: Allow Access to repos
 
-Click `Authorize` on Github to allow access to public repos.
+Click `Authorize Application` on Github or `Grant access` on Bitbucket to allow access to repos.
 
 And Voila! you are now ready to test and run your build on Shippable.
 

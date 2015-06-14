@@ -6,8 +6,8 @@ repo_url: https://github.com/lekhab
 docs_dir: sources
 theme_dir: theme/shippable
 
-#Google Analytics
-google_analytics: ['UA-50610279-1', 'auto']
+#Google Analytics: Turn on after launch
+#google_analytics: ['UA-50610279-1', 'auto']
 
 # Pages
 pages:
