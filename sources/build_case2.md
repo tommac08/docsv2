@@ -2,7 +2,7 @@ page_title: How to run a build with test and coverage reports on Shippable | Doc
 page_description: Run a build with test and coverage reports on Shippable CI
 page_keywords: how-to, questions, documentation, shippable, Continuous Integration, Continuous Deployment, CI/CD
 
-# Detailed How To Guide to use Shippable CI
+# Run a build with Test and Coverage Reports
 
 This guide will walk you through the basic sections of the YML as well project settings you need to run a build with test reports and coverage visualization included.
 
