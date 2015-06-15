@@ -11,7 +11,7 @@ This page walks through the Subscriptions dashboard and the options available fr
 - Login to Shippable
 - Click on **CI** on the Shippable Landing page
 - Click on a subscription from the dropdown
-- This will bring you to the **Status** page that is also referred as the Subscriptions Dashboard
+- This will bring you to the **Status** page that is also referred to as the Subscriptions Dashboard
 
 ## Default View
 

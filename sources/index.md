@@ -10,7 +10,7 @@ Shippable is a SaaS platform for developers and devops teams that significantly 
 
 Shippable is comprised of two products that enable you to ship code faster -
 
-**Shippable CI:** Shippable CI is our Continuous Integration and Deployment Platform. It uses **Build Minions** which are docker based containers to run your workloads. After building and testing your code, you can push your docker image to Docker Hub, Google Container Registry or any other private registry.
+**Shippable CI:** Shippable CI is our Continuous Integration and Deployment Platform. It uses **Build Minions**, which are docker based containers to run your workloads. After building and testing your code, you can push your docker image to Docker Hub, Google Container Registry, or any other private registry.
 
 Go to [Shippable CI overview](ci_overview.md) to learn more.
 
