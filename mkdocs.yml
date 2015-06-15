@@ -15,7 +15,7 @@ pages:
 
   - [ci_overview.md, Shippable CI, Overview]
   - [ci_dashboard.md, Shippable CI, CI Subscription Dashboard]
-  - [ci_billing.md, Shippable CI, CI Subscription Settings]
+  - [ci_billing.md, Shippable CI, CI Subscription Billing]
   - [project_settings.md, Shippable CI, Project Settings]
   - [project_dashboard.md, Shippable CI, Project Dashboard]
   - [pr_builds.md, Shippable CI, PR Builds]
@@ -50,4 +50,5 @@ pages:
 
   - [faq.md, Reference, FAQ]
   - [supported_services.md, Reference, Supported Languages]
+  - [access_and_permissions.md, Reference, Access and Permissions]
   - [glossary.md, Reference, Glossary]

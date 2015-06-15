@@ -4,7 +4,10 @@ page_keywords: ci dashboard, subscription settings, CI/CD, shippable CI, documen
 
 # CI Dashboard
 
-This page walks through the subscriptions dashboard. This is the page you get to when you click on a specific CI Subscription from the Shippable landing page.
+This page walks through the subscriptions dashboard and the options available from the dashboard.
+
+
+This is the **Status** page you get to when you click on a specific CI Subscription from the Shippable landing page.
 
 ## Default View
 
@@ -18,7 +21,7 @@ The default view when you get to the subscriptions dashboard is a list of your e
 
 **ADD A SCREENSHOT**
 
-## Enabling a New Project
+## Enable a New Project
 
 Click on the (+) icon to the right of the header bar to enable a new project. This brings you to the page with the list of projects in your repo that are yet to be enabled. Clicking on the `key` icon will enable the project and bring you back to the dashboard.
 

@@ -48,26 +48,6 @@ This happens due to one of the following reasons:
 - Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings. (the `gear` on the top nav bar)
 -  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
 
-## How are permissions managed on Shippable?
-
-We closely mimic GitHub and Bitbucket permissions for Orgs and projects.
-Anyone who has access to an organization or repository in
-GitHub/Bitbucket will also have access to build information and/or
-repository and build actions on Shippable. This happens automatically,
-so if you enable a repository in your Org on Shippable and another team
-member signs in, they will see the enabled repository and build history
-already present in their account.
-
-We support 2 roles -
-
-**Owner :** Owners have all privileges for an Org or Project. They can
-enable, run and delete projects, upgrade pricing plans, and view/run,
-cancel, and delete builds.
-
-**Collaborator :** Collaborators can enable projects and view/run builds
-on Shippable. They cannot delete enabled projects or upgrade pricing
-plans.
-
 ## Why do I get an error when I try to enable a project that is listed on my dashboard?
 
 This usually happens if you are a collaborator on a project and the
@@ -77,8 +57,7 @@ project on their Shippable dashboard.
 
 ## I have enabled my repository and committed code, but my build doesn't start. What could be wrong?
 
-Please check the 'Notifications' tab on your repository page on
-Shippable. If it shows any errors, fix those and try again.
+Please check the 'Notifications' tab on your repository page on Shippable. If it shows any errors, fix those and try again.
 
 If the error shows a parsing failure for the yml, you can validate the
 file at [YAML Lint](http://www.yamllint.com/).
