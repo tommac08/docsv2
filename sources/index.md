@@ -58,7 +58,7 @@ node_js:
 
 To enable a repository for CI -
 
-- Click on the 'CI' on the Shippable landing page
+- On the Shippable landing page, click ![CI](images/landing_widget.gif)
 - Find your subscription from the dropdown and go to your Subscriptions page
 - Click on the (+) to enable a new project
 - Find the repo you want to enable and click the `Enable` (the key icon) button
