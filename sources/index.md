@@ -68,9 +68,7 @@ To enable a repository for CI -
 
 - On the Project Page, click on the `Run Build` icon to run a manual build
 
->**This is a very basic version of a build. Learn how to [customize your build further](build_case2.md)**
-
-A complete reference to your project settings and build configuration is available [here](project_settings.md).
+>This is a very basic version of a build. Learn how to [customize your build further](build_case2.md)
 
 *****
 
