@@ -6,7 +6,7 @@ page_keywords: containers, lxc, Docker, Continuous Integration, Continuous Deplo
 
 ## What is Shippable?
 
-Shippable is a SaaS platform for developers and devops teams that significantly reduces the time taken for code to be built, tested and deployed to production.
+Shippable is a SaaS platform for developers and DevOps teams that significantly reduces the time taken for code to be built, tested and deployed to production.
 
 Shippable is comprised of two products that enable you to ship code faster:
 
