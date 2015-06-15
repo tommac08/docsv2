@@ -51,6 +51,7 @@ pages:
 
   - [faq.md, Reference, FAQ]
   - [basic_flow.md, Reference, How the Build works]
+  - [yml_reference.md, Reference, YML Reference]
   - [supported_services.md, Reference, Supported Languages]
   - [permissions.md, Reference, Access and Permissions]
   - [glossary.md, Reference, Glossary]

@@ -1,8 +1,8 @@
-page_title: Shippable Project Dashboard| Documentation | Shippable
-page_description: Explanation of the Shippable Project Dashboard
-page_keywords: project dashboard, CI/CD, shippable CI, documentation, shippable, config, yml
+page_title: Shippable Queued Builds| Documentation | Shippable
+page_description: Queued and Waiting builds on Shippable
+page_keywords: project dashboard, queued builds, waiting builds, CI/CD, shippable CI, documentation, shippable, config, yml
 
-# CI Project Dashboard
+# Queued and Waiting Builds
 
-This page walks through the details on the Project Dashboard. You get here by clicking on a specific project from your [CI Dashboard](ci_dashboard)
+This tab lists all the builds queued and waiting for a container to be freed up. Remember, the number of parallel builds that can be run depends on the number of containers in your plan.
 
