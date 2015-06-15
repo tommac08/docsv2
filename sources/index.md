@@ -56,7 +56,7 @@ node_js:
 
 ### Step 4: Enable CI for repos
 
-To enable a repository for CI -
+To enable a repository for CI:
 
 - On the Shippable landing page, click on **CI**
 
