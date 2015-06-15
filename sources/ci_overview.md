@@ -4,18 +4,18 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 
 # Overview
 
-This page explains how to use the rest of the user guide under Shippable CI. A couple of common use cases for Shippable CI include:
+Shippable CI is our Continuous Integration and Deployment platform. It uses **Build Minions** which are docker based containers to run your workloads. A couple of common use cases for Shippable CI include:
 
 -  Automating the packaging and deployment of web applications
 -  Automated testing and continuous integration/deployment
 
-## Supported Languages, Services, Platforms
+## What is supported?
 
-This [page](supported_services.md) lists all the supported languages, services and platforms on Shippable CI.
+Go [here](supported_services.md) to see a list of all supported languages, services and platforms on Shippable CI.
 
 ## How to use the Shippable CI user guide
 
-The user guide is organized by the different tabs on the product - so you will find a page for each tab in the guide.
+The user guide is organized by the different tabs on the product - so you will find a page for each tab under **Shippable CI.**
 
 ### CI Subscriptions Dashboard
 
