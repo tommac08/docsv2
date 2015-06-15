@@ -20,7 +20,7 @@ pages:
   - [project_dashboard.md, Shippable CI, Project Dashboard]
   - [pr_builds.md, Shippable CI, PR Builds]
   - [queued_builds.md, Shippable CI, Queued Builds]
-  - [build_dashboard.md, Shippable CI, Build Page]
+  - [build_dashboard.md, Shippable CI, Build Dashboard]
 
   - [formations_overview.md, Shippable Formations, Overview]
   - [formations_status.md, Shippable Formations, Formations Dashboard]
@@ -52,5 +52,5 @@ pages:
   - [faq.md, Reference, FAQ]
   - [basic_flow.md, Reference, How the Build works]
   - [supported_services.md, Reference, Supported Languages]
-  - [access_and_permissions.md, Reference, Access and Permissions]
+  - [permissions.md, Reference, Access and Permissions]
   - [glossary.md, Reference, Glossary]
