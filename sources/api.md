@@ -23,7 +23,7 @@ The main endpoint for interacting with our API is
 ### Authentication
 
 Using our API requires authenticating with one of your Shippable API
-tokens. Shippable API tokens can be generated from your account settings
+tokens. Shippable API tokens can be generated from your [account settings](account_settings/#tokens)
 page.
 
 These tokens must be placed in the header of your HTTP request. For
