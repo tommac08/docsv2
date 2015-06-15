@@ -24,8 +24,9 @@ pages:
 
   - [formations_overview.md, Shippable Formations, Overview]
   - [formations_status.md, Shippable Formations, Formations Dashboard]
-  - [formations_components.md, Shippable Formations, Formation Components]
-  - [formations_billing.md, Shippable Formations, Formations Settings]
+  - [formation_services.md, Shippable Formations, Formation Services]
+  - [formation_settings.md, Shippable Formations, Formation Settings]
+  - [formations_billing.md, Shippable Formations, Formations Billing]
 
   - [lighthouse.md, Lighthouse]
 
