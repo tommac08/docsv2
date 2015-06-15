@@ -33,7 +33,7 @@ Shippable uses either your [GitHub](https://github.com) or [Bitbucket](https://b
 To sign in, visit the [Shippable website](https://www.shippable.com),
 click **Login**, and choose between GitHub or Bitbucket auth. This will take you to either the GitHub or Bitbucket Sign In page, where you enter your credentials.
 
-Click `Authorize Application` on GitHub or `Grant access` on Bitbucket to allow access to repos. Check out our [access policy](permissions.md) page for more details.
+Click `Authorize Application` on GitHub or `Grant access` on Bitbucket to allow access to repos. You can read the [access policy](permissions.md) page for more details.
 
 ### Step 2: Create YML file
 
