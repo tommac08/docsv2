@@ -25,7 +25,7 @@ pages:
   - [formations_overview.md, Shippable Formations, Overview]
   - [formations_status.md, Shippable Formations, Formations Dashboard]
   - [formations_components.md, Shippable Formations, Formation Components]
-  - [formations_settings.md, Shippable Formations, Formations Settings]
+  - [formations_billing.md, Shippable Formations, Formations Settings]
 
   - [lighthouse.md, Lighthouse]
 
@@ -37,6 +37,7 @@ pages:
   - [docker_build.md, How To, Do a Docker Build]
   - [docker_registries.md, How To, Use a Docker Registry]
   - [languages.md, How To, Use Specific Languages for CI]
+  - [sample_formation.md, How To, Create a Sample Formation]
   - [using_gitlab.md, How To, Use Shippable CI with Gitlab]
   - [heroku.md, How To, Deploy to Heroku]
   - [beanstalk.md, How To, Deploy to Amazon Elastic Beanstalk]

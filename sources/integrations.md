@@ -19,6 +19,8 @@ You will need this to pull or push images to Docker Hub as part of building your
 5. Enter your credentials
 6. Click on `Save`
 
+Go [here](docker_registries) to learn more about Docker Registries.
+
 --------
 
 ## Google Container Registry (GCR)
@@ -37,6 +39,8 @@ You will need this to pull or push images to Google Container Registry as part o
 10. Enter a name for your integration. Use a distinctive name that's easy to associate to the integration and recall. `Example:gcr-gcrusername`
 11. Enter your JSON key that you saved earlier
 12. Click on `Save`
+
+Go [here](docker_registries) to learn more about Docker Registries.
 
 ------------
 

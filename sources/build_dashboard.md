@@ -10,3 +10,13 @@ This page walks through the build dashboard for your CI project. You get here in
 - By clicking on the build on the Shippable landing page - either current or running builds
 - By clicking on a build link in the notification emails you receive
 
+## Build Console
+
+## Test Tab
+
+## Coverage Tab
+
+## Script
+
+## More Info
+
