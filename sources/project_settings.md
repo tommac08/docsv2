@@ -82,7 +82,7 @@ See our [Lighthouse Page](lighthouse.md) for details on how to use the feature.
 
 By default, Cache is set to OFF. Turn this on if you want to save build sessions between builds.
 
-Shippable does not cache dependencies between builds by defauly. Each build will run on a fresh minion and as soon as the build finishes execution, the minion will be deleted. However, we also understand that installing dependencies for each build will take more time and it affects your build speed. Hence the caching feature.
+Shippable does not cache dependencies between builds by default. Each build will run on a fresh minion and as soon as the build finishes execution, the minion will be deleted. However, we also understand that installing dependencies for each build will take more time and it affects your build speed. Hence the caching feature.
 
 Before the build, we will check for the **cache** flag and if it is ON, the entire minion will be cached if the build succeeds and the cached minion will be reused for further builds.
 
