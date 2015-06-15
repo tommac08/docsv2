@@ -70,7 +70,7 @@ To enable a repository for CI/CD:
 ### Step 5: Run the build
 
 - On the Project Page, click on the `Run Build` icon to run a manual build
-- You can view the build status on the Console in the build page
+- You can view the build status on the console in the build page
 - The status is updated as soon as the build completes
 
 >This is a very basic version of a build. Learn how to [customize your build further](build_case2.md)
@@ -104,7 +104,7 @@ To purchase additional containers for Shippable CI:
 To purchase containers for a new or existing Shippable Formation:
 
 - Click on **Formations** on the Shippable Landing page
-- Click on your **Add a new formation** in the dropdown
+- Click on **Add a new formation** in the dropdown
 - This will take you to our payment page. Choose `Multi-Tenant Formation` as your plan
 - Use the slider to select the number of containers you want for your formation
 - Enter your payment details and click `Buy`
@@ -126,8 +126,8 @@ To update containers in an existing Shippable Formation:
 This happens due to one of the following reasons:
 
 - You haven't enabled private repositories in your Shippable account. Go to [Account Settings](account_settings.md) and in the **GitHub Identity** section, click on the **Private Repos OFF** icon. This is a one-way toggle button to turn on Private Repos for your GitHub account.
-- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings (the `gear` on the top nav bar).
--  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
+- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, go to your Account Settings and click on the `Force Sync` icon next to your Account Id.
+-  You're a Bitbucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI/CD.
 
 Visit our [FAQ Page](faq.md) for answers to more frequently asked questions.
 
