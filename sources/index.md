@@ -68,7 +68,7 @@ To enable a repository for CI -
 
 - On the Project Page, click on the `Run Build` icon to run a manual build
 
-**This is a very basic version of a build. To learn how to customize your build further, go [here](build_case2.md)**
+>**This is a very basic version of a build. Learn how to [customize your build further](build_case2.md)**
 
 A complete reference to your project settings and build configuration is available [here](project_settings.md).
 
@@ -126,5 +126,5 @@ This happens due to one of the following reasons:
 - Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings (the `gear` on the top nav bar).
 -  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
 
-Visit our[FAQ Page](faq.md) for answers to more frequently asked questions.
+Visit our [FAQ Page](faq.md) for answers to more frequently asked questions.
 
