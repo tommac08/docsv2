@@ -1,6 +1,6 @@
 page_title: Learn About What Makes Shippable Great | Documentation | Shippable
 page_description: Code examples, FAQs, language & platform support
-page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deployment, CI/CD, testing, automation
+page_keywords: containers, lxc, Docker, Continuous Integration, Continuous Deployment, CI/CD, testing, automation
 
 # Overview
 
@@ -8,13 +8,13 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 
 Shippable is a SaaS platform for developers and devops teams that significantly reduces the time taken for code to be built, tested and deployed to production.
 
-Shippable is comprised of two products that enable you to ship code faster -
+Shippable is comprised of two products that enable you to ship code faster:
 
-**Shippable CI:** Shippable CI is our Continuous Integration and Deployment Platform. It uses **Build Minions**, which are docker based containers to run your workloads. After building and testing your code, you can push your docker image to Docker Hub, Google Container Registry, or any other private registry.
+**Shippable CI/CD:** Shippable CI/CD is our Continuous Integration and Deployment Platform. It uses **Build Minions**, which are docker based containers to run your workloads. After building and testing your code, you can push your docker image to Docker Hub, Google Container Registry, or any other private registry.
 
-Go to [Shippable CI overview](ci_overview.md) to learn more.
+Go to [Shippable CI/CD overview](ci_overview.md) to learn more.
 
-**Shippable Formations** Shippable Formations is a system based on Kubernetes that allows you to manage your multi-tier application across multiple environments without writing any DevOps code. It is persistent, fully orchestrated and scalable.
+**Shippable Formations** Shippable Formations gives developers an easy way to provision, configure, and deploy multi-container Dev and Test clouds (environments) with zero DevOps code. It is fully integrated with the updated Shippable CI/CD platform, and together, they create an automated, frictionless pipeline from source control to full-topology environments that can mimic your production environment or represent any combination of software component versions you'd like to deploy.
 
 Go to [Shippable Formations Overview](formations_overview.md) to learn more.
 
@@ -54,9 +54,9 @@ node_js:
 ```
 
 
-### Step 4: Enable CI for repos
+### Step 4: Enable CI/CD for repos
 
-To enable a repository for CI:
+To enable a repository for CI/CD:
 
 - On the Shippable landing page, click on **CI**
 
@@ -89,7 +89,7 @@ To enable a repository for CI:
 
 ### How can I update my Shippable plan?
 
-Shippable CI and Shippable Formations are 2 different subscriptions under your account. These need to be purchased separately.
+Shippable CI/CD and Shippable Formations are 2 different subscriptions under your account. These need to be purchased separately.
 
 To purchase additional containers for Shippable CI:
 
