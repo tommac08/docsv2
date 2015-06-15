@@ -37,8 +37,6 @@ click **Login**, and choose between Github or Bitbucket auth. This will take you
 
 Click `Authorize Application` on Github or `Grant access` on Bitbucket to allow access to repos.
 
-And Voila! you are now ready to test and run your build on Shippable.
-
 ### Step 3: Create YML file
 
 Create a shippable.yml file at the root of the repository you want to build with Shippable.
