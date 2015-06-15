@@ -26,16 +26,16 @@ Go to [Shippable Formations Overview](formations_overview.md) to learn more.
 
 ### Step 0: Prerequisite
 
-Shippable uses either your [Github](https://github.com) or [Bitbucket](https://bitbucket.org) account to authenticate. You must have your source code in one of these two repos to sign up for Shippable.
+Shippable uses either your [GitHub](https://github.com) or [Bitbucket](https://bitbucket.org) account to authenticate. You must have your source code in one of these two repos to sign up for Shippable.
 
 ### Step 1: Sign in to Shippable
 
 To sign in, visit the [Shippable website](https://www.shippable.com),
-click **Login**, and choose between Github or Bitbucket auth. This will take you to either the Github or Bitbucket Sign In page, where you enter your credentials.
+click **Login**, and choose between GitHub or Bitbucket auth. This will take you to either the GitHub or Bitbucket Sign In page, where you enter your credentials.
 
 ### Step 2: Allow Access to repos
 
-Click `Authorize Application` on Github or `Grant access` on Bitbucket to allow access to repos.
+Click `Authorize Application` on GitHub or `Grant access` on Bitbucket to allow access to repos.
 
 ### Step 3: Create YML file
 
@@ -125,7 +125,7 @@ To update containers in an existing Shippable Formation:
 
 This happens due to one of the following reasons:
 
-- You haven't enabled private repositories in your Shippable account. Go to our [Account Settings Documentation](account_settings.md) to learn how to turn on Private Repos for your Github Account.
+- You haven't enabled private repositories in your Shippable account. Go to [Account Settings](account_settings.md) and in the **GitHub Identity** section, click on the **Private Repos OFF** icon. This is a one-way toggle button to turn on Private Repos for your GitHub account.
 - Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings (the `gear` on the top nav bar).
 -  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
 
