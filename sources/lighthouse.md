@@ -24,12 +24,12 @@ Lighthouse is available to all users for Shippable for free!
 
 ### Step 1: Prequisite: Set up Account Integration for the registry
 
-**If you have already set this up for your registry in Shippable, go to Step 2**
+**If you have already set this up for either your Docker Hub or Google Container registry in Shippable, go to Step 2**
 
 **Docker Hub**
 
 - Login to Shippable
-- Click on `Settings` in the top navbar
+- Click on `Account Settings` in the top navbar
 - On the Account Settings page, click on `Integrations`
 - From the options presented, click on `Docker Hub Credentials`
 - Enter an Integration name, which will be used to refer to this integration on Shippable
@@ -39,9 +39,9 @@ Lighthouse is available to all users for Shippable for free!
 **GCR**
 
 - Login to Shippable
-- Click on `Settings` in the top navbar
+- Click on `Account Settings` in the top navbar
 - On the Account Settings page, click on `Integrations`
-- From the options presented, click on `Docker Hub Credentials`
+- From the options presented, click on `GCR Credentials`
 - Enter an Integration name, which will be used to refer to this integration on Shippable
 - Enter your credentials
 - Click on `Save`

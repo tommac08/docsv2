@@ -12,7 +12,7 @@ This page describes the different integrations you can set up for your account. 
 
 You will need this to pull or push images to Docker Hub as part of building your project.
 
-1. Click on Account Settings (the gear icon on the top bar) and scroll down to the `Integrations` section
+1. Click on Account Settings (the gear icon on the top bar) and select the `Integrations` tab.
 2. To add a new integration, click on (+)
 3. **Master Integration:** Click on `Docker`
 4. Enter a name for your integration. Use a distinctive name that's easy to associate to the integration and recall. `Example:docker-mydockerusername`

@@ -34,6 +34,7 @@ pages:
   - [integrations.md, Account, Integrations]
   - [payment_methods.md, Account, Payment Methods]
 
+  - [link_gh_and_bb.md, How To, Link GitHub and Bitbucket Accounts]
   - [build_case2.md, How To, Use CI with Test and Coverage]
   - [docker_build.md, How To, Do a Docker Build]
   - [docker_registries.md, How To, Use a Docker Registry]
