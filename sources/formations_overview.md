@@ -6,7 +6,7 @@ page_keywords: formations,multi containers, microservices, Continuous Integratio
 
 ## Shippable Formations
 Shippable Formations allows you to manage your multi-container applications across multiple
-environments with just a few clicks. Behind the scenes, we use Kubernetes clusters that allows us
+environments with just a few clicks. Behind the scenes, we use Kubernetes, clusters that allow us
 to abstract anything related to managing containers or infrastructure for our users.
 
 A formation is comprised of images, configuration variables and environments. Once these are set up
