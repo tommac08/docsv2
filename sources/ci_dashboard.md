@@ -1,15 +1,15 @@
-page_title: Shippable CI Dashboard| Documentation | Shippable
-page_description: Explanation of the CI Dashboard
-page_keywords: ci dashboard, subscription settings, CI/CD, shippable CI, documentation, shippable, config, yml
+page_title: Shippable CI/CD Dashboard| Documentation | Shippable
+page_description: Explanation of the CI/CD Dashboard
+page_keywords: ci/cd dashboard, subscription settings, CI/CD, shippable CI/CD, documentation, shippable, config, yml
 
-# CI Dashboard
+# CI/CD Dashboard
 
 This page walks through the Subscriptions dashboard and the options available from the dashboard.
 
 ## How to get here
 
 - Login to Shippable
-- Click on **CI** on the Shippable Landing page
+- Click on **CI/CD** on the Shippable Landing page
 - Click on a subscription from the dropdown
 - This will bring you to the **Status** page that is also referred to as the Subscriptions Dashboard
 
