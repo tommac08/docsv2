@@ -58,15 +58,20 @@ node_js:
 
 To enable a repository for CI -
 
-- On the Shippable landing page, click ![CI](images/landing_widget.gif)
+- On the Shippable landing page, click on **CI**
+
+![CI](images/landing_widget.gif)
+
 - Find your subscription from the dropdown and go to your Subscriptions page
-- Click on the (+) to enable a new project
-- Find the repo you want to enable and click the `Enable` (the key icon) button
-- Your project is now enabled and you can see it under your `Project Status`
+- Click on the ![add](images/add_icon.gif) to enable a new project
+- Find the repo you want to enable and click on the ![enable](images/enable_icon.gif) icon
+- This will bring you back to the project dashboard and you can see your enabled project there.
 
 ### Step 5: Run the build
 
 - On the Project Page, click on the `Run Build` icon to run a manual build
+- You can view the build status on the Console in the build page
+- The status is updated as soon as the build completes
 
 >This is a very basic version of a build. Learn how to [customize your build further](build_case2.md)
 
