@@ -11,7 +11,7 @@ git command only.
 To be able to push your code to Heroku, you need to add SSH public key
 associated with your Shippable account to authorized keys in [Heroku
 Account Settings](https://dashboard.heroku.com/account). In Shippable,
-go to 'Settings' and choose 'Deployment key' tab. Copy the contents of
+go to your subscription page and choose 'Deployment key' tab on the right. Copy the contents of
 the key and add it in 'SSH keys' section of Heroku settings.
 
 Next, create your Heroku application using Web GUI or `heroku` command
