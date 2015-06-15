@@ -4,96 +4,49 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 
 # Overview
 
-## What is Shippable CI?
-
-Shippable CI is our SaaS platform that lets you easily add Continuous
-Integration/Deployment to your Github and Bitbucket(Git) repositories.
-It is lightweight, super simple to setup, and runs your builds and tests
-faster than any other service. After building and testing your code, you
-can deploy it to any PaaS provider like Heroku & OpenShift and also to
-VMs, bare metal, OpenStack clusters, or any major infrastructure
-provider.
-
-Common use cases for Shippable include:
+This page explains how to use the rest of the user guide under Shippable CI. A couple of common use cases for Shippable CI include:
 
 -  Automating the packaging and deployment of web applications
 -  Automated testing and continuous integration/deployment
 
-## What is supported?
+## Supported Languages, Services, Platforms
 
-### Languages
+This [page](supported_services.md) lists all the supported languages, services and platforms on Shippable CI.
 
-We currently support the following programming languages:
+## How to use the Shippable CI user guide
 
--  [Clojure](languages/#clojure)
--  [GO](languages/#go)
--  [Java](languages/#java)
--  [Node.js](languages/#node)
--  [PHP](languages/#php)
--  [Python](languages/#python)
--  [Ruby](languages/#ruby)
--  [Scala](languages/#scala)
+The user guide is organized by the different tabs on the product - so you will find a page for each tab in the guide.
 
-### Platforms
+### CI Subscriptions Dashboard
 
-Your can test your repos on:
+Go to [CI Subscriptions Dashboard](ci_dashboard) to learn where to find info about the projects in your repository and enable new projects.
 
--  Ubuntu 12.04 LTS
--  Ubuntu 13.10
--  Ubuntu 14.04
+### CI Billing
 
-### Services
+Go to [CI Billing](ci_billing) to learn how to update your CI plan/add more containers.
 
-We support the following services natively:
+### Project Dashboard
 
--  MySQL
--  Postgres
--  Elastic Search
--  Redis
--  MongoDB
--  RabbitMQ
--  Neo4j
--  Cassandra
--  RethinkDB
--  CouchDB
--  Selenium
+Go to [Project Dashboard](project_dashboard) to learn how to run a manual build, look at build history by branch or delete any builds.
 
-### Tools
+### PR Builds
 
-A set of common tools are available on all [minions](glossary/#minions). The following is a
-list of available tools -
+Go to [PR Builds](pr_builds) to look at the status of any pull request builds.
 
--   Latest release of Git repository
--   apt installer
--   Networking tools
-    -   curl
-    -   wget
-    -   OpenSSL
--   Headless browser testing tools
-    -   xfvb
-    -   PhantomJS
--   Libraries
-    -   ImageMagik
-    -   OpenSSL
--   JDK Versions
-    -   Oracle JDK 7u6 (oraclejdk7)
-    -   OpenJDK 7 (alias: openjdk7)
-    -   OpenJDK 6 (openjdk6)
-    -   Oracle JDK 8 EA (oraclejdk8)
--   Build Tools
-    -   Maven 3
-    -   Gradle 1.9
-    -   Make
-    -   SBT 0.12.1
--   Preinstalled PIP Packages
-    -   mock
-    -   nosetests
-    -   py.test
--   Gems
-    -   Bundler
-    -   Rake
--   Addons
-    -   Firefox
-    -   Custom hostname
-    -   PostgreSQL
+### Queued Builds
+
+Go to [Queued Builds](queued_builds) to look at builds queued and waiting for a container to be freed up. Remember, the number of parallel builds that can be run depends on the number of containers in your plan.
+
+### Project Settings
+
+Build Configuration for Shippable CI is done both in the UI at Project Settings and via the YML.
+
+Go to [Project Settings](project_settings) to learn all about the different build configuration available and how to use them.
+
+### Build Dashboard
+
+Go to [Build Dashboard](build_dashboard) to learn more about the build detail page, where to look at the console and test/coverage reports
+
+
+
 
