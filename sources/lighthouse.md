@@ -4,8 +4,6 @@ page_keywords: lighthouse, shippable ci, documentation, shippable, watch docker 
 
 # Lighthouse: Image Watcher
 
-**REVIEW PAGE AFTER UI IS COMPLETE to update flow or add screenshots**
-
 ## Overview
 
 Have you ever wasted your time debugging a broken build only to realize a few frustrated hours later that it was due to something that changed in one of the images you depend on?
@@ -14,13 +12,13 @@ Lighthouse to your rescue!
 
 Lighthouse is available to all users of Shippable (yes, for free). Using this feature, you can add any image from any registry that you want to track and get notified via email when there is an update. It is a simple set up and we will be adding more functionality to this feature over time - so keep a watch on our watcher.
 
-Today, we support watching images that are hosted on either Docker Hub or Google Container Registry
+Today, we support watching images that are hosted on either Docker Hub or Google Container Registry.
 
 * * * * *
 
 ## Permissions
 
-**UPDATE PERMISSIONS**
+Lighthouse is available to all users for Shippable for free!
 
 ## Adding an image to the Lighthouse
 
