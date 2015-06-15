@@ -14,13 +14,13 @@ You can get to your Account Settings by clicking on the _gear_ icon on the top b
 
 **Force Sync:** We periodically sync account info with Github and Bitbucket. Currently this is every hour. Use this button to sync your account if you would like to see any changes made upstream immediately. Example: You have been added to a new subscription as an owner/collaborator; you have new repos in github and want to see it immediately; you linked your bitbucket account to this account and want to see your bitbucket repositories right away.
 
-### Github Identity
+### GitHub Identity
 
-If you are using a Github Account to log in, this displays the github user settings.
+If you are using a GitHub Account to log in, this displays the GitHub user settings.
 
-**Public On:** This indicates that we have access to your Public Repos in Github. This is turned on by default, since signing into Shippable requires you to authorize this access on Github.
+**Public On:** This indicates that we have access to your Public Repos in GitHub. This is turned on by default, since signing into Shippable requires you to authorize this access on GitHub.
 
-**Private On/Off:** This indicates whether Shippable has access to your Private Repos. This needs to be turned on for Shippable to run any builds on repos that are private on Github.
+**Private On/Off:** This indicates whether Shippable has access to your Private Repos. This needs to be turned on for Shippable to run any builds on repos that are private on GitHub.
 
 > **Note**
 >
@@ -37,7 +37,7 @@ If you are using a Bitbucket Account to log in, this displays the bitbucket user
 
 (see the section below on linking accounts as well)
 
-### Linking your Bitbucket and Github Accounts
+### Linking your Bitbucket and GitHub Accounts
 
 If you want to use Shippable to build both GitHub and Bitbucket
 repositories, you can connect the two accounts in this page to get a
@@ -47,8 +47,8 @@ To connect your accounts -
 
 1. Sign in with the GitHub/BitBucket account that you want to be your primary account.
 2. You will go through the [authorization flow](sign_up.md) to sign in.
-3. If you signed in with Github, you will see an option to link Bitbucket under the **Bitbucket Identity Section**. Click on that and follow the authorization flow for Bitbucket.
-4. If you signed in with Bitbucket, you will see an option to link Github under the **Github Identity Section**. Click on that and follow the authorization flow for Github.
+3. If you signed in with GitHub, you will see an option to link Bitbucket under the **Bitbucket Identity Section**. Click on that and follow the authorization flow for Bitbucket.
+4. If you signed in with Bitbucket, you will see an option to link GitHub under the **GitHub Identity Section**. Click on that and follow the authorization flow for GitHub.
 
 Once your accounts are both connected to Shippable, you should see a
 consolidated list of orgs and projects in your account. You can sign in

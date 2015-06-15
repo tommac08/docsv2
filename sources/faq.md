@@ -9,7 +9,7 @@ questions.... hope this helps!
 
 ### How can I update my Shippable plan?
 
-Shippable CI and Shippable Formations are 2 different subscriptions under your account. These need to be purchased separately.
+Shippable CI/CD and Shippable Formations are 2 different subscriptions under your account. These need to be purchased separately.
 
 To purchase additional containers for Shippable CI:
 
@@ -24,7 +24,7 @@ To purchase additional containers for Shippable CI:
 To purchase containers for a new or existing Shippable Formation:
 
 - Click on **Formations** on the Shippable Landing page
-- Click on your **Add a new formation** in the dropdown
+- Click on **Add a new formation** in the dropdown
 - This will take you to our payment page. Choose `Multi-Tenant Formation` as your plan
 - Use the slider to select the number of containers you want for your formation
 - Enter your payment details and click `Buy`
@@ -40,13 +40,14 @@ To update containers in an existing Shippable Formation:
 - Enter your payment details and click `Buy`
 - Your plan is now updated
 
-## Why can't I see some of my repositories in my Shippable account?
+
+### Why can't I see some of my repositories in my Shippable account?
 
 This happens due to one of the following reasons:
 
-- You haven't enabled private repositories in your Shippable account. Go to our [Account Settings Documentation](account_settings.md) to learn how to turn on Private Repos for your Github Account.
-- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, click on the `Force Sync` icon in your Account Settings. (the `gear` on the top nav bar)
--  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
+- You haven't enabled private repositories in your Shippable account. Go to [Account Settings](account_settings.md) and in the **GitHub Identity** section, click on the **Private Repos OFF** icon. This is a one-way toggle button to turn on Private Repos for your GitHub account.
+- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, go to your Account Settings and click on the `Force Sync` icon next to your Account Id.
+-  You're a Bitbucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI/CD.
 
 ## Why do I get an error when I try to enable a project that is listed on my dashboard?
 
@@ -70,19 +71,19 @@ Shippable repository list. If you cannot see git based repos, please
 open an issue on our [GitHub Support
 repo](<https://github.com/Shippable/support>).
 
-## Why can't shippable see my org on github?
+## Why can't Shippable see my org on GitHub?
 
-Github's default policy when a new org is created is 'access
+GitHub's default policy when a new org is created is 'access
 restricted'. In order for Shippable to be able to see the org, you must
 manually grant access to Shippable. This can be resolved by going to the
 third-party access section for the org, and clicking 'Remove
 restrictions' Under the 'Third-party application access policy' section.
 
-## How do I link my github and bitbucket accounts?
+## How do I link my GitHub and Bitbucket accounts?
 
-Check out our documentation on [linking bitbucket and github accounts](account_settings/#linking-your-bitbucket-and-github-accounts)
+Check out our documentation on [linking Bitbucket and GitHub accounts](account_settings/#linking-your-bitbucket-and-github-accounts)
 
-## Why am I not able to see BitBucket org repos after deleting and recreating my account on Shippable?
+## Why am I not able to see Bitbucket org repos after deleting and recreating my account on Shippable?
 
 Deleting the shippable account will also delete the permissions
 associated with the account. If you recreate your account, bitbucket

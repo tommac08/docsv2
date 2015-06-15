@@ -8,11 +8,11 @@ This page explains the levels of access Shippable has to your repos and how perm
 
 ## OAuth Authentication
 
-We use OAuth authentication. What this means is if you have either a Github or Bitbucket account, you do not need to create a separate account on our platform.
+We use OAuth authentication. What this means is if you have either a GitHub or Bitbucket account, you do not need to create a separate account on our platform.
 
 ## Access to repos
 
-When signing up to Shippable, you will be prompted to give Shippable access to your repos. GitHub and Bitbucker auth behave a little differently as follows -
+When signing up to Shippable, you will be prompted to give Shippable access to your repos. GitHub and Bitbucket auth behave a little differently as follows -
 
 **GitHub**- By default, we will only ask for access to public repos. If you want to use Shippable to build your private repos, you will need to authorize us for private repositories. This is done from your [Account Settings Page](account_settings.md).
 

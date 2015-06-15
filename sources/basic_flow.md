@@ -8,7 +8,7 @@ These are the steps that are executed when we receive a build trigger automatica
 
 ## Build Steps
 
-1.  Clone/Pull the project from Github or Bitbucket. This depends on
+1.  Clone/Pull the project from GitHub or Bitbucket. This depends on
     whether the minion is in pristine state or not
 2.  `cd` into the workspace
 3.  Checkout the commit that is being built
