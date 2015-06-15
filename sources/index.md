@@ -8,7 +8,7 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 
 Shippable is a SaaS platform for developers and devops teams that significantly reduces the time taken for code to be built, tested and deployed to production.
 
-Shippable comprises of two products that enables you to ship code faster -
+Shippable is comprised of two products that enable you to ship code faster -
 
 **Shippable CI:** Shippable CI is our Continuous Integration and Deployment Platform. It uses **Build Minions** which are docker based containers to run your workloads. After building and testing your code, you can push your docker image to Docker Hub, Google Container Registry or any other private registry.
 
