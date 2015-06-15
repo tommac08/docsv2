@@ -33,11 +33,9 @@ Shippable uses either your [GitHub](https://github.com) or [Bitbucket](https://b
 To sign in, visit the [Shippable website](https://www.shippable.com),
 click **Login**, and choose between GitHub or Bitbucket auth. This will take you to either the GitHub or Bitbucket Sign In page, where you enter your credentials.
 
-### Step 2: Allow Access to repos
+Click `Authorize Application` on GitHub or `Grant access` on Bitbucket to allow access to repos. Check out our [access policy](permissions.md) page for more details.
 
-Click `Authorize Application` on GitHub or `Grant access` on Bitbucket to allow access to repos.
-
-### Step 3: Create YML file
+### Step 2: Create YML file
 
 Create a shippable.yml file at the root of the repository you want to build with Shippable.
 
@@ -54,7 +52,7 @@ node_js:
 ```
 
 
-### Step 4: Enable CI/CD for repos
+### Step 3: Enable CI/CD for repos
 
 To enable a repository for CI/CD:
 
@@ -67,7 +65,7 @@ To enable a repository for CI/CD:
 - Find the repo you want to enable and click on the ![enable](images/enable_icon.gif) icon
 - This will bring you back to the project dashboard and you can see your enabled project there.
 
-### Step 5: Run the build
+### Step 4: Run the build
 
 - On the Project Page, click on the `Run Build` icon to run a manual build
 - You can view the build status on the console in the build page
