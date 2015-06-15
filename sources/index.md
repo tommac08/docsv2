@@ -92,7 +92,7 @@ To purchase additional containers for Shippable CI:
 
 - Click on **CI** on the Shippable Landing page
 - Click on your **CI Subscription** in the dropdown
-- Go to the **Settings** tab
+- Go to the **Billing** tab
 - Make sure your plan is set to `Multi-Tenant CI`
 - Use the slider to select the number of containers you want for your subscription.
 - Enter your payment details and click `Buy`
@@ -111,7 +111,7 @@ To update containers in an existing Shippable Formation:
 
 - Click on **Formations** on the Shippable Landing page
 - Choose the Formation that you want to update
-- Go to the **Settings** tab
+- Go to the **Billing** tab
 - In the first section, choose `Multi-Tenant Formation` as your plan
 - Use the slider to select the number of containers you want for your formation
 - Enter your payment details and click `Buy`

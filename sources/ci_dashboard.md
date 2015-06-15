@@ -4,18 +4,23 @@ page_keywords: ci dashboard, subscription settings, CI/CD, shippable CI, documen
 
 # CI Dashboard
 
-This page walks through the subscriptions dashboard and the options available from the dashboard.
+This page walks through the Subscriptions dashboard and the options available from the dashboard.
 
+## How to get here
 
-This is the **Status** page you get to when you click on a specific CI Subscription from the Shippable landing page.
+- Login to Shippable
+- Click on **CI** on the Shippable Landing page
+- Click on a subscription from the dropdown
+- This will bring you to the **Status** page that is also referred as the Subscriptions Dashboard
 
 ## Default View
 
 The default view when you get to the subscriptions dashboard is a list of your enabled projects. The view includes information about the following:
 
 - Who enabled the project and when
-- The branch for the project. Clicking on the branch will take you to the [Project Dashboard](project_dashboard.md)
-- Build Info: The latest build number will lead to the [build dashboard](build_dashboard.md)
+- The active branch for the project
+- Duration of the latest build for a project
+- Status of the latest build for a project
 - Change Set Info
 - Committer Info
 

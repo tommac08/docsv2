@@ -49,6 +49,7 @@ pages:
   - [api.md, API]
 
   - [faq.md, Reference, FAQ]
+  - [basic_flow.md, Reference, How the Build works]
   - [supported_services.md, Reference, Supported Languages]
   - [access_and_permissions.md, Reference, Access and Permissions]
   - [glossary.md, Reference, Glossary]
