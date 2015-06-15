@@ -4,8 +4,8 @@ page_keywords: PR builds, CI/CD, shippable CI, documentation, shippable, config,
 
 # PR Builds
 
-Shippable will integrate with github to show your pull request status on
-CI. Whenever a pull request is opened for your repo, we will run the
+Shippable will integrate with GitHub to show your pull request status on
+CI/CD. Whenever a pull request is opened for your repo, we will run the
 build for the respective pull request and notify you about the status.
 You can decide whether to merge the request or not, based on the status
 shown. If you accept the pull request, Shippable will run one more build
