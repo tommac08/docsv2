@@ -1,18 +1,30 @@
-page_title: Shippable CI Settings| Documentation | Shippable
-page_description: How to configure Shippable CI Subscription Settings
-page_keywords: ci settings, subscription settings, CI/CD, shippable CI, documentation, shippable, config, yml
+page_title: Shippable CI Billing| Documentation | Shippable
+page_description: How to update Subscription CI Plan and add more containers
+page_keywords: ci billing, add containers, subscription settings, CI/CD, shippable CI, documentation, shippable, config, yml
 
-# CI Subscription Settings
+# CI Subscription Billing
 
-This page explains the different options available in the `SETTINGS` tab for your Subscription.
+This page explains how to update your CI plan from the Billing Tab.
 
 ****ADD SCREENSHOT****
 
-## Subscription Plan Management
+## How do you get here?
 
-This is where you can manage your subscription plan and add more containers.
+- Login to Shippable
+- Click on **CI** on the landing page
+- Click on a specific subscription from the dropdown
+- Click on the **Billing** tab from the Subscription dashboard
 
+## Subscription Billing
 
+This is where you can manage your subscription plan and edit your number of containers.
+
+- Make sure your plan is set to `Multi-Tenant CI`
+- Use the slider to select the number of containers you want for your subscription.
+- The total price automatically updates to reflect the price you will pay for the number of containers chosen
+- Enter your payment details
+- Click the **Buy** button
+- Your CI Plan is now updated and the number of minion count on your Subscriptions dashboard should reflect the new number of containers on your plan
 
 ## Invoices
 
@@ -26,4 +38,4 @@ Use this icon to force sync your subscription if you have updated your subscript
 
 This is the SSH public key associated with your Shippable Account. You will need this key to enable Continuous Deployment for some providers that supports git based deployments. (Heroku and Red Hat Openshift, for example)
 
-See our Continuous Deployment Section [deployment/index.md] for details on how to enable continuous deployment with different providers.
+See our **How To** section for details on how to enable continuous deployment with different providers.
