@@ -20,5 +20,5 @@ with either of your credentials after this point.
 
 > **Tip**
 >
-> To see the linked account repositories updated immediately, click on the ![force sync](images/force_sync.gif) icon on your [Account Information section](account_settings/#account-information)
+> To see the linked account repositories updated immediately, click on the ![force sync](images/force_sync_icon.gif) icon on your [Account Information section](account_settings/#account-information)
 
