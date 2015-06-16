@@ -1,17 +1,17 @@
-page_title: Shippable CI Billing| Documentation | Shippable
-page_description: How to update Subscription CI Plan and add more containers
+page_title: Shippable CI/CD Billing| Documentation | Shippable
+page_description: How to update Subscription CICD Plan and add more containers
 page_keywords: ci billing, add containers, subscription settings, CI/CD, shippable CI, documentation, shippable, config, yml
 
-# CI Subscription Billing
+# CI/CD Subscription Billing
 
-This page explains how to update your CI plan from the Billing Tab.
+This page explains how to update your CI/CD plan from the Billing Tab.
 
 ****ADD SCREENSHOT****
 
 ## How do you get here?
 
 - Login to Shippable
-- Click on **CI** on the landing page
+- Click on **CI/CD** on the landing page
 - Click on a specific subscription from the dropdown
 - Click on the **Billing** tab from the Subscription dashboard
 
@@ -19,12 +19,12 @@ This page explains how to update your CI plan from the Billing Tab.
 
 This is where you can manage your subscription plan and edit your number of containers.
 
-- Make sure your plan is set to `Multi-Tenant CI`
+- Make sure your plan is set to `Multi-Tenant CI/CD`
 - Use the slider to select the number of containers you want for your subscription.
 - The total price automatically updates to reflect the price you will pay for the number of containers chosen
 - Enter your payment details
 - Click the **Buy** button
-- Your CI Plan is now updated and the number of minion count on your Subscriptions dashboard should reflect the new number of containers on your plan
+- Your CI/CD Plan is now updated and the number of minion count on your Subscriptions dashboard should reflect the new number of containers on your plan
 
 ## Invoices
 
