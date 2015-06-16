@@ -83,7 +83,7 @@ list of available tools -
     -   xfvb
     -   PhantomJS
 -   Libraries
-    -   ImageMagik
+    -   ImageMagick
     -   OpenSSL
 -   JDK Versions
     -   Oracle JDK 7u6 (oraclejdk7)
