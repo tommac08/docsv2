@@ -1,21 +1,39 @@
-page_title: Shippable YML Reference| Documentation | Shippable
-page_description: How to configure shippable YML
-page_keywords: project settings, CI/CD, shippable CI, documentation, shippable, config, yml, build configuration, build timeout, build badge
+page_title: Shippable Build Configuration| Documentation | Shippable
+page_description: How to write your Shippable YML and Set up your Build Configuration
+page_keywords: getting started, questions, documentation, shippable, config, yml
 
-# YML Reference
+# Build Configuration
 
-This is a reference page for the various configuration options that can be set in your Shippable YML file.
+## Build Images
 
-To learn how to run a build with the most important YML configs, please refer to our
-[how to guide on running a build](build_case2.md).
+Our default image, shippable/minv2, comes installed with popular versions of all
+supported languages, tools and services.
 
->**NOTE**
->
-> By default, we will build all branches of the project as long as there is a shippable.yml in the root of every branch. The YML file is specific to a branch.
+However, you might prefer starting with a small image that only has
+versions of your language installed. To help with this, we have open
+sourced basic images for all supported languages. These images only come
+with popular versions of a language and are NOT pre-installed with any
+tools, addons or services.
 
-### Build matrix
+Our build images are available on Docker Hub in the [shippableImages account]
+(https://registry.hub.docker.com/repos/shippableimages/) . Dockerfiles
+for these images are in our [GitHub repository](https://github.com/shippableImages).
 
-This is a powerful feature that Shippable has to offer. You can
+You can choose language specific images for your project under **project settings**:
+
+- Go to your Project page
+- Click on the Settings tab
+- Click on the dropdown against `Pull Image from` and choose an appropriate image
+
+As mentioned above, our language specific images do not come with any
+tools, addons, or services pre-installed. If you need pre-installed
+tools, addons or services, then you should use shippable/minv2 image.
+
+Check out our [language help page](languages.md) for language specific info about build images.
+
+## Build matrix
+
+This is another powerful feature that Shippable has to offer. You can
 trigger multiple different test passes for a single code push. You might
 want to test against different versions of ruby, or different aspect
 ratios for your Selenium tests or best yet, just different jdk versions.
@@ -43,7 +61,7 @@ env:
 The above example will fire 36 different builds for each push. Whoa!
 Need more minions?
 
-### Environment Variables
+## Environment Variables
 
 #### Standard environment variables
 
@@ -122,11 +140,74 @@ env:
   - FOO=bar BAR=foo
 ```
 
->**NOTE**
->
-> See the prior section on Encrypt Variables on how to secure any environment variables
+#### Secure environment variables
 
-### Command collections
+Shippable allows you to encrypt the environment variable definitions and
+keep your configurations private using **secure** tag. Go to the org
+dashboard or individual dashboard page from where you have enabled your
+project and click on **ENCRYPT ENV VARIABLE** button on the top right
+corner of the page. Enter the env variable and its value in the text box
+as shown below.
+
+```
+name=abc
+```
+
+Click on the encrypt button and copy the encrypted output string and add
+it to your yml file as shown below:
+
+```yaml
+env:
+  secure: <encrypted output>
+```
+
+To encrypt multiple environment variables and use them as part of a
+single build, enter the environment variable definitions in the text box
+as shown below
+
+```
+name1="abc" name2="xyz"
+```
+
+This will give you a single encrypted output that you can embed in your
+yml file.
+
+You can also combine encrypted output and clear text environments using
+**global** tag.
+
+```yaml
+env:
+  global:
+    - FOO="bar"
+    - secure: <encrypted output>
+```
+
+To encrypt multiple environment variables separately, configure your yml
+file as shown below:
+
+```yaml
+env:
+  global:
+    #encrypted output of first env variable
+    - secure: <encrypted output>
+    #encrypted output of second env variable
+    - secure: <encrypted output>
+  matrix:
+    #encrypted output of third env variable
+    - secure: <encrypted output>
+```
+
+> **Note**
+>
+> Due to the security risk of exposing your secure variables, we do not
+> decrypt secure variables for pull request from the forks of public
+> projects. Secure variable decryption is limited to the pull request
+> triggered from the branches on the same repository. And the decrypted
+> secured variables are also not displayed in the script tab for
+> security reasons.
+
+
+## Command collections
  `shippable.yml` supports collections under each tag. This is nothing more than YML functionality and we will run it one command at a time.
 
 ```yaml
@@ -141,7 +222,7 @@ and then run `./minions/do_something-else.sh`. The only requirement is
 that all of these operations return a `0` exit code. Else the build will
 fail.
 
-### Retrying npm install
+## Retrying npm install
 
 Sometimes npm install may fail due to the intermittent network issues
 and affects your build execution. To avoid this, **shippable_retry**
@@ -160,7 +241,7 @@ before_install:
     - shippable_retry sudo apt-get install something
 ```
 
-### Git submodules
+## Git submodules
 
 Shippable supports git submodules. This is a cool functionality of
 breaking your projects down into manageable chunks. We automatically
@@ -190,7 +271,7 @@ git:
  submodules: false
 ```
 
-### Include/Exclude Branches
+## Include/Exclude Branches
 
 By default, Shippable builds all branches for enabled repositories as
 long as they have a shippable.yml at the root.
@@ -247,7 +328,7 @@ matrix:
       env: ISOLATED=false
 ```
 
-### Allow-failures
+## Allow-failures
 
 Allowed failures are items in your build matrix that are allowed to fail
 without causing the entire build to be shown as failed. You can define
@@ -260,6 +341,8 @@ matrix:
 ```
 
 ---
+
+## Test and Code Coverage Visualization
 
 ### Test Results
 
@@ -279,7 +362,7 @@ script:
 Examples for other languages can be found in our
 [Code Samples](languages/).
 
-### Code Coverage Visualization
+### Code Coverage
 
 To set up code coverage result visualization for a repository.
 
@@ -299,7 +382,7 @@ Examples for other languages can be found in our Code Samples.
 
 ---
 
-### Notifications
+## Notifications
 
 Shippable primarily supports email and irc notifications and these can
 can be configured in your yml file. To send Slack notifications, please
@@ -314,7 +397,7 @@ configuring the notifications section of your yml. You can specify the
 email address(es) where you want to receive notification as well as the
 criteria for when you want notifications to be sent.
 
-#### Email notifications
+### Email notifications
 
 To send notifications to specific email addresses, replace the sample
 email addresses below with the recipients' email ids in your
@@ -351,7 +434,7 @@ notifications:
    email: false
 ```
 
-#### IRC notifications
+### IRC notifications
 
 You can also configure yml file to send build notifications to your IRC
 channels.
@@ -398,7 +481,7 @@ notifications:
 ```
 ---
 
-### Services
+## Services
 
 Shippable offers a host of pre-installed services to make it easy to run
 your builds. In addition to these you can install other services also by
@@ -407,7 +490,7 @@ using the `install` tag of `shippable.yml`.
 All the services are turned off by default and can be turned on by using
 the `services:` tag.
 
-#### MongoDB
+### MongoDB
 
 ```yaml
 # Mongo binds to 127.0.0.1 by default
@@ -418,7 +501,7 @@ services:
 Sample PHP code using
 [mongodb](https://github.com/shippableSamples/sample_php_mongo) .
 
-#### MySQL
+### MySQL
 
 ```yaml
 # MySQL binds to 127.0.0.1 by default and is started on boot. Default username is shippable with no password
@@ -431,7 +514,7 @@ before_script:
 Sample javascript code using
 [mysql](https://github.com/shippableSamples/sample_node_mysql).
 
-#### SQLite3
+### SQLite3
 
 SQLite is a software library that implements a self-contained,
 serverless, zero-configuration, transactional SQL database engine. So
@@ -441,7 +524,7 @@ other databases.
 Sample python code using
 [SQLite](https://github.com/shippableSamples/sample_python_sqllite).
 
-#### Elastic Search
+### Elastic Search
 
 ```yaml
 # elastic search is on default port 9200
@@ -451,7 +534,7 @@ services:
 
 Sample python code using [Elastic Search](https://github.com/shippableSamples/sample_python_elasticsearch).
 
-#### Memcached
+### Memcached
 
 ```yaml
 # memcached runs on default port 11211
@@ -462,7 +545,7 @@ services:
 Sample python code using
 [Memcached](https://github.com/shippableSamples/sample_python_memcache) .
 
-#### Redis
+### Redis
 
 ```yaml
 # redis runs on default port 6379
@@ -473,7 +556,7 @@ services:
 Sample python code using
 [Redis](https://github.com/shippableSamples/sample_python_redis).
 
-#### Neo4j
+### Neo4j
 
 ```yaml
 #neo4j runs on default port 7474
@@ -484,7 +567,7 @@ services:
 Sample javascript code using
 [Neo4j](https://github.com/shippableSamples/sample_node_neo4j) .
 
-#### Cassandra
+### Cassandra
 
 ```yaml
 # cassandra binds to the default localhost 127.0.0.1 and is not started on boot.
@@ -495,7 +578,7 @@ services:
 Sample ruby code using
 [Cassandra](https://github.com/shippableSamples/sample_ruby_cassandra) .
 
-#### CouchDB
+### CouchDB
 
 ```yaml
 # couchdb binds to the default localhost 127.0.0.1 and runs on default port 5984. It is not started on boot.
@@ -506,7 +589,7 @@ services:
 Sample ruby code using
 [CouchDB](https://github.com/shippableSamples/sample-ruby-couchdb) .
 
-#### RethinkDB
+### RethinkDB
 
 ```yaml
 # rethinkdb binds to the default localhost 127.0.0.1 and is not started on boot.
@@ -517,7 +600,7 @@ services:
 Sample javascript code using
 [RethinkDB](https://github.com/shippableSamples/sample-node-rethinkdb).
 
-#### RabbitMQ
+### RabbitMQ
 
 ```yaml
 # rabbitmq binds to 127.0.0.1 and is not started on boot. Default vhost "/", username "guest" and password "guest" can be used.
@@ -530,9 +613,9 @@ Sample python code using
 
 ---
 
-### Addons
+## Addons
 
-#### Firefox
+### Firefox
 
 We support different firefox versions like "18.0", "19.0", "20.0",
 "21.0", "22.0", "23.0", "24.0", "25.0", "26.0", "27.0", "28.0", "29.0".
@@ -544,7 +627,7 @@ addons:
    firefox: "21.0"
 ```
 
-#### Custom Host Name
+### Custom Host Name
 
 You can also set up custom hostnames using the **hosts** addons. To set
 up the hostnames in /etc/hosts file, add the following to your
@@ -557,7 +640,7 @@ addons:
     - asdf.com
 ```
 
-#### PostgreSQL
+### PostgreSQL
 
 ```yaml
 # Postgre binds to 127.0.0.1 by default and is started on boot. Default username is "postgres" with no password
@@ -583,7 +666,7 @@ addons:
 PostGIS 2.1 packages are pre-installed in our minions along with the
 PostgreSQL versions 9.1, 9.2 and 9.3.
 
-#### Selenium
+### Selenium
 
 Selenium is not started on boot. You will have to enable it using
 **services** tag and start xvfb (X Virtual Framebuffer) on display port
@@ -644,4 +727,47 @@ before_script:
 
 Sample javascript code using
 [Selenium](https://github.com/shippableSamples/sample_node_selenium) .
+
+---
+
+## Pull requests
+
+Shippable will integrate with github to show your pull request status on
+CI. Whenever a pull request is opened for your repo, we will run the
+build for the respective pull request and notify you about the status.
+You can decide whether to merge the request or not, based on the status
+shown. If you accept the pull request, Shippable will run one more build
+for the merged repo and will send email notifications for the merged
+repo. To rerun a pull request build, go to your project's page -\> Pull
+Request tab and then click on the **Build this Pull Request** button.
+
+* * * * *
+
+## Build badge
+
+Badges will display the status of your default branch. You can find the build badges on the project's page. Click on the **Badge** button and copy the markdown to your README file to display the status of most recent build on your Github or Bitbucket repo page.
+
+* * * * *
+
+## Build termination
+
+Build will be forcefully terminated in the following scenarios:
+
+-   If there has not been any log output or a command hangs for 10 minutes
+-   If the build is still running after 60 minutes for Free Plans or 120 minutes for Paid Plans
+
+When a build is forcefully terminated, the build status will indicate **timeout**.
+
+* * * * *
+
+## Skipping a build
+
+Any changes to your source code will trigger a build automatically on
+Shippable. So if you do not want to run build for a particular commit,
+then add **[ci skip]** or **[skip ci]** to your commit message.
+
+Our webhook processor will look for the string **[ci skip]** or **[skip
+ci]** in the commit message and if it exists, then that particular
+webhook build will not be executed.
+
 

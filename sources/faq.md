@@ -7,19 +7,53 @@ page_keywords: concepts, documentation, shippable, CI/CD
 Having trouble with your builds? Here is a list of frequently asked
 questions.... hope this helps!
 
-## How do I update my Shippable plan?
-- Login to Shippable
-- Click on the subscription you want to upgrade from the `Organizations` list on your right
-- You will see a `Plan and Billing` icon on the top right of the Subscription Page. Click on the icon to see and/or update your plan
+### How can I update my Shippable plan?
 
-## Why can't I see some of my repositories in my Shippable account?
+Shippable CI/CD and Shippable Formations are 2 different subscriptions under your account. These need to be purchased separately.
+
+First make sure you have a valid payment method on Shippable.
+
+- Click on the Account Settings icon on the top nav bar
+- Click on the **Cards** tab
+- Add a new payment method by clicking on the ![add icon](images/add_icon.gif)
+
+To purchase additional containers for Shippable CI:
+
+- Click on **CI** on the Shippable Landing page
+- Click on your **CI Subscription** in the dropdown
+- Go to the **Billing** tab
+- Make sure your plan is set to `Multi-Tenant CI`
+- Use the slider to select the number of containers you want for your subscription.
+- Enter your payment details and click `Buy`
+- Your CI Plan is now updated
+
+To purchase containers for a new or existing Shippable Formation:
+
+- Click on **Formations** on the Shippable Landing page
+- Click on **Add a new formation** in the dropdown
+- This will take you to our payment page. Choose `Multi-Tenant Formation` as your plan
+- Use the slider to select the number of containers you want for your formation
+- Enter your payment details and click `Buy`
+- You are ready to start on your new formation
+
+To update containers in an existing Shippable Formation:
+
+- Click on **Formations** on the Shippable Landing page
+- Choose the Formation that you want to update
+- Go to the **Billing** tab
+- In the first section, choose `Multi-Tenant Formation` as your plan
+- Use the slider to select the number of containers you want for your formation
+- Enter your payment details and click `Buy`
+- Your plan is now updated
+
+
+### Why can't I see some of my repositories in my Shippable account?
 
 This happens due to one of the following reasons:
 
-- You haven't enabled private repositories in your Shippable account.  If this is the reason, please click on the 'Private repos off' icon on your dashboard and give us permissions to access your private repositories.
-- Your account hasn't yet been synced with the latest permissions from GitHub. To fix
-this, please click on the 'Sync account' icon on your dashboard.
--  You're a BitBucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI.
+- You haven't enabled private repositories in your Shippable account. Go to [Account Settings](account_settings.md) and in the **GitHub Identity** section, click on the **Private Repos OFF** icon. This is a one-way toggle button to turn on Private Repos for your GitHub account.
+- Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, go to your Account Settings and click on the `Force Sync` icon next to your Account Id.
+-  You're a Bitbucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI/CD.
 
 ## Why do I get an error when I try to enable a project that is listed on my dashboard?
 
@@ -30,8 +64,7 @@ project on their Shippable dashboard.
 
 ## I have enabled my repository and committed code, but my build doesn't start. What could be wrong?
 
-Please check the 'Notifications' tab on your repository page on
-Shippable. If it shows any errors, fix those and try again.
+Please check the 'Notifications' tab on your repository page on Shippable. If it shows any errors, fix those and try again.
 
 If the error shows a parsing failure for the yml, you can validate the
 file at [YAML Lint](http://www.yamllint.com/).
@@ -44,34 +77,21 @@ Shippable repository list. If you cannot see git based repos, please
 open an issue on our [GitHub Support
 repo](<https://github.com/Shippable/support>).
 
-## Why can't shippable see my org on github?
+## Why can't Shippable see my org on GitHub?
 
-Github's default policy when a new org is created is 'access
+GitHub's default policy when a new org is created is 'access
 restricted'. In order for Shippable to be able to see the org, you must
 manually grant access to Shippable. This can be resolved by going to the
 third-party access section for the org, and clicking 'Remove
 restrictions' Under the 'Third-party application access policy' section.
 
-## How do I link my github and bitbucket accounts?
+## How do I link my GitHub and Bitbucket accounts?
 
-Shippable allows you to link both github and bitbucket service providers
-into a single account. Click on the bitbucket icon or github icon on the
-top right to link the respective account from the dashboard page.
+Please read our documentation on [linking GitHub and Bitbucket accounts](link_gh_and_bb.md).
 
-For example: Sign in to shippable with your github account and click on
-the bitbucket icon on the top right to link your bitbucket account.
+## Why am I not able to see Bitbucket org repos after deleting and recreating my account on Shippable?
 
-If you have already logged in to shippable with both the service
-providers account separately, then it will not allow you to link the
-accounts. You have to delete one of your shippable account and then
-click on the respective service provider icon from the other account.
-Deleting the account will also remove all its associated projects and
-builds, so first you need to decide which account you want to delete and
-then delete the account from the profile dropdown.
-
-## Why am I not able to see BitBucket org repos after deleting and recreating my account on Shippable?
-
-Deleting the shippable account will also delete all the permissions
+Deleting the shippable account will also delete the permissions
 associated with the account. If you recreate your account, bitbucket
 will not allow us to pull all the permissions you have, unless the owner
 of that organization logs in back to shippable and then click on the
@@ -92,3 +112,13 @@ before_script:
 
 This will change your minion timezone to paris time. Refer the article
 [list of tz database time zones](http://en.wikipedia.org/wiki/List_of_tz_database_time_zones) to select the timezone for your location.
+
+## How do I skip webhook builds?
+
+Any changes to your source code will trigger a build automatically on
+Shippable. If you do not want to run build for a particular commit,
+then add **[ci skip]** or **[skip ci]** to your commit message.
+
+Our webhook processor will look for the string **[ci skip]** or **[skip
+ci]** in the commit message and if it exists, then that particular
+webhook build will not be executed.
