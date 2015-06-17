@@ -10,11 +10,13 @@ Shippable is a SaaS platform for developers and DevOps teams that significantly 
 
 Shippable is comprised of two products that enable you to ship code faster:
 
-**Shippable CI/CD:** Shippable CI/CD is our Continuous Integration and Deployment Platform. It uses **Build Minions**, which are Docker based containers to run your workloads. After building and testing your code, you can push your Docker image to Docker Hub, Google Container Registry, or any other private registry.
+**Shippable CI/CD:**  
+Shippable CI/CD is our Continuous Integration and Deployment Platform. It uses **Build Minions**, which are Docker-based containers to run your workloads. After building and testing your code, you can have Shippable create a Docker image from your Build Minion and push it to Docker Hub or Google Container Registry (private registry support coming soon!).
 
-Go to [Shippable CI/CD overview](ci_overview.md) to learn more.
+Go to [Shippable CI/CD Overview](ci_overview.md) to learn more.
 
-**Shippable Formations** Shippable Formations gives developers an easy way to provision, configure, and deploy multi-container Dev and Test clouds (environments) with zero DevOps code. It is fully integrated with the updated Shippable CI/CD platform, and together, they create an automated, frictionless pipeline from source control to full-topology environments that can mimic your production environment or represent any combination of software component versions you'd like to deploy.
+**Shippable Formations**  
+Shippable Formations gives developers an easy way to provision, configure, and deploy multi-container Dev and Test clouds (environments) with zero DevOps code. It is fully integrated with the updated Shippable CI/CD platform, and together, they create an automated, frictionless pipeline from source control to full-topology environments that can mimic your production environment or represent any combination of software component versions you'd like to deploy.
 
 Go to [Shippable Formations Overview](formations_overview.md) to learn more.
 
@@ -31,7 +33,7 @@ Shippable uses either your [GitHub](https://github.com) or [Bitbucket](https://b
 ### Step 1: Sign in to Shippable
 
 To sign in, visit the [Shippable website](https://www.shippable.com),
-click **Login**, and choose between GitHub or Bitbucket auth. This will take you to either the GitHub or Bitbucket Sign In page, where you enter your credentials.
+click **Login**, and choose between GitHub or Bitbucket auth. This will take you to either the GitHub or Bitbucket sign-in page, where you enter your credentials.
 
 Click `Authorize Application` on GitHub or `Grant access` on Bitbucket to allow access to repos. The [access policy](permissions.md) page has more details on Shippable's access policies.
 
@@ -39,11 +41,11 @@ Click `Authorize Application` on GitHub or `Grant access` on Bitbucket to allow 
 
 Create a shippable.yml file at the root of the repository you want to build with Shippable.
 
-Your yml needs a couple of entries at the very minumum - the language and the version(s) of the language you want to test against. We will use defaults for the other settings in this case.
+Your yml needs a couple of entries at the very minimum - the language and the version(s) of the language you want to test against. For this Quick Start, we will use defaults for the other settings.  See our [Language Specific Help](languages.md) page for a list of valid `language:` values.
 
 ```
 # language setting
-language: nodejs
+language: node_js
 
 # version numbers, testing against two versions of node
 node_js:

@@ -4,11 +4,11 @@ page_keywords: formations, formation settings, multi containers, microservices, 
 
 # Overview
 
-The Formation Settings page is where you can add the different components that your formation is comprised of. A Formation consists of images and config variables as the base components. You can combine these in any way to create an **Application Template**. The **Application Template** is deployed to an environment.
+The Formation Settings page is where you can add the different components that your formation is comprised of. A Formation consists of images and config variables as the base components. You can combine these in any way to create an **Service**. The **Service** is deployed to an environment.
 
-Now you are ready to configure an _instance_ of the Application Template.
+Now you are ready to configure an _instance_ of the Service.
 
-Thia happens in the [Service Instance page](formation_services.md) where you add the versions of the images, values of the config variables and the ports you want exposed, if any. You also set your flag for `auto-deploy` if you want the application re-deployed every time an image is updated in your Application Template.
+Thia happens in the service instance page where you add the versions of the images, values of the config variables and the ports you want exposed, if any. You also set your flag for `auto-deploy` if you want the application re-deployed every time an image is updated in your Application Template.
 
 Once the Service Instance has been updated, you can click `Deploy Service` to deploy the service to the environment. You can see the streaming live logs on the Service Status page.The application will be available at the IP address and port that is displayed on the Status page.
 
@@ -21,7 +21,7 @@ Once the Service Instance has been updated, you can click `Deploy Service` to de
 
 ## Formation Components
 
-The Formation Settings page is where you can add the different components that your formation is comprised of. A Formation consists of images and config variables as the base components. You can combine these in any way to create an **Application Template**. The **Application Template** is deployed to an environment.
+The Formation Settings page is where you can add the different components that your formation is comprised of. A Formation consists of images and config variables as the base components. You can combine these in any way to create a **Service**. The **Service** is deployed to an environment.
 
 ### Add Images
 
@@ -43,14 +43,14 @@ Add a list of environment variables that your services might need here. You are 
 
 Click on the ![add icon](images/add_icon.gif) and enter a name for your environment. You can add any number of environments in this section.
 
-## Formation Apps
+## Formation Service
 
-This is where you create your Application Template. You can combine the images and config keys created in your **Components** section to create multiple Application Templates.
+This is where you create your Service. You can combine the images and config keys created in your **Components** section to create multiple Services.
 
 - Add images to your template
 - Add Config Variables to your template
 - Select the environment you want this template deployed to
-- Once you are ready to deploy the Application Template, click on the icon next to the environment to configure an instance of your application.
+- Once you are ready to deploy the Service, click on the icon next to the environment to configure an instance of your service.
 
 ## Formation Teams
 
