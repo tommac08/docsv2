@@ -1,4 +1,4 @@
-page_title: Shippable Build Dashboard| Documentation | Shippable
+page_title: Shippable Build Dashboard | Documentation | Shippable
 page_description: Walk through the Build Dashboard for Shippable CI
 page_keywords: build page, build dashboard, CI/CD, shippable CI, documentation, shippable, config, yml
 

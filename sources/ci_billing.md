@@ -1,4 +1,4 @@
-page_title: Shippable CI Billing| Documentation | Shippable
+page_title: Shippable CI Billing | Documentation | Shippable
 page_description: How to update Subscription CI Plan and add more containers
 page_keywords: ci billing, add containers, subscription settings, CI/CD, shippable CI, documentation, shippable, config, yml
 

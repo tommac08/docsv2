@@ -1,4 +1,4 @@
-page_title: Shippable Build Configuration| Documentation | Shippable
+page_title: Shippable Build Configuration | Documentation | Shippable
 page_description: How to write your Shippable YML and Set up your Build Configuration
 page_keywords: getting started, questions, documentation, shippable, config, yml
 

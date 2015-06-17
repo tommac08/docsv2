@@ -1,4 +1,4 @@
-page_title: Shippable Formations Settings| Documentation | Shippable
+page_title: Shippable Formations Settings | Documentation | Shippable
 page_description: Shippable Formation Settings
 page_keywords: formations, formation settings, multi containers, microservices, Continuous Integration, Continuous Deployment, CI/CD, testing, automation
 

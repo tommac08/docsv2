@@ -1,4 +1,4 @@
-page_title: Shippable Formations Billing| Documentation | Shippable
+page_title: Shippable Formations Billing | Documentation | Shippable
 page_description: Explains how Shippable Formations Billing works
 page_keywords: formations, upgrade containers, add new formation, multi containers, microservices, Continuous Integration, Continuous Deployment, CI/CD, testing, automation
 

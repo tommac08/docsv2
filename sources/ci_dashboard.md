@@ -1,4 +1,4 @@
-page_title: Shippable CI/CD Dashboard| Documentation | Shippable
+page_title: Shippable CI/CD Dashboard |  Documentation | Shippable
 page_description: Explanation of the CI/CD Dashboard
 page_keywords: ci/cd dashboard, subscription settings, CI/CD, shippable CI/CD, documentation, shippable, config, yml
 

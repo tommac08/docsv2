@@ -1,4 +1,4 @@
-page_title: Shippable CI/CD Settings| Documentation | Shippable
+page_title: Shippable CI/CD Settings | Documentation | Shippable
 page_description: How to update Subscription CI/CD Settings
 page_keywords: ci settings, add containers, subscription settings, CI/CD, shippable CI, documentation, shippable, config, yml
 

@@ -1,4 +1,4 @@
-page_title: FAQ
+page_title: FAQ | Documentation | Shippable
 page_description: Commonly asked questions that will help with troubleshooting
 page_keywords: concepts, documentation, shippable, CI/CD
 

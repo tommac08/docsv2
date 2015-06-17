@@ -60,7 +60,7 @@ This is the integration that is used to set up email notifications for Lighthous
 
 1. Click on the Account Settings and select the Integrations tab
 2. To add a new integration, click on ![add_icon](images/add_icon.gif)
-3. **Master Integration:** Click on `Email Notification for imageWatchers`
+3. **Master Integration:** Click on `Email`
 4. Enter a name for your integration. Use a distinctive name that's easy to associate to the integration and recall. Example: `Example: my-shippable-emailid`
 5. Enter your email address: `janedoe@shippable.com`
 6. Click on `Save`
