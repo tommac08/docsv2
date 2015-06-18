@@ -54,7 +54,7 @@ node_js:
 ```
 
 
-### Step 3: Enable CI/CD for repos
+### Step 3: Enable CI/CD for Repos
 
 To enable a repository for CI/CD:
 
@@ -67,7 +67,7 @@ To enable a repository for CI/CD:
 - Find the repo you want to enable and click on the ![enable](images/enable_icon.gif) icon
 - This will bring you back to the project dashboard and you can see your enabled project there
 
-### Step 4: Run the build
+### Step 4: Run the Build
 
 - On the Project Page, click on the `Run Build` icon to run a manual build
 - You can view the build status on the console in the build page
