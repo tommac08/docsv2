@@ -7,7 +7,7 @@ page_keywords: containers, lxc, docker, Continuous Integration, Continuous Deplo
 Shippable CI/CD is our Continuous Integration and Deployment platform. It uses **Build Minions** which are docker based containers to run your workloads. A couple of common use cases for Shippable CI include:
 
 -  Automating the packaging and deployment of web applications
--  Automated testing and continuous integration/deployment
+-  Automated testing and Continuous Integration/Deployment
 
 ## What is supported?
 
