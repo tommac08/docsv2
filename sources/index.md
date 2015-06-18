@@ -22,7 +22,7 @@ Go to [Shippable Formations Overview](formations_overview.md) to learn more.
 
 *****
 
-## Quick Start: Run a build
+## Quick Start: Run a Build
 
 ![Run a Build](images/build_flow.gif)
 
@@ -189,7 +189,7 @@ To update containers in an existing Shippable Formation:
 
 This happens due to one of the following reasons:
 
-- You haven't enabled private repositories in your Shippable account. Go to [Account Settings](account_settings.md) and in the **GitHub Identity** section, click on the **Private Repos OFF** icon. This is a one-way toggle button to turn on Private Repos for your GitHub account.
+- You haven't enabled private repositories in your Shippable account. Go to [Account Settings](account_settings.md) and in the **GitHub Identity** section, click on the **Private Off** icon. This is a one-way toggle button to turn on Private Repos for your GitHub account.
 - Your account hasn't yet been synced with the latest permissions from GitHub. To force sync your account, go to your Account Settings and click on the `Force Sync` icon next to your Account Id.
 -  You're a Bitbucket user and you have mercurial repositories. We do not support mercurial at this time, so you will need to convert them to git or use another platform for CI/CD.
 
