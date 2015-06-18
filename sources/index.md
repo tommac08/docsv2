@@ -83,7 +83,7 @@ To enable a repository for CI/CD:
 
 ### Step 0: Prerequisite
 
-Shippable uses either your [GitHub](https://github.com) or [Bitbucket](https://bitbucket.org) account to authenticate. You must have one of these two accounts to sign into Shippable.
+Shippable uses either your [GitHub](https://github.com) or [Bitbucket](https://bitbucket.org) account to authenticate. You must have one of these two accounts to sign in to Shippable.
 
 ### Step 1: Sign in to Shippable
 
